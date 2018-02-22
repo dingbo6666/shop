@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>lst</title>
+    <title>add</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -183,9 +183,12 @@
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
                                         <li>
-                        <a href="#">系统</a>
+                        <a href="/shop/index.php/Admin/Index/index">系统</a>
                     </li>
-                                        <li class="active">管理员管理</li>
+                                        <li>
+                        <a href="/shop/index.php/Admin/Admin/lst">管理员列表</a>
+                    </li>
+                                        <li class="active">编辑管理员</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -193,45 +196,37 @@
                 <!-- Page Body -->
                 <div class="page-body">
 
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '/shop/index.php/Admin/Admin/add'">
-	<i class="fa fa-plus"></i> Add
-</button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">编辑管理员</span>
+            </div>
             <div class="widget-body">
-                <div class="flip-scroll">
-                    <table class="table table-bordered table-hover">
-                        <thead class="">
-                            <tr>
-                                <th class="text-center">ID</th>
-                                <th class="text-center">用户名称</th>
-                                <th class="text-center">操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-													<?php if(is_array($adminres)): $i = 0; $__LIST__ = $adminres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                                <td align="center"><?php echo ($vo["id"]); ?></td>
-                                <td align="center"><?php echo ($vo["username"]); ?></td>
-                                <td align="center">
-                                    <a href="/shop/index.php/Admin/Admin/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
-                                        <i class="fa fa-edit"></i> 编辑
-                                    </a>
-                                    <a href="#" onClick="warning('确实要删除吗', '/shop/index.php/Admin/Admin/del/id/<?php echo ($vo["id"]); ?>')" class="btn btn-danger btn-sm shiny">
-                                        <i class="fa fa-trash-o"></i> 删除
-                                    </a>
-                                </td>
-                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </tbody>
-                    </table>
-										<div style="height:40px;">
-                    <ul class="pagination" style="float:right; margin:10px 0 0 0; ">
-                    <?php echo ($page); ?>
-                    </ul>
-                    </div>
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post">
+											<input type="hidden" name="id" value="<?php echo ($admins["id"]); ?>" />
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">用户名</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="请输入用户名" value="<?php echo ($admins["username"]); ?>" name="username" required="" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="group_id" class="col-sm-2 control-label no-padding-right">密码</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="password" placeholder="请输入密码 留空则表示不修改密码" name="password" type="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div>
-                	                </div>
             </div>
         </div>
     </div>

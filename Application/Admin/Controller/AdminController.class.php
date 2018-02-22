@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class AdminController extends Controller {
+class AdminController extends CommonController {
     public function lst(){
       $admin=D('admin');
       $count=$admin->count();// 查询满足要求的总记录数
@@ -36,7 +36,27 @@ class AdminController extends Controller {
     }
 
     public function edit(){
-        $this->display();
+      $admin=D('admin');
+      $admins=$admin->find(I('id'));
+      if(IS_POST){
+          if($admin->create()){
+              if(I('password')){
+                  $admin->password=md5(I('password'));
+              }else{
+                  $admin->password=$admins['password'];
+              }
+              if($admin->save() !== false){
+                  $this->success('修改管理员成功！',U('lst'));
+              }else{
+                  $this->error('修改管理员失败！');
+              }
+          }else{
+              $this->error($admin->getError());
+          }
+          return;
+      }
+      $this->assign('admins',$admins);
+      $this->display();
     }
 
     public function del(){
