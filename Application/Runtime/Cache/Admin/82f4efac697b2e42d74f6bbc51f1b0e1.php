@@ -48,7 +48,12 @@
                                     <img src="http://127.0.0.1/shop/Application/Admin/Public/images/adam-jansen.jpg">
                                 </div>
                                 <section>
-                                    <h2><span class="profile"><span>admin</span></span></h2>
+                                    <h2><span class="profile">
+                                      <span>
+                                        <?php echo (session('username')); ?>
+                                      </span>
+                                    </span>
+                                  </h2>
                                 </section>
                             </a>
                             <!--Login Area Dropdown-->

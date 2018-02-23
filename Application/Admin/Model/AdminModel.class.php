@@ -16,7 +16,7 @@ class AdminModel extends Model {
     if($info){
       if($info['password']==md5($password)){
         session('uid',$info['id']);
-        session('uname',$info['username']);
+        session('username',$info['username']);
         return true;
       }else{
         return false;

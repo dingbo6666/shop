@@ -67,4 +67,9 @@ class AdminController extends CommonController {
           $this->error('删除管理员失败！');
       }
     }
+
+    public function logout(){
+      session(null);
+      $this->success('退出成功！',U('Login/index'));
+    }
 }

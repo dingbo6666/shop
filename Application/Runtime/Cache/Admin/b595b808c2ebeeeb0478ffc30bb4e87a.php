@@ -48,19 +48,24 @@
                                     <img src="http://127.0.0.1/shop/Application/Admin/Public/images/adam-jansen.jpg">
                                 </div>
                                 <section>
-                                    <h2><span class="profile"><span>admin</span></span></h2>
+                                    <h2><span class="profile">
+                                      <span>
+                                        <?php echo (session('username')); ?>
+                                      </span>
+                                    </span>
+                                  </h2>
                                 </section>
                             </a>
                             <!--Login Area Dropdown-->
                             <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
                                 <li class="username"><a>David Stevenson</a></li>
                                 <li class="dropdown-footer">
-                                    <a href="/admin/user/logout.html">
+                                    <a href="/shop/index.php/Admin/Admin/logout">
                                             退出登录
                                         </a>
                                 </li>
                                 <li class="dropdown-footer">
-                                    <a href="/admin/user/changePwd.html">
+                                    <a href="/shop/index.php/Admin/Admin/edit/id/<?php echo (session('uid')); ?>">
                                             修改密码
                                         </a>
                                 </li>
