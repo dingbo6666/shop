@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>后台</title>
+    <title>add</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,7 +90,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			      <!-- Page Sidebar -->
-						<div class="page-sidebar" id="sidebar">
+            <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
     <div class="sidebar-header-wrapper">
         <input class="searchinput" type="text">
@@ -187,7 +187,13 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li class="active">控制面板</li>
+                                        <li>
+                        <a href="/shop/index.php/Admin/Index/index">系统</a>
+                    </li>
+                                        <li>
+                        <a href="/shop/index.php/Admin/Cate/lst">商品分类列表</a>
+                    </li>
+                                        <li class="active">添加商品分类</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -195,10 +201,42 @@
                 <!-- Page Body -->
                 <div class="page-body">
 
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                大型商城项目<br /><p style="color:#aaa;"></p></div>
-                </div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">新增商品分类</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">分类名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="username" required="" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
 
+                        <div class="form-group">
+                            <label for="group_id" class="col-sm-2 control-label no-padding-right">上级分类</label>
+                            <div class="col-sm-6">
+                                <select name="pid">
+                                	<option value="0">顶级分类</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
                 </div>
                 <!-- /Page Body -->

@@ -60,12 +60,12 @@
                             <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
                                 <li class="username"><a>David Stevenson</a></li>
                                 <li class="dropdown-footer">
-                                    <a href="/admin/user/logout.html">
+                                    <a href="/shop/index.php/Admin/Admin/logout">
                                             退出登录
                                         </a>
                                 </li>
                                 <li class="dropdown-footer">
-                                    <a href="/admin/user/changePwd.html">
+                                    <a href="/shop/index.php/Admin/Admin/edit/id/<?php echo (session('uid')); ?>">
                                             修改密码
                                         </a>
                                 </li>
@@ -124,8 +124,8 @@
             </a>
               <ul class="submenu">
                   <li>
-                    <a href="/admin/user/index.html">
-                      <span class="menu-text">商品列表</span>
+                    <a href="/shop/index.php/Admin/Cate/lst">
+                      <span class="menu-text">商品分类</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>
