@@ -59,14 +59,14 @@
                             <tr>
                                 <th class="text-center" width="10%">ID</th>
                                 <th align="left">栏目名称</th>
-                                <th class="text-center" width="10%">操作</th>
+                                <th class="text-center" width="15%">操作</th>
                             </tr>
                         </thead>
                         <tbody>
-													<volist name="adminres" id="vo">
+													<volist name="cateres" id="vo">
                             <tr>
                                 <td align="center">{$vo.id}</td>
-                                <td align="left">{$vo.username}</td>
+                                <td align="left"><if condition="$vo['pid'] neq 0">|</if><?php echo str_repeat('——', $vo['level']*2);?>{$vo.catename}</td>
                                 <td align="center">
                                     <a href="__CONTROLLER__/edit/id/{$vo.id}" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 编辑

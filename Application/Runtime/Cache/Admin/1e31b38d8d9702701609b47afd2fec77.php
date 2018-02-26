@@ -211,13 +211,13 @@
                             <tr>
                                 <th class="text-center" width="10%">ID</th>
                                 <th align="left">栏目名称</th>
-                                <th class="text-center" width="10%">操作</th>
+                                <th class="text-center" width="15%">操作</th>
                             </tr>
                         </thead>
                         <tbody>
-													<?php if(is_array($adminres)): $i = 0; $__LIST__ = $adminres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+													<?php if(is_array($cateres)): $i = 0; $__LIST__ = $cateres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                                 <td align="center"><?php echo ($vo["id"]); ?></td>
-                                <td align="left"><?php echo ($vo["username"]); ?></td>
+                                <td align="left"><?php if($vo['pid'] != 0): ?>|<?php endif; echo str_repeat('——', $vo['level']*2); echo ($vo["catename"]); ?></td>
                                 <td align="center">
                                     <a href="/shop/index.php/Admin/Cate/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 编辑
