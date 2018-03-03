@@ -58,19 +58,25 @@
                         <thead class="">
                             <tr>
                                 <th class="text-center" width="10%">ID</th>
-                                <th align="left">品牌名称</th>
-																<th align="left">品牌logo</th>
-																<th align="left">品牌网址</th>
+                                <th class="text-center">品牌名称</th>
+																<th class="text-center">品牌logo</th>
+																<th class="text-center">品牌网址</th>
                                 <th class="text-center" width="15%">操作</th>
                             </tr>
                         </thead>
                         <tbody>
-													<volist name="cateres" id="vo">
+													<volist name="list" id="vo">
                             <tr>
                                 <td align="center">{$vo.id}</td>
-                                <td align="left"></td>
-																<td align="left"></td>
-																<td align="left"></td>
+                                <td align="center">{$vo.brand_name}</td>
+																<td align="center">
+																	<if condition="$vo['brand_logo'] eq ''">
+																	暂无logo
+																	<else/>
+																	<img src="__ROOT__{$vo.brand_logo}" height="40" />
+																	</if>
+																</td>
+																<td align="center"><a target="_brank" href="{$vo.brand_url}">{$vo.brand_url}</a></td>
                                 <td align="center">
                                     <a href="__CONTROLLER__/edit/id/{$vo.id}" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 编辑

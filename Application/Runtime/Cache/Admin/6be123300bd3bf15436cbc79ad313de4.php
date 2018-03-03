@@ -216,18 +216,22 @@
                         <thead class="">
                             <tr>
                                 <th class="text-center" width="10%">ID</th>
-                                <th align="left">品牌名称</th>
-																<th align="left">品牌logo</th>
-																<th align="left">品牌网址</th>
+                                <th class="text-center">品牌名称</th>
+																<th class="text-center">品牌logo</th>
+																<th class="text-center">品牌网址</th>
                                 <th class="text-center" width="15%">操作</th>
                             </tr>
                         </thead>
                         <tbody>
-													<?php if(is_array($cateres)): $i = 0; $__LIST__ = $cateres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+													<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                                 <td align="center"><?php echo ($vo["id"]); ?></td>
-                                <td align="left"></td>
-																<td align="left"></td>
-																<td align="left"></td>
+                                <td align="center"><?php echo ($vo["brand_name"]); ?></td>
+																<td align="center">
+																	<?php if($vo['brand_logo'] == ''): ?>暂无logo
+																	<?php else: ?>
+																	<img src="/shop<?php echo ($vo["brand_logo"]); ?>" height="40" /><?php endif; ?>
+																</td>
+																<td align="center"><a target="_brank" href="<?php echo ($vo["brand_url"]); ?>"><?php echo ($vo["brand_url"]); ?></a></td>
                                 <td align="center">
                                     <a href="/shop/index.php/Admin/Brand/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 编辑
