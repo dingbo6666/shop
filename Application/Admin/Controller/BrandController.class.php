@@ -30,6 +30,25 @@ class BrandController extends CommonController {
         $this->display();
     }
 
+    public function edit(){
+        $brand=D('brand');
+        if(IS_POST){
+            if($brand->create()){
+                if($brand->save()){
+                    $this->success('修改品牌成功！',U('lst'));
+                }else{
+                    $this->error('修改品牌失败！');
+                }
+            }else{
+                $this->error($brand->getError());
+            }
+            return;
+        }
+        $brands=$brand->find(I('id'));
+        $this->assign('brands',$brands);
+        $this->display();
+    }
+
     public function del(){
         if(D('brand')->delete(I('id'))){
             $this->success('删除品牌成功！',U('lst'));
