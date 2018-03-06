@@ -113,7 +113,7 @@
 																					<select name="cate_id">
 																							<option value="">请选择</option>
 																							<volist name="cateres" id="vo">
-																									<option value="{$vo.id}"><if condition="$vo['pid'] neq 0">|</if><?php echo str_repeat('-', $vo['level']*8);?>{$vo.catename}</option>
+																									<option value="{$vo.id}"><if condition="$vo['pid'] neq 0">|</if><?php echo str_repeat('——', $vo['level']*2);?>{$vo.catename}</option>
 																							</volist>
 																					</select>
 																			</div>

@@ -276,7 +276,7 @@
 																			<div class="col-sm-6">
 																					<select name="cate_id">
 																							<option value="">请选择</option>
-																							<?php if(is_array($cateres)): $i = 0; $__LIST__ = $cateres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php if($vo['pid'] != 0): ?>|<?php endif; echo str_repeat('-', $vo['level']*8); echo ($vo["catename"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+																							<?php if(is_array($cateres)): $i = 0; $__LIST__ = $cateres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php if($vo['pid'] != 0): ?>|<?php endif; echo str_repeat('——', $vo['level']*2); echo ($vo["catename"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 																					</select>
 																			</div>
 																			<p class="help-block col-sm-4 red">* 必填</p>

@@ -27,6 +27,16 @@ class GoodsController extends CommonController {
             }
             return;
         }
+        $cateres=D('cate')->catetree();
+        $brandres=D('brand')->select();
+        $levres=D('memberLevel')->select();
+        $typeres=D('type')->select();
+        $this->assign(array(
+            'cateres'=>$cateres,
+            'brandres'=>$brandres,
+            'levres'=>$levres,
+            'typeres'=>$typeres,
+            ));
         $this->display();
     }
 
