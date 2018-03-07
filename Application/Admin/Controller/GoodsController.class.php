@@ -18,9 +18,9 @@ class GoodsController extends CommonController {
         if(IS_POST){
             if($goods->create()){
                 if($goods->add()){
-                    $this->success('添加品牌成功！',U('lst'));
+                    $this->success('添加商品成功！',U('lst'));
                 }else{
-                    $this->error('添加品牌失败！');
+                    $this->error('添加商品失败！');
                 }
             }else{
                 $this->error($goods->getError());
