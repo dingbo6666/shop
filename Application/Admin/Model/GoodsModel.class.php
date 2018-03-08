@@ -34,6 +34,12 @@ class GoodsModel extends Model {
             $data['mid_thumb']=$mid_thumb;
             $data['sm_thumb']=$sm_thumb;
         }
+        $data['goods_sn']=time().rand(111111,999999);
+        if($data['onsale']){
+            $data['onsale']=1;
+        }else{
+            $data['onsale']=0;
+        }
     }
 
     public function _before_update(&$data,$option){

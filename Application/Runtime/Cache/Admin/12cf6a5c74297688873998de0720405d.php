@@ -221,32 +221,47 @@
                     <table class="table table-bordered table-hover">
                         <thead class="">
                             <tr>
-                                <th class="text-center" width="10%">ID</th>
-                                <th class="text-center">品牌名称</th>
-																<th class="text-center">品牌logo</th>
-																<th class="text-center">品牌网址</th>
-                                <th class="text-center" width="15%">操作</th>
+															<th class="text-center" width="6%">ID</th>
+															<th class="text-center">商品名称</th>
+															<th class="text-center" width="10%">商品logo</th>
+															<th class="text-center" width="8%">市场价格</th>
+															<th class="text-center" width="8%">本店价格</th>
+															<th class="text-center" width="8%">是否上架</th>
+															<th class="text-center" width="8%">所属栏目</th>
+															<th class="text-center" width="8%">所属品牌</th>
+															<th class="text-center" width="14%">操作</th>
                             </tr>
                         </thead>
-                        <tbody>
-													<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                                <td align="center"><?php echo ($vo["id"]); ?></td>
-                                <td align="center"><?php echo ($vo["brand_name"]); ?></td>
-																<td align="center">
-																	<?php if($vo['brand_logo'] == ''): ?>暂无logo
-																	<?php else: ?>
-																	<img src="/shop<?php echo ($vo["brand_logo"]); ?>" height="40" /><?php endif; ?>
-																</td>
-																<td align="center"><a target="_brank" href="<?php echo ($vo["brand_url"]); ?>"><?php echo ($vo["brand_url"]); ?></a></td>
-                                <td align="center">
-                                    <a href="/shop/index.php/Admin/Goods/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
-                                        <i class="fa fa-edit"></i> 编辑
-                                    </a>
-                                    <a href="#" onClick="warning('确实要删除吗', '/shop/index.php/Admin/Goods/del/id/<?php echo ($vo["id"]); ?>')" class="btn btn-danger btn-sm shiny">
-                                        <i class="fa fa-trash-o"></i> 删除
-                                    </a>
-                                </td>
-                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+												<tbody>
+                            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                                    <td align="center"><?php echo ($vo["id"]); ?></td>
+                                    <td align="center"><?php echo ($vo["goods_name"]); ?></td>
+                                    <td align="center">
+                                        <?php if($vo['sm_thumb'] == ''): ?>暂无logo
+                                        <?php else: ?>
+                                        <img src="/shop<?php echo ($vo['sm_thumb']); ?>" height="40" /><?php endif; ?>
+                                    </td>
+                                    <td align="center"><?php echo ($vo["market_price"]); ?></td>
+                                    <td align="center"><?php echo ($vo["shop_price"]); ?></td>
+                                    <td align="center">
+                                        <?php if($vo['onsale'] == 1): ?>上架
+                                        <?php else: ?>
+                                        下架<?php endif; ?>
+                                    </td>
+                                    <td align="center"><a target="_brank" href="#"><?php echo ($vo["catename"]); ?></a></td>
+                                    <td align="center"><a target="_brank" href="#"><?php echo ($vo["brand_name"]); ?></a></td>
+                                    <td align="center">
+                                        <a href="/shop/index.php/Admin/Goods/product/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
+                                            <i class="fa fa-truck"></i> 库存
+                                        </a>
+                                        <a href="/shop/index.php/Admin/Goods/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
+                                            <i class="fa fa-edit"></i> 编辑
+                                        </a>
+                                        <a href="#" onClick="warning('确实要删除吗', '/shop/index.php/Admin/Goods/del/id/<?php echo ($vo["id"]); ?>')" class="btn btn-danger btn-sm shiny">
+                                            <i class="fa fa-trash-o"></i> 删除
+                                        </a>
+                                    </td>
+                                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                         </tbody>
                     </table>
 										<div style="height:40px;">

@@ -3,9 +3,9 @@ namespace Admin\Controller;
 use Think\Controller;
 class GoodsController extends CommonController {
     public function lst(){
-      $goods=D('goods');
+      $goods=D('GoodsView');
       $count= $goods->count();// 查询满足要求的总记录数
-      $Page = new \Think\Page($count,2);
+      $Page = new \Think\Page($count,8);
       $show = $Page->show();// 分页显示输出
       $list = $goods->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
       $this->assign('list',$list);// 赋值数据集
