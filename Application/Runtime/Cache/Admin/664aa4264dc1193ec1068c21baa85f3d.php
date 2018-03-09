@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>后台</title>
+    <title>lst</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,7 +90,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			      <!-- Page Sidebar -->
-						<div class="page-sidebar" id="sidebar">
+            <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
     <div class="sidebar-header-wrapper">
         <input class="searchinput" type="text">
@@ -205,7 +205,10 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li class="active">控制面板</li>
+                                        <li>
+                        <a href="#">系统</a>
+                    </li>
+                                        <li class="active">等级管理</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -213,10 +216,55 @@
                 <!-- Page Body -->
                 <div class="page-body">
 
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                大型商城项目<br /><p style="color:#aaa;"></p></div>
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '/shop/index.php/Admin/MemberLevel/add'">
+	<i class="fa fa-plus"></i> Add
+</button>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr>
+                                <th class="text-center" width="10%">ID</th>
+                                <th class="text-center">等级名称</th>
+																<th class="text-center">积分下限</th>
+																<th class="text-center">积分上限</th>
+																<th class="text-center">折扣率</th>
+                                <th class="text-center" width="15%">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+													<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                                <td align="center"><?php echo ($vo["id"]); ?></td>
+                                <td align="center"><?php echo ($vo["level_name"]); ?></td>
+																<td align="center"><?php echo ($vo["points_min"]); ?></td>
+																<td align="center"><?php echo ($vo["points_max"]); ?></td>
+																<td align="center"><?php echo ($vo["rate"]); ?></td>
+                                <td align="center">
+                                    <a href="/shop/index.php/Admin/MemberLevel/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
+                                        <i class="fa fa-edit"></i> 编辑
+                                    </a>
+                                    <a href="#" onClick="warning('确实要删除吗', '/shop/index.php/Admin/MemberLevel/del/id/<?php echo ($vo["id"]); ?>')" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                </td>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                        </tbody>
+                    </table>
+										<div style="height:40px;">
+                    <ul class="pagination" style="float:right; margin:10px 0 0 0; ">
+                    <?php echo ($page); ?>
+                    </ul>
+                    </div>
                 </div>
-
+                <div>
+                	                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
                 </div>
                 <!-- /Page Body -->
