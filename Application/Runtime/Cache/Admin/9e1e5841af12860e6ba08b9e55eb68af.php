@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>add</title>
+    <title>lst</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -212,12 +212,9 @@
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
                                         <li>
-                        <a href="/shop/index.php/Admin/Index/index">系统</a>
+                        <a href="#">系统</a>
                     </li>
-                                        <li>
-                        <a href="/shop/index.php/Admin/Brand/lst">品牌列表</a>
-                    </li>
-                                        <li class="active">添加商品品牌</li>
+                                        <li class="active">商品类型</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -225,41 +222,46 @@
                 <!-- Page Body -->
                 <div class="page-body">
 
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '/shop/index.php/Admin/Type/add'">
+	<i class="fa fa-plus"></i> Add
+</button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
-            <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">新增商品品牌</span>
-            </div>
             <div class="widget-body">
-                <div id="horizontal-form">
-                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌名称</label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="brand_name" placeholder="" name="brand_name" required="" type="text">
-                            </div>
-                            <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>
-												<div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌logo</label>
-                            <div class="col-sm-6">
-                                <input id="brand_logo" name="brand_logo" type="file">
-                            </div>
-                        </div>
-												<div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌网址</label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="brand_url" placeholder="" name="brand_url" required="" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-default">保存信息</button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr>
+                                <th class="text-center" width="10%">ID</th>
+                                <th class="text-center">类型名称</th>
+                                <th class="text-center" width="25%">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+													<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                                <td align="center"><?php echo ($vo["id"]); ?></td>
+                                <td align="center"><?php echo ($vo["type_name"]); ?></td>
+                                <td align="center">
+																		<a href="/shop/index.php/Admin/Attr/lst/typeid/<?php echo ($vo["id"]); ?>" class="btn btn-darkorange btn-sm"><i class="fa fa-cog"></i>属性列表</a>
+                                    <a href="/shop/index.php/Admin/Type/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
+                                        <i class="fa fa-edit"></i> 编辑
+                                    </a>
+                                    <a href="#" onClick="warning('确实要删除吗', '/shop/index.php/Admin/Type/del/id/<?php echo ($vo["id"]); ?>')" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                </td>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                        </tbody>
+                    </table>
+										<div style="height:40px;">
+                    <ul class="pagination" style="float:right; margin:10px 0 0 0; ">
+                    <?php echo ($page); ?>
+                    </ul>
+                    </div>
                 </div>
+                <div>
+                	                </div>
             </div>
         </div>
     </div>

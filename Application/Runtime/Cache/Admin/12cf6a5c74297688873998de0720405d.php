@@ -141,18 +141,30 @@
                       <i class="menu-expand"></i>
                     </a>
                   </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Type/lst">
+                      <span class="menu-text">商品类型</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
             </ul>
       </li>
       <li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-gear"></i>
-                <span class="menu-text">文章管理</span>
+                <span class="menu-text">会员模块</span>
                 <i class="menu-expand"></i>
             </a>
               <ul class="submenu">
                   <li>
                     <a href="/admin/user/index.html">
-                      <span class="menu-text">文章列表</span>
+                      <span class="menu-text">会员管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/MemberLevel/lst">
+                      <span class="menu-text">会员等级</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>

@@ -215,9 +215,9 @@
                         <a href="/shop/index.php/Admin/Index/index">系统</a>
                     </li>
                                         <li>
-                        <a href="/shop/index.php/Admin/Brand/lst">品牌列表</a>
+                        <a href="/shop/index.php/Admin/Attr/lst">属性列表</a>
                     </li>
-                                        <li class="active">添加商品品牌</li>
+                                        <li class="active">添加属性</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -229,29 +229,46 @@
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
             <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">新增商品品牌</span>
+                <span class="widget-caption">新增属性</span>
             </div>
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌名称</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">属性名称</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="brand_name" placeholder="" name="brand_name" required="" type="text">
+                                <input class="form-control" id="attr_name" placeholder="" name="attr_name" required="" type="text">
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
 												<div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌logo</label>
-                            <div class="col-sm-6">
-                                <input id="brand_logo" name="brand_logo" type="file">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">属性类型</label>
+														<div class="col-sm-6 radio">
+                                <label>
+                                    <input type="radio" checked="checked" value="0" name="attr_type">
+                                    <span class="text">唯一</span>
+                                </label>
+                                <label>
+                                    <input type="radio" class="inverted" value="1" name="attr_type">
+                                    <span class="text">单选</span>
+                                </label>
                             </div>
                         </div>
 												<div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌网址</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">属性可选值</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="brand_url" placeholder="" name="brand_url" required="" type="text">
+                                <textarea class="form-control" rows="5" name="attr_values" ></textarea>
                             </div>
+                            <p class="help-block col-sm-4 red">* 必填 多个以“,”隔开</p>
+                        </div>
+												<div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">所属类型</label>
+                            <div class="col-sm-6">
+                                <select name="type_id">
+    															<?php if(is_array($typeres)): $i = 0; $__LIST__ = $typeres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option <?php if($vo['id'] == $typeid): ?>selected='selected'<?php endif; ?> value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["type_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+																</select>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">

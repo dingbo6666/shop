@@ -54,8 +54,8 @@ class GoodsController extends CommonController {
             }
             return;
         }
-        $goodss=$goods->find(I('id'));
-        $this->assign('goodss',$goodss);
+        $goods=$goods->find(I('id'));
+        $this->assign('goods',$goods);
         $this->display();
     }
 

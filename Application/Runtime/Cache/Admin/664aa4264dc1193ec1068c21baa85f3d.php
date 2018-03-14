@@ -141,6 +141,12 @@
                       <i class="menu-expand"></i>
                     </a>
                   </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Type/lst">
+                      <span class="menu-text">商品类型</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
             </ul>
       </li>
       <li>

@@ -215,9 +215,9 @@
                         <a href="/shop/index.php/Admin/Index/index">系统</a>
                     </li>
                                         <li>
-                        <a href="/shop/index.php/Admin/Brand/lst">品牌列表</a>
+                        <a href="/shop/index.php/Admin/Type/lst">类型列表</a>
                     </li>
-                                        <li class="active">添加商品品牌</li>
+                                        <li class="active">修改类型</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -229,29 +229,18 @@
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
             <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">新增商品品牌</span>
+                <span class="widget-caption">修改类型</span>
             </div>
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+											<input type="hidden" name="id" value="<?php echo ($types["id"]); ?>">
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌名称</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">类型名称</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="brand_name" placeholder="" name="brand_name" required="" type="text">
+                                <input class="form-control" id="type_name" placeholder="" name="type_name" required="" value="<?php echo ($types["type_name"]); ?>" type="text">
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>
-												<div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌logo</label>
-                            <div class="col-sm-6">
-                                <input id="brand_logo" name="brand_logo" type="file">
-                            </div>
-                        </div>
-												<div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌网址</label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="brand_url" placeholder="" name="brand_url" required="" type="text">
-                            </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
