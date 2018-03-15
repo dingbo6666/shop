@@ -59,6 +59,45 @@ class GoodsController extends CommonController {
         $this->display();
     }
 
+    public function product($id){
+        $pro=D('product');
+        if(IS_POST){
+            $goods_num=I('goods_num');
+            $goods_attr=I('goods_attr');
+            $pro->where(array('goods_id'=>$id))->delete();
+            foreach ($goods_num as $k=>$v) {
+                $_attr=array();
+                foreach ($goods_attr as $k1=>$v1) {
+                    if((int)$v1[$k]<=0){
+                        continue 2;
+                    }
+                    $_attr[]=$v1[$k];
+                }
+                sort($_attr);
+                $goodsAttrStr=implode(',',$_attr);
+                $pro->add(array(
+                    'goods_id'=>$id,
+                    'goods_number'=>$v,
+                    'goods_attr'=>$goodsAttrStr
+                    ));
+            }
+            $this->success('添加库存成功！');
+            return;
+        }
+        $goods=D('goods');
+        $_radioAttr=$goods->getRadioAttr($id);
+        $radioAttr=array();
+        foreach ($_radioAttr as $k=>$v) {
+            $radioAttr[$v['attr_id']][]=$v;
+        }
+        $prores=$pro->where(array('goods_id'=>$id))->order('id desc')->select();
+        $this->assign(array(
+            'radioAttr'=>$radioAttr,
+            'prores'=>$prores
+            ));
+        $this->display();
+    }
+
     public function del(){
         if(D('goods')->delete(I('id'))){
             $this->success('删除品牌成功！',U('lst'));
@@ -66,4 +105,10 @@ class GoodsController extends CommonController {
             $this->error('删除品牌失败！');
         }
     }
+
+    public function ajaxgetattr($typeid){
+        $data=D('attr')->where(array('type_id'=>$typeid))->select();
+        echo json_encode($data);
+    }
+
 }

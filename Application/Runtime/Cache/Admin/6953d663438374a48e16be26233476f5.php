@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>后台</title>
+    <title>lst</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,7 +90,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			      <!-- Page Sidebar -->
-						<div class="page-sidebar" id="sidebar">
+            <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
     <div class="sidebar-header-wrapper">
         <input class="searchinput" type="text">
@@ -211,7 +211,10 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li class="active">控制面板</li>
+                                        <li>
+                        <a href="#">商品管理</a>
+                    </li>
+                                        <li class="active">商品库存</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -219,10 +222,62 @@
                 <!-- Page Body -->
                 <div class="page-body">
 
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                大型商城项目<br /><p style="color:#aaa;"></p></div>
-                </div>
+									<div class="row">
+									    <div class="col-lg-12 col-sm-12 col-xs-12">
+									        <div class="widget">
+									            <div class="widget-body">
+									                <div class="flip-scroll">
+									                    <form action="" method="post">
+									                        <table class="table table-bordered table-hover">
+									                            <thead class="">
+									                                <tr>
+									                                    <?php if(is_array($radioAttr)): $i = 0; $__LIST__ = $radioAttr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><th align="left"><?php echo ($vo[0]['attr_name']); ?></th><?php endforeach; endif; else: echo "" ;endif; ?>
+									                                    <th align="left" width="8%">库存量</th>
+									                                    <th class="text-center" width="14%">操作</th>
+									                                </tr>
+									                            </thead>
+									                            <tbody>
+									                               <?php if($prores): if(is_array($prores)): foreach($prores as $k0=>$vo0): ?><tr>
+									                                            <?php if(is_array($radioAttr)): foreach($radioAttr as $k=>$vo): ?><td align="left">
+									                                            <select name="goods_attr[<?php echo ($k); ?>][]">
+									                                                <option value="">请选择</option>
+									                                                <?php foreach ($vo as $k2=>$v2): if(strpos(','.$vo0['goods_attr'].',',','.$v2['id'].',') !== false){ $select='selected="selected"'; }else{ $select=''; } ?>
+									                                                <option <?php echo $select;?> value="<?php echo $v2['id'];?>"><?php echo $v2['attr_value'];?></option>
+									                                                <?php endforeach;?>
+									                                            </select>
+									                                            </td><?php endforeach; endif; ?>
+									                                            <td align="left"><input type="text" value="<?php echo ($vo0["goods_number"]); ?>" name="goods_num[]" /></td>
+									                                            <td align="center">
+									                                                <input type="button" onclick="addrow(this);" class="btn btn-primary btn-sm shiny" value="<?php if($k0 == 0): ?>+<?php else: ?>-<?php endif; ?>">
+									                                            </td>
+									                                        </tr><?php endforeach; endif; ?>
+									                                <?php else: ?>
+									                                    <tr>
+									                                        <?php if(is_array($radioAttr)): foreach($radioAttr as $k=>$vo): ?><td align="left">
+									                                        <select name="goods_attr[<?php echo ($k); ?>][]">
+									                                            <option value="">请选择</option>
+									                                            <?php if(is_array($vo)): $i = 0; $__LIST__ = $vo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo2["id"]); ?>"><?php echo ($vo2["attr_value"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+									                                        </select>
+									                                        </td><?php endforeach; endif; ?>
+									                                        <td align="left"><input type="text" name="goods_num[]" /></td>
+									                                        <td align="center">
+									                                            <input type="button" onclick="addrow(this);" class="btn btn-primary btn-sm shiny" value="+">
+									                                        </td>
+									                                    </tr><?php endif; ?>
 
+									                            </tbody>
+									                        </table>
+									                        <input value="添加库存" style="width:150px; margin-top:10px;" class="btn btn-darkorange btn-block" type="submit">
+									                    </form>
+									                    <div style="height:40px;">
+									                    </div>
+									                </div>
+									                <div>
+									                	                </div>
+									            </div>
+									        </div>
+									    </div>
+									</div>
 
                 </div>
                 <!-- /Page Body -->

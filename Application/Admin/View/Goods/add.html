@@ -258,6 +258,55 @@
 		function delImg(o){
         $(o).parent().parent().remove();
     }
+		function attrad(o){
+				var div=$(o).parent().parent();
+				if($(o).html() == '[+]'){
+						var newdiv=div.clone();
+						newdiv.find('a').html('[-]');
+						div.after(newdiv);
+				}else{
+						div.remove();
+				}
+		}
+
+		$("select[name=type_id]").change(function(){
+        var typeid=$(this).val();
+        $.ajax({
+            type:"GET",
+            url:"__CONTROLLER__/ajaxgetattr/typeid/"+typeid,
+            dataType:"json",
+						success : function(data){
+                var html="";
+                $(data).each(function(k,v){
+                    if(v.attr_type == '1'){
+                        var attrs=v.attr_values.split(",");
+                        html+="<div class='form-group'><label class='col-sm-2 control-label no-padding-right'><a href='javascript:;' onclick='attrad(this);'>[+]</a>"+v.attr_name+"</label><div class='col-sm-6'>";
+                        html+="<select name='goods_attr["+v.id+"][]'><option>请选择</option>";
+                        for(var i=0; i<attrs.length; i++){
+                            html+="<option>"+attrs[i]+"</option>";
+                        }
+                        html+="</select> <span>￥<input type='text' name='goods_price[]' style='padding:6px 12px; width:70px;' value='0' /> 元</span>";
+                        html+="</div></div>";
+                    }else{
+                        if(v.attr_values != ''){
+                            var attrs=v.attr_values.split(",");
+                            html+="<div class='form-group'><label class='col-sm-2 control-label no-padding-right'>"+v.attr_name+"</label><div class='col-sm-6'>";
+                            html+="<select name='goods_attr["+v.id+"]'><option>请选择</option>";
+                            for(var i=0; i<attrs.length; i++){
+                                html+="<option>"+attrs[i]+"</option>";
+                            }
+                            html+="</select><input type='hidden' name='goods_price[]' style='padding:6px 12px; width:70px;' value='0' /> ";
+                            html+="</div></div>";
+                        }else{
+                            html+="<div class='form-group'><label class='col-sm-2 control-label no-padding-right'>"+v.attr_name+"</label><div class='col-sm-6'><input name='goods_attr["+v.id+"]' type='text' class='form-control' /><input type='hidden' name='goods_price[]' style='padding:6px 12px; width:70px;' value='0' /></div></div>";
+                        }
+                    }
+                });
+
+                $("#attr").html(html);
+            }
+					});
+				});
 		</script>
 
 </body></html>

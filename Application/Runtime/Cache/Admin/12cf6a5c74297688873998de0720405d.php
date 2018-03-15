@@ -241,7 +241,7 @@
 															<th class="text-center" width="8%">是否上架</th>
 															<th class="text-center" width="8%">所属栏目</th>
 															<th class="text-center" width="8%">所属品牌</th>
-															<th class="text-center" width="14%">操作</th>
+															<th class="text-center" width="20%">操作</th>
                             </tr>
                         </thead>
 												<tbody>
