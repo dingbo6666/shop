@@ -44,7 +44,7 @@ class GoodsController extends CommonController {
         $goods=D('goods');
         if(IS_POST){
             if($goods->create()){
-                if($goods->save()){
+                if($goods->save() !== false){
                     $this->success('修改品牌成功！',U('lst'));
                 }else{
                     $this->error('修改品牌失败！');
@@ -54,9 +54,42 @@ class GoodsController extends CommonController {
             }
             return;
         }
-        $goods=$goods->find(I('id'));
-        $this->assign('goods',$goods);
+        $id=I('id');
+        $goods=$goods->find($id);
+        $cateres=D('cate')->catetree();
+        $brandres=D('brand')->select();
+        $levres=D('MemberLevel')->select();
+        $mpres=D('MemberPrice')->where(array('goods_id'=>$id))->select();
+        $picres=D('GoodsPic')->where(array('goods_id'=>$id))->select();
+        $typeres=D('type')->select();
+        $attrres=D('attr')->where(array('type_id'=>$goods['type_id']))->select();
+        $_gattrres=D('GoodsAttr')->where(array('goods_id'=>$id))->select();
+        $gattrres=array();
+        foreach ($_gattrres as $k => $v) {
+            $gattrres[$v['attr_id']][]=$v;
+        }
+        $this->assign(array(
+            'goods'=>$goods,
+            'cateres'=>$cateres,
+            'brandres'=>$brandres,
+            'levres'=>$levres,
+            'mpres'=>$mpres,
+            'picres'=>$picres,
+            'typeres'=>$typeres,
+            'attrres'=>$attrres, //当前类型的所有属性
+            'gattrres'=>$gattrres//当前商品的所有属性
+            ));
         $this->display();
+    }
+
+    //处理异步删除商品图片
+    public function ajaxdelpic($picid){
+        $goodspic=D('GoodsPic');
+        $goodspic->find($picid);
+        @unlink($goodspic->original);
+        @unlink($goodspic->max_thumb);
+        @unlink($goodspic->sm_thumb);
+        $goodspic->delete();
     }
 
     public function product($id){

@@ -292,7 +292,17 @@
     <script src="http://127.0.0.1/shop/Application/Admin/Public/style/jquery.js"></script>
     <!--Beyond Scripts-->
     <script src="http://127.0.0.1/shop/Application/Admin/Public/style/beyond.js"></script>
-
-
+		<script type="text/javascript">
+		function addrow(o){
+				var tr=$(o).parent().parent();
+				if($(o).val()=="+"){
+						var newtr=tr.clone();
+						newtr.find(":button").val("-");
+						tr.after(newtr);
+				}else{
+						tr.remove();
+				}
+		}
+		</script>
 
 </body></html>
