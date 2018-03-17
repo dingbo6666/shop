@@ -345,7 +345,16 @@
 						newdiv.find('a').html('[-]');
 						div.after(newdiv);
 				}else{
-						div.remove();
+					if(confirm('确定要删除该商品属性吗？')){
+							var gaid=div.attr('gaid');
+							$.ajax({
+							type:"GET",
+							url:"__CONTROLLER__/ajaxdelga/gaid/"+gaid,
+							success:function(data){
+									div.remove();
+							}
+					});
+					}
 				}
 		}
 		//处理删除商品图片

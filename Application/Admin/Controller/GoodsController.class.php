@@ -92,6 +92,11 @@ class GoodsController extends CommonController {
         $goodspic->delete();
     }
 
+    //异步删除商品属性
+    public function ajaxdelga($gaid){
+        D('GoodsAttr')->delete($gaid);
+    }
+
     public function product($id){
         $pro=D('product');
         if(IS_POST){
