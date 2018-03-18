@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>后台</title>
+    <title>edit</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,10 @@
     <link href="http://127.0.0.1/shop/Application/Admin/Public/style/demo.css" rel="stylesheet">
     <link href="http://127.0.0.1/shop/Application/Admin/Public/style/typicons.css" rel="stylesheet">
     <link href="http://127.0.0.1/shop/Application/Admin/Public/style/animate.css" rel="stylesheet">
-
+		<!-- 引入ueditor -->
+    <script src="http://127.0.0.1/shop/Application/Admin/Public/ueditor/ueditor.config.js"></script>
+    <script src="http://127.0.0.1/shop/Application/Admin/Public/ueditor/ueditor.all.min.js"></script>
+    <script src="http://127.0.0.1/shop/Application/Admin/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
 </head>
 <body>
 	<!-- 头部 -->
@@ -90,7 +93,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			      <!-- Page Sidebar -->
-						<div class="page-sidebar" id="sidebar">
+            <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
     <div class="sidebar-header-wrapper">
         <input class="searchinput" type="text">
@@ -232,7 +235,13 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li class="active">控制面板</li>
+                                        <li>
+                        <a href="/shop/index.php/Admin/Index/index">系统</a>
+                    </li>
+                                        <li>
+                        <a href="/shop/index.php/Admin/Article/lst">文章列表</a>
+                    </li>
+                                        <li class="active">修改文章</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -240,10 +249,48 @@
                 <!-- Page Body -->
                 <div class="page-body">
 
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                大型商城项目<br /><p style="color:#aaa;"></p></div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">修改文章</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文章名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="title" value="<?php echo ($articles["title"]); ?>" placeholder="" name="title" required="" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+												<div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">所属栏目</label>
+                            <div class="col-sm-6">
+                                <select name="cateid">
+                                    <option value="">选择栏目</option>
+                                    <?php if(is_array($categoryres)): $i = 0; $__LIST__ = $categoryres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option <?php if($vo['id'] == $articles['cateid']): ?>selected<?php endif; ?> value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["catename"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文章内容</label>
+                            <div class="col-sm-6">
+                                <textarea id="content" name="content"><?php echo ($articles["content"]); ?></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-
+            </div>
+        </div>
+    </div>
+</div>
 
                 </div>
                 <!-- /Page Body -->
@@ -258,7 +305,10 @@
     <script src="http://127.0.0.1/shop/Application/Admin/Public/style/jquery.js"></script>
     <!--Beyond Scripts-->
     <script src="http://127.0.0.1/shop/Application/Admin/Public/style/beyond.js"></script>
-
-
+		<script type="text/javascript">
+        //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    UE.getEditor('content',{initialFrameWidth:1000,initialFrameHeight:500,});
+    </script>
 
 </body></html>

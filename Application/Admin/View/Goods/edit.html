@@ -342,6 +342,11 @@
 				var div=$(o).parent().parent();
 				if($(o).html() == '[+]'){
 						var newdiv=div.clone();
+						var sel=newdiv.find("select");
+						var oldname=sel.attr('name');
+						var newname=oldname.replace('old_','');
+						sel.attr('name',newname);
+						newdiv.find(":text").attr('name','goods_price[]');
 						newdiv.find('a').html('[-]');
 						div.after(newdiv);
 				}else{

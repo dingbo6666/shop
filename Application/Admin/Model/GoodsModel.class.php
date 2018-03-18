@@ -119,6 +119,61 @@ class GoodsModel extends Model {
                     ));
             }
         }
+        //处理商品属性,新增
+        $goods_attr=I('goods_attr');
+        $goods_price=I('goods_price');
+        if($goods_attr){
+            $goodsattr=D('GoodsAttr');
+            $i=0;
+            foreach ($goods_attr as $k=>$v) {
+                if(is_array($v)){
+                    foreach ($v as $k1 => $v1) {
+                       $goodsattr->add(array(
+                        'goods_id'=>$option['where']['id'],
+                        'attr_id'=>$k,
+                        'attr_value'=>$v1,
+                        'attr_price'=>$goods_price[$i],
+                    ));
+                       $i++;
+                    }
+                }else{
+                    $goodsattr->add(array(
+                        'goods_id'=>$option['where']['id'],
+                        'attr_id'=>$k,
+                        'attr_value'=>$v,
+                        'attr_price'=>$goods_price[$i],
+                    ));
+                    $i++;
+                }
+            }
+        }
+        //处理商品属性,修改
+        $goods_attr=I('old_goods_attr');
+        $goods_price=I('old_goods_price');
+        if($goods_attr){
+            $ids=array_keys($goods_price);
+            $prices=array_values($goods_price);
+            $goodsattr=D('GoodsAttr');
+            $i=0;
+            foreach ($goods_attr as $k=>$v) {
+                if(is_array($v)){
+                    foreach ($v as $k1 => $v1) {
+                       $goodsattr->where(array('id'=>$ids[$i]))->save(array(
+                        'attr_value'=>$v1,
+                        'attr_price'=>$prices[$i],
+                    ));
+                       $i++;
+                    }
+                }else{
+                   $goodsattr->where(array('id'=>$ids[$i]))->save(array(
+                        'attr_value'=>$v,
+                        'attr_price'=>$prices[$i],
+                    ));
+                    $i++;
+                }
+            }
+        }
+        
     }
 
     public function _before_delete($option){
