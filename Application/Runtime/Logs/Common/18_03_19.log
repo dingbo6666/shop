@@ -1,0 +1,66 @@
+[ 2018-03-19T16:48:26+08:00 ] 127.0.0.1 /shop/Application/Admin/Public/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+ERR: 无法加载模块:Application
+
+[ 2018-03-19T16:48:33+08:00 ] 127.0.0.1 /shop/Application/Admin/Public/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+ERR: 无法加载模块:Application
+
+[ 2018-03-19T16:48:35+08:00 ] 127.0.0.1 /shop/Application/Admin/Public/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+ERR: 无法加载模块:Application
+
+[ 2018-03-19T16:49:26+08:00 ] 127.0.0.1 /shop/Application/Admin/Public/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+ERR: 无法加载模块:Application
+
+[ 2018-03-19T22:58:29+08:00 ] 127.0.0.1 /shop/Application/Admin/Public/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+ERR: 无法加载模块:Application
+
+[ 2018-03-19T22:58:35+08:00 ] 127.0.0.1 /shop/Application/Admin/Public/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+ERR: 无法加载模块:Application
+
+[ 2018-03-19T22:58:42+08:00 ] 127.0.0.1 /shop/Application/Admin/Public/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+ERR: 无法加载模块:Application
+
+[ 2018-03-19T22:58:45+08:00 ] 127.0.0.1 /shop/Application/Admin/Public/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+ERR: 无法加载模块:Application
+
+[ 2018-03-19T22:59:34+08:00 ] 127.0.0.1 /shop/Application/Admin/Public/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000867s ]
+ERR: 无法加载模块:Application
+
+[ 2018-03-19T23:09:29+08:00 ] 127.0.0.1 /shop/Application/Admin/Public/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+ERR: 无法加载模块:Application
+
+[ 2018-03-19T23:10:43+08:00 ] 127.0.0.1 /shop/Application/Admin/Public/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000218s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001317s ]
+ERR: 无法加载模块:Application
+

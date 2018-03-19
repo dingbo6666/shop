@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>后台</title>
+    <title>add</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,7 +90,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			      <!-- Page Sidebar -->
-						<div class="page-sidebar" id="sidebar">
+            <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
     <div class="sidebar-header-wrapper">
         <input class="searchinput" type="text">
@@ -184,7 +184,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="/shop/index.php/Admin/Article/lst">
+                    <a href="/shop/index.php/Admin/Ad/lst">
                       <span class="menu-text">广告管理</span>
                       <i class="menu-expand"></i>
                     </a>
@@ -253,7 +253,13 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li class="active">控制面板</li>
+                                        <li>
+                        <a href="/shop/index.php/Admin/Index/index">系统</a>
+                    </li>
+                                        <li>
+                        <a href="/shop/index.php/Admin/Ad/lst">广告列表</a>
+                    </li>
+                                        <li class="active">添加广告</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -261,10 +267,91 @@
                 <!-- Page Body -->
                 <div class="page-body">
 
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                大型商城项目<br /><p style="color:#aaa;"></p></div>
-                </div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">新增广告</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">所属广告位</label>
+														<div class="col-sm-6">
+                                <select name="posid">
+                                    <option value="">请选择</option>
+                                    <?php if(is_array($adposres)): $i = 0; $__LIST__ = $adposres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["pname"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                                </select>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+												<div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">是否启用</label>
+                            <div class="col-sm-6">
 
+                                <label>
+                                    <input name="ison" value="1" checked="checked" class="checkbox-slider colored-darkorange" type="checkbox">
+                                    <span class="text"></span>
+                                </label>
+                            </div>
+                        </div>
+												<div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">广告名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="adname" placeholder="" name="adname" required="" type="text">
+                            </div>
+                        </div>
+												<div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">广告类型</label>
+                            <div class="col-sm-6">
+                                <label>
+                                    <input name="type" value="1" onclick='$("#pic").show(); $(".img").hide();' checked="checked" class="inverted" type="radio">
+                                    <span class="text">图片</span>
+                                </label>
+                                <label>
+                                    <input name="type" value="2" onclick='$("#pic").hide(); $(".img").show();' class="inverted" type="radio">
+                                    <span class="text">轮播</span>
+                                </label>
+                            </div>
+                        </div>
+												<div id="pic">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">图片</label>
+                            <div class="col-sm-6">
+                                <label>
+                                    <input name="picurl" class="checkbox-slider colored-darkorange" type="file">
+                                    <span class="text"></span>
+                                </label>
+                            </div>
+                        </div>
+                       <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">链接地址</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="link" placeholder="" name="link"  type="text">
+                            </div>
+                        </div>
+                        </div>
+												<div class="form-group img" style="display:none;">
+                            <label for="username" class="col-sm-2 control-label no-padding-right"><a onclick="imgad(this);" href="javascript:;">[+]</a></label>
+                            <div class="col-sm-6">
+                                <label>
+                                    <span>图片：</span><input name="imgurl[]" style="display:inline;" class="checkbox-slider colored-darkorange" type="file">
+                                    <span>地址：</span><input name="links[]" style="display:inline; width:200px;" class="form-control"  placeholder="" type="text">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
                 </div>
                 <!-- /Page Body -->
@@ -279,7 +366,18 @@
     <script src="http://127.0.0.1/shop/Application/Admin/Public/style/jquery.js"></script>
     <!--Beyond Scripts-->
     <script src="http://127.0.0.1/shop/Application/Admin/Public/style/beyond.js"></script>
-
+		<script type="text/javascript">
+    function imgad(o){
+        var div=$(o).parent().parent();
+        if($(o).html() == '[+]'){
+            var newdiv=div.clone();
+            newdiv.find('a').html('[-]');
+            div.after(newdiv);
+        }else{
+            div.remove();
+        }
+    }
+    </script>
 
 
 </body></html>
