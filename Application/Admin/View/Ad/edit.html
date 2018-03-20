@@ -58,6 +58,8 @@
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+											<input type="hidden" name="id" value="{$ads.id}">
+											<input type="hidden" name="oldpicurl" value="{$ads.picurl}">
                         <div class="form-group">
                             <label for="username" class="col-sm-2 control-label no-padding-right">所属广告位</label>
 														<div class="col-sm-6">
@@ -165,9 +167,22 @@
         if($(o).html() == '[+]'){
             var newdiv=div.clone();
             newdiv.find('a').html('[-]');
+            newdiv.find('input').attr("value","");
+            newdiv.find('input').eq(0).attr("name","imgurl[]");
+            newdiv.find('input').eq(1).attr("name","links[]");
+            newdiv.find('img').remove();
             div.after(newdiv);
         }else{
-            div.remove();
+            if(confirm('确定要删除该广告图片吗？')){
+                var id=div.attr('id');
+                $.ajax({
+                type:"GET",
+                url:"__CONTROLLER__/ajaxdeladpic/id/"+id,
+                success:function(data){
+                    div.remove();
+                }
+            });
+            }
         }
     }
     </script>

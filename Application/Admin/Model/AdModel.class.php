@@ -20,17 +20,9 @@ class AdModel extends Model {
                 D('adpic')->where(array('adid'=>$id))->delete();
            }
         }
-        // $this->field('brand_logo')->find($id);
-        // if($this->brand_logo){
-        //     if(file_exists($this->brand_logo)){
-        //         @unlink($this->brand_logo);
-        //     }
-
-        // }
     }
 
   public function _before_insert(&$data,$option){
-
     if($data['type']==1){
       if($_FILES['picurl']['tmp_name']){
             $upload = new \Think\Upload();// 实例化上传类
