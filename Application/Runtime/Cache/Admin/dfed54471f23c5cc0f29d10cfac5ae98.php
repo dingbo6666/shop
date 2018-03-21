@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>lst</title>
+    <title>add</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -253,58 +253,53 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                    <li>
-                        <a href="#">系统</a>
+                                        <li>
+                        <a href="/shop/index.php/Admin/Index/index">系统</a>
                     </li>
-                    <li class="active">文章管理</li>
-                    </ul>
+                                        <li>
+                        <a href="/shop/index.php/Admin/Category/lst">栏目列表</a>
+                    </li>
+                                        <li class="active">修改栏目</li>
+                                        </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
 
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '/shop/index.php/Admin/Article/add'">
-	<i class="fa fa-plus"></i> Add
-</button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">修改栏目</span>
+            </div>
             <div class="widget-body">
-                <div class="flip-scroll">
-                    <table class="table table-bordered table-hover">
-                        <thead class="">
-                            <tr>
-                                <th class="text-center" width="10%">ID</th>
-                                <th class="text-center">文章标题</th>
-																<th class="text-center">所属栏目</th>
-                                <th class="text-center" width="15%">操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-													<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                                <td align="center"><?php echo ($vo["id"]); ?></td>
-                                <td align="center"><?php echo ($vo["title"]); ?></td>
-																<td align="center"><?php echo ($vo["catename"]); ?></td>
-                                <td align="center">
-                                    <a href="/shop/index.php/Admin/Article/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
-                                        <i class="fa fa-edit"></i> 编辑
-                                    </a>
-                                    <a href="#" onClick="warning('确实要删除吗', '/shop/index.php/Admin/Article/del/id/<?php echo ($vo["id"]); ?>')" class="btn btn-danger btn-sm shiny">
-                                        <i class="fa fa-trash-o"></i> 删除
-                                    </a>
-                                </td>
-                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </tbody>
-                    </table>
-										<div style="height:40px;">
-                    <ul class="pagination" style="float:right; margin:10px 0 0 0; ">
-                    <?php echo ($page); ?>
-                    </ul>
-                    </div>
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+											<input type="hidden" name="id" value="<?php echo ($categorys["id"]); ?>">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">栏目名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="catename" placeholder="" value="<?php echo ($categorys["catename"]); ?>" name="catename" required="" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+												<div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">是否帮助</label>
+                            <div class="col-sm-6">
+                                <label>
+                                    <input <?php if($categorys['type'] == 1): ?>checked="checked"<?php endif; ?> name="type" class="checkbox-slider colored-blue" type="checkbox">
+                                    <span class="text"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div>
-                	                </div>
             </div>
         </div>
     </div>

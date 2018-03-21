@@ -2,22 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta name="Generator" content="ECSHOP v2.7.3">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="Keywords" content="童老师thinkphp交流群：484519446">
-<meta name="Description" content="童老师thinkphp交流群：484519446">
-<title>商城首页</title>
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>列表页面</title>
 <link rel="shortcut icon" href="mbmeilishuo/favicon.ico">
 <link rel="icon" href="mbmeilishuo/animated_favicon.gif" type="image/gif">
 <link href="__PUBLIC__/style/style.css" rel="stylesheet" type="text/css">
-<link rel="alternate" type="application/rss+xml" title="RSS|童老师thinkphp交流群：484519446 - Powered by ECShop" href="mbmeilishuo/feed.php">
-<script src="__PUBLIC__/style/hm.js"></script><script type="text/javascript" src="__PUBLIC__/style/common.js"></script><script type="text/javascript" src="__PUBLIC__/style/index.js"></script></head>
-<body class="index_page" style="min-width:1200px;">
-<link href="__PUBLIC__/style/qq.css" rel="stylesheet" type="text/css">
+<script src="__PUBLIC__/style/hm.js"></script><script type="text/javascript" src="list_files/common.js"></script><script type="text/javascript" src="list_files/global.js"></script><script type="text/javascript" src="list_files/compare.js"></script></head>
+<body>
+<link href="__PUBLIC__/style/qq.htm" rel="stylesheet" type="text/css">
 
 <script type="text/javascript">
 var process_request = "正在处理您的请求...";
 </script>
 <script type="text/javascript">
-//设为首页 www.chuanke.com/s2260700.html
 function SetHome(obj,url){
     try{
         obj.style.behavior='url(#default#homepage)';
@@ -53,121 +51,45 @@ catch (e) {
 
 <include file="Common/head" />
 
-<style type="text/css">
-.container, .container *{margin:0; padding:0;}
-.container{width:100%; height:419px; overflow:hidden;position:relative;}
-.slider{position:absolute; width:100%; height:419px;}
-.slider li , .slider li a{list-style:none; float:left;width:100%; height:419px;}
-.slider img{width:100%; height:419px; display:block;}
-.slider2{width:2000px;}
-.slider2 li{float:left;}
-.num{position:absolute; right:5px; bottom:5px; width:800px; margin:0 auto;}
-.num li{
-	float: left;
-	color: #f69;
-	text-align: center;
-	line-height: 16px;
-	width: 16px;
-	height: 16px;
-	font-family: Arial;
-	font-size: 12px;
-	cursor: pointer;
-	overflow: hidden;
-	margin: 3px 1px;
-	border: 1px solid #f69;
-	background-color: #fff;
-}
-.num li.on{
-	color: #fff;
-	line-height: 21px;
-	width: 21px;
-	height: 21px;
-	font-size: 16px;
-	margin: 0 1px;
-	border: 0;
-	background-color: #f69;
-	font-weight: bold;
-}
-</style>
-
-<link href="__PUBLIC__/style/shop.css" type="text/css" rel="stylesheet" />
-<div style="overflow: hidden; position: relative;" class="container" id="idTransformView">
-  <div class="flexslider">
-	<ul class="slides">
-		<li style="background:url(http://demo.lanrenzhijia.com/2014/alipay0423/images/img1.jpg) 50% 0 no-repeat;"></li>
-		<li style="background:url(http://demo.lanrenzhijia.com/2014/alipay0423/images/img2.jpg) 50% 0 no-repeat;"></li>
-		<li style="background:url(http://demo.lanrenzhijia.com/2014/alipay0423/images/img3.jpg) 50% 0 no-repeat;"></li>
-		<li style="background:url(http://demo.lanrenzhijia.com/2014/alipay0423/images/img4.jpg) 50% 0 no-repeat;"></li>
-		<li style="background:url(http://demo.lanrenzhijia.com/2014/alipay0423/images/img5.jpg) 50% 0 no-repeat;"></li>
-	</ul>
+  <div class="block box">
+<div class="blank"></div>
+ <div id="ur_here">
+当前位置: <a href="mbmeilishuo/">首页</a> <code>&gt;</code> <a href="mbmeilishuo/category.php?id=21">女装</a>
 </div>
 </div>
-<script src="__PUBLIC__/style/jquery.min.js"></script>
-<script src="__PUBLIC__/style/jquery.flexslider-min.js"></script>
-<script>
-$(function(){
-	$('.flexslider').flexslider({
-		directionNav: true,
-		pauseOnAction: false
-	});
-});
-</script>
-
-<div class="blank5"></div>
-<div class="blank"></div><div class="blank"></div>
+<div class="blank"></div>
 <div class="block clearfix">
-<script type="text/javascript">
-          //初始化主菜单
-            function sw_nav2(obj,tag)
-            {
-            var DisSub2 = document.getElementById("DisSub2_"+obj);
-            var HandleLI2= document.getElementById("HandleLI2_"+obj);
-                if(tag==1)
-                {
-                    DisSub2.style.display = "block";
-					HandleLI2.className="current";
-                }
-                else
-                {
-                    DisSub2.style.display = "none";
-					HandleLI2.className="";
-                }
-            }
-</script>
 
-
+  <div class="AreaL">
 
   <div id="category_tree">
-  <dl class="clearfix" style=" margin-top:-455px;z-index:999">
-             <div class="dt" onmouseover="sw_nav2(1,1);" onmouseout="sw_nav2(1,0);">
-
-        <div class="" id="HandleLI2_1">
-        <a class="a
-
-" href="mbmeilishuo/category.php?id=132">
- 男装  <img src="__PUBLIC__/images/biao8.gif">
- </a>
-</div>
+  <div class="tit">所有商品分类</div>
+  <dl class="clearfix" style=" overflow:hidden;">
+   <div class="box1 cate" id="cate">
+					<h1 onclick="tab(0)" style="border-top:none">
 
 
+		<span class="f_l"><img src="__PUBLIC__/images/btn_fold.gif" style="padding-top:10px;padding-right:6px;cursor:pointer;"></span>
+		<a href="mbmeilishuo/category.php?id=132" class="  f_l">男装</a>
+		</h1>
+		<ul style="display:none">
+				 <a class="over_2" href="mbmeilishuo/category.php?id=138">针织衫</a>
 
-<dd id="DisSub2_1" style="display: none;">
- <a class="over_2" href="mbmeilishuo/category.php?id=138">针织衫</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=139">针织背心</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=140">套头衫</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=141">开衫</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=154">内衣</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=154">内衣</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=156">内衣/套装</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=157">袜子</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=158">家居服</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=159">内裤</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=160">外套</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=160">外套</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=161">皮衣/皮草</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=162">卫衣</a>
@@ -178,8 +100,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=168">羽绒服</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=169">夹克</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=170">裤子</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=170">裤子</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=171">西裤</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=172">牛仔中裤</a>
@@ -188,57 +110,50 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=623">休闲短裤</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=629">休闲分裤</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=175">T恤</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=175">T恤</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=176">长袖T恤</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=178">短袖T恤</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=179">背心</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=182">POLO衫</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=182">POLO衫</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=185">长袖POLO衫</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=188">短袖POLO衫</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=190">衬衫</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=190">衬衫</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=193">短袖衬衫</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=194">长袖衬衫</a>
 </div>
-
-</dd>
-</div>
-        <div class="dt" onmouseover="sw_nav2(2,1);" onmouseout="sw_nav2(2,0);">
-
-        <div class="" id="HandleLI2_2">
-        <a class="a
-         t
-
-" href="mbmeilishuo/category.php?id=21">
- 女装  <img src="__PUBLIC__/images/biao8.gif">
- </a>
-</div>
+				</ul>
+		<div style="clear:both"></div>
+					<h1 onclick="tab(1)">
 
 
+		<span class="f_l"><img src="__PUBLIC__/images/btn_fold.gif" style="padding-top:10px;padding-right:6px;cursor:pointer;"></span>
+		<a href="mbmeilishuo/category.php?id=21" class="  f_l">女装</a>
+		</h1>
+		<ul style="display:none">
+				 <a class="over_2" href="mbmeilishuo/category.php?id=22">T恤/POLO</a>
 
-<dd id="DisSub2_2" style="display: none;">
- <a class="over_2" href="mbmeilishuo/category.php?id=22">T恤/POLO</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=23">POLO衫</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=26">短袖T恤</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=27">长袖T恤</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=29">衬衫</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=29">衬衫</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=30">长袖衬衫</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=32">短袖衬衫</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=33">分袖衬衫</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=34">裤子</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=34">裤子</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=35">牛仔分裤</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=36">牛仔短裤</a>
@@ -250,8 +165,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=633">打底裤</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=634">西裤</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=39">外套</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=39">外套</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=40">卫衣</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=41">西装</a>
@@ -262,22 +177,22 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=626">风衣</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=627">大衣</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=110">针织衫</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=110">针织衫</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=114">套头衫</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=115">开衫</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=628">短袖针织衫</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=124">裙</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=124">裙</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=125">半裙</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=126">连衣裙</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=127">吊带裙</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=635">中老年服装</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=635">中老年服装</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=636">T恤</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=637">针织衫</a>
@@ -285,8 +200,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=639">裤装</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=640">裙装</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=641">内衣</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=641">内衣</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=642">文胸</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=643">内裤</a>
@@ -295,23 +210,17 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=646">套装/打底</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=647">丝袜/裤袜</a>
 </div>
-
-</dd>
-</div>
-        <div class="dt" onmouseover="sw_nav2(3,1);" onmouseout="sw_nav2(3,0);">
-
-        <div class="" id="HandleLI2_3">
-        <a class="a
-
-" href="mbmeilishuo/category.php?id=16">
- 运动户外  <img src="__PUBLIC__/images/biao8.gif">
- </a>
-</div>
+				</ul>
+		<div style="clear:both"></div>
+					<h1 onclick="tab(2)">
 
 
+		<span class="f_l"><img src="__PUBLIC__/images/btn_fold.gif" style="padding-top:10px;padding-right:6px;cursor:pointer;"></span>
+		<a href="mbmeilishuo/category.php?id=16" class="  f_l">运动户外</a>
+		</h1>
+		<ul style="display:none">
+				 <a class="over_2" href="mbmeilishuo/category.php?id=120">运动服</a>
 
-<dd id="DisSub2_3" style="display: none;">
- <a class="over_2" href="mbmeilishuo/category.php?id=120">运动服</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=201">MP3/MP4</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=202">MID</a>
@@ -327,62 +236,55 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=213">数码相框</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=214">苹果配件</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=17">运动鞋</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=17">运动鞋</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=2">CDMA手机</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=18">3G手机</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=19">双模手机</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=20">GSM手机</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=116">运动包</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=116">运动包</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=117">便携相机</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=118">单反相机</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=119">数码摄像机</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=203">耳机</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=6">装备配件</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=6">装备配件</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=7">充 电 器</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=8">耳机</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=9">电池</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=11">读卡内存卡</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=12">户外服装</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=12">户外服装</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=13">小灵通充值卡</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=14">移动充值卡</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=15">联通充值卡</a>
 </div>
-
-</dd>
-</div>
-        <div class="dt" onmouseover="sw_nav2(4,1);" onmouseout="sw_nav2(4,0);">
-
-        <div class="" id="HandleLI2_4">
-        <a class="a
-         t
-
-" href="mbmeilishuo/category.php?id=69">
- 母婴童  <img src="__PUBLIC__/images/biao8.gif">
- </a>
-</div>
+				</ul>
+		<div style="clear:both"></div>
+					<h1 onclick="tab(3)">
 
 
+		<span class="f_l"><img src="__PUBLIC__/images/btn_fold.gif" style="padding-top:10px;padding-right:6px;cursor:pointer;"></span>
+		<a href="mbmeilishuo/category.php?id=69" class="  f_l">母婴童</a>
+		</h1>
+		<ul style="display:none">
+				 <a class="over_2" href="mbmeilishuo/category.php?id=70">童装</a>
 
-<dd id="DisSub2_4" style="display: none;">
- <a class="over_2" href="mbmeilishuo/category.php?id=70">童装</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=71">笔记本</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=72">台式机</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=73">服务器</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=74">婴童洗护</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=74">婴童洗护</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=75">CPU</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=76">硬盘</a>
@@ -394,124 +296,111 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=82">散热器</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=112">UPS电源</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=83">孕妈专区</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=83">孕妈专区</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=84">显示器</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=86">鼠标</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=87">键盘</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=88">电源</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=89">婴儿装</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=89">婴儿装</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=90">打印机</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=91">一体机</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=92">复印机</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=93">玩具/早教</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=93">玩具/早教</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=94">路由器</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=95">网卡</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=96">交换机</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=97">喂养用品</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=97">喂养用品</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=98">杀毒软件</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=99">办公软件</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=100">游戏软件</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=101">童鞋</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=101">童鞋</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=102">墨盒</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=103">墨粉</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=104">色带</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=111">硒鼓</a>
 </div>
-
-</dd>
-</div>
-        <div class="dt" onmouseover="sw_nav2(5,1);" onmouseout="sw_nav2(5,0);">
-
-        <div class="" id="HandleLI2_5">
-        <a class="a
-
-" href="mbmeilishuo/category.php?id=44">
- 鞋靴  <img src="__PUBLIC__/images/biao8.gif">
- </a>
-</div>
+				</ul>
+		<div style="clear:both"></div>
+					<h1 onclick="tab(4)">
 
 
+		<span class="f_l"><img src="__PUBLIC__/images/btn_fold.gif" style="padding-top:10px;padding-right:6px;cursor:pointer;"></span>
+		<a href="mbmeilishuo/category.php?id=44" class="  f_l">鞋靴</a>
+		</h1>
+		<ul style="display:none">
+				 <a class="over_2" href="mbmeilishuo/category.php?id=45">家居用品</a>
 
-<dd id="DisSub2_5" style="display: none;">
- <a class="over_2" href="mbmeilishuo/category.php?id=45">家居用品</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=46">被子</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=47">枕头</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=48">家纺毛巾</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=49">卫浴用品</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=50">女鞋</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=50">女鞋</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=51">休闲鞋</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=52">童鞋</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=53">腰带</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=54">礼品箱包</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=54">礼品箱包</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=55">烟具</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=56">瑞士军刀</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=57">工艺藏品</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=58">钟表首饰</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=58">钟表首饰</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=59">日本表店</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=60">流行饰品</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=61">国产表店</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=62">运动健康</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=62">运动健康</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=63">运动器材</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=64">户外装备</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=65">室内球类</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=66">趣味玩具</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=66">趣味玩具</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=67">电动玩具</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=68">遥控玩具</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=121">男鞋</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=121">男鞋</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=122">乳液/面霜</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=123">身体护理</a>
 </div>
-
-</dd>
-</div>
-        <div class="dt" onmouseover="sw_nav2(6,1);" onmouseout="sw_nav2(6,0);">
-
-        <div class="" id="HandleLI2_6">
-        <a class="a
-         t
-
-" href="mbmeilishuo/category.php?id=215">
- 箱包  <img src="__PUBLIC__/images/biao8.gif">
- </a>
-</div>
+				</ul>
+		<div style="clear:both"></div>
+					<h1 onclick="tab(5)">
 
 
+		<span class="f_l"><img src="__PUBLIC__/images/btn_fold.gif" style="padding-top:10px;padding-right:6px;cursor:pointer;"></span>
+		<a href="mbmeilishuo/category.php?id=215" class="  f_l">箱包</a>
+		</h1>
+		<ul style="display:none">
+				 <a class="over_2" href="mbmeilishuo/category.php?id=216">男装</a>
 
-<dd id="DisSub2_6" style="display: none;">
- <a class="over_2" href="mbmeilishuo/category.php?id=216">男装</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=217">衬衫</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=218">T恤</a>
@@ -520,8 +409,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=221">羽绒服</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=222">裤子</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=223">女装</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=223">女装</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=224">衬衫</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=225">T恤</a>
@@ -533,15 +422,15 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=231">孕妇装</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=232">皮衣</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=233">运动</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=233">运动</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=234">运动装</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=235">运动鞋</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=236">运动配件</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=237">内衣</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=237">内衣</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=238">文胸</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=239">内裤</a>
@@ -553,8 +442,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=245">情趣</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=246">保暖</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=247">配饰</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=247">配饰</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=248">眼镜</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=249">腰带</a>
@@ -564,39 +453,33 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=253">领带</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=254">袖扣</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=255">鞋靴</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=255">鞋靴</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=256">男鞋</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=257">女鞋</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=258">拖鞋</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=259">童鞋</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=260">童装</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=260">童装</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=261">女童</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=262">男童</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=263">宝宝服饰</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=264">亲子装</a>
 </div>
-
-</dd>
-</div>
-        <div class="dt" onmouseover="sw_nav2(7,1);" onmouseout="sw_nav2(7,0);">
-
-        <div class="" id="HandleLI2_7">
-        <a class="a
-
-" href="mbmeilishuo/category.php?id=265">
- 配饰  <img src="__PUBLIC__/images/biao8.gif">
- </a>
-</div>
+				</ul>
+		<div style="clear:both"></div>
+					<h1 onclick="tab(6)">
 
 
+		<span class="f_l"><img src="__PUBLIC__/images/btn_fold.gif" style="padding-top:10px;padding-right:6px;cursor:pointer;"></span>
+		<a href="mbmeilishuo/category.php?id=265" class="  f_l">配饰</a>
+		</h1>
+		<ul style="display:none">
+				 <a class="over_2" href="mbmeilishuo/category.php?id=266">饰品</a>
 
-<dd id="DisSub2_7" style="display: none;">
- <a class="over_2" href="mbmeilishuo/category.php?id=266">饰品</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=267">洁面乳</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=268">爽肤水</a>
@@ -609,8 +492,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=275">护肤套装</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=276">防晒隔离</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=277">配饰</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=277">配饰</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=278">洗发护发</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=279">染发/造型</a>
@@ -624,15 +507,15 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=287">手足护理</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=288">洗护套装</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=289">手表</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=289">手表</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=290">牙膏/牙粉</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=291">漱口水</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=292">牙刷/牙线</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=293">女性护理</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=293">女性护理</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=294">卫生巾</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=295">卫生护垫</a>
@@ -643,8 +526,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=316">美甲</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=317">彩妆工具</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=299">男士护理</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=299">男士护理</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=300">脸部</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=301">眼部</a>
@@ -654,8 +537,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=305">防脱洗护</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=306">唇膏</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=307">魅力彩妆</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=307">魅力彩妆</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=308">粉底/遮瑕</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=309">腮红</a>
@@ -665,8 +548,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=313">唇膏唇彩</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=314">彩妆组合</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=318">帽子</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=318">帽子</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=319">女士香水</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=320">男士香水</a>
@@ -674,24 +557,17 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=322">迷你香水</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=323">香体走珠</a>
 </div>
-
-</dd>
-</div>
-        <div class="dt" onmouseover="sw_nav2(8,1);" onmouseout="sw_nav2(8,0);">
-
-        <div id="HandleLI2_8">
-        <a class="a
-         t
-
-" href="mbmeilishuo/category.php?id=324">
- 美妆  <img src="__PUBLIC__/images/biao8.gif">
- </a>
-</div>
+				</ul>
+		<div style="clear:both"></div>
+					<h1 onclick="tab(7)">
 
 
+		<span class="f_l"><img src="__PUBLIC__/images/btn_fold.gif" style="padding-top:10px;padding-right:6px;cursor:pointer;"></span>
+		<a href="mbmeilishuo/category.php?id=324" class="  f_l">美妆</a>
+		</h1>
+		<ul style="display:none">
+				 <a class="over_2" href="mbmeilishuo/category.php?id=325">个人洗护</a>
 
-<dd id="DisSub2_8" style="display:none">
- <a class="over_2" href="mbmeilishuo/category.php?id=325">个人洗护</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=326">钱包/卡包</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=327">手拿包</a>
@@ -700,8 +576,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=330">手提包</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=331">斜挎包</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=348">香水精油</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=348">香水精油</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=349">火机烟具</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=350">礼品文具</a>
@@ -713,8 +589,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=356">鲜花速递</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=357">婚庆用品</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=358">奢侈品</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=358">奢侈品</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=359">GUCCI</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=360">PRADA</a>
@@ -733,8 +609,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=373">COACH</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=374">更多品牌</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=375">面部护理</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=375">面部护理</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=376">瑞士品牌</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=377">国产品牌</a>
@@ -743,8 +619,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=380">闹钟挂钟</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=381">儿童手表</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=382">彩妆</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=382">彩妆</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=383">纯金K金饰品</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=384">金银投资</a>
@@ -755,38 +631,32 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=389">宝石珍珠</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=390">时尚饰品</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=662">美妆团购</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=662">美妆团购</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=663">面部护理</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=664">时尚彩妆</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=665">个人洗护</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=666">其他护理</a>
 </div>
-
-</dd>
-</div>
-        <div class="dt" style="border-bottom:none;" onmouseover="sw_nav2(9,1);" onmouseout="sw_nav2(9,0);">
-
-        <div class="" id="HandleLI2_9">
-        <a class="a
-
-" href="mbmeilishuo/category.php?id=391">
- 家居  <img src="__PUBLIC__/images/biao8.gif">
- </a>
-</div>
+				</ul>
+		<div style="clear:both"></div>
+					<h1 onclick="tab(8)">
 
 
+		<span class="f_l"><img src="__PUBLIC__/images/btn_fold.gif" style="padding-top:10px;padding-right:6px;cursor:pointer;"></span>
+		<a href="mbmeilishuo/category.php?id=391" class="  f_l">家居</a>
+		</h1>
+		<ul style="display:none">
+				 <a class="over_2" href="mbmeilishuo/category.php?id=392">户外鞋服</a>
 
-<dd id="DisSub2_9" style="display: none;">
- <a class="over_2" href="mbmeilishuo/category.php?id=392">户外鞋服</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=393">户外服装</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=394">户外鞋袜</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=395">户外配饰</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=396">户外装备</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=396">户外装备</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=397">帐篷</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=398">睡袋</a>
@@ -806,8 +676,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=412">游泳用具</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=413">泳衣</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=414">运动器械</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=414">运动器械</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=415">健身器械</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=416">运动器材</a>
@@ -816,8 +686,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=419">极限运动</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=420">武术搏击</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=421">纤体瑜伽</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=421">纤体瑜伽</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=422">瑜伽垫</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=423">瑜伽服</a>
@@ -825,8 +695,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=425">瑜伽套装</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=426">舞蹈鞋服</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=427">体育娱乐</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=427">体育娱乐</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=428">羽毛球</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=429">乒乓球</a>
@@ -838,8 +708,8 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=435">棋牌麻将</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=436">其他</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=437">成人用品</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=437">成人用品</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=438">安全避孕</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=439">验孕测孕</a>
@@ -848,16 +718,16 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=442">情趣内衣</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=443">组合套装</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=444">保健器械</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=444">保健器械</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=445">养生器械</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=446">保健用品</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=447">康复辅助</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=448">家庭护理</a>
 </div>
+				 <a class="over_2" href="mbmeilishuo/category.php?id=449">急救卫生</a>
 
- <a class="over_2" href="mbmeilishuo/category.php?id=449">急救卫生</a>
 <div class="clearfix">
 <a class="over_3" href="mbmeilishuo/category.php?id=450">跌打损伤</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=451">烫伤止痒</a>
@@ -869,349 +739,263 @@ $(function(){
 <a class="over_3" href="mbmeilishuo/category.php?id=457">生殖泌尿</a>
 <a class="over_3" href="mbmeilishuo/category.php?id=458">美体塑身</a>
 </div>
+				</ul>
+		<div style="clear:both"></div>
 
-</dd>
 </div>
+<div style="clear:both"></div>
+</dl></div>
 
-</dl>
+<div class="blank"></div>
+<script type="text/javascript">
+obj_h4 = document.getElementById("cate").getElementsByTagName("h4")
+obj_ul = document.getElementById("cate").getElementsByTagName("ul")
+obj_img = document.getElementById("cate").getElementsByTagName("img")
+function tab(id)
+{
+		if(obj_ul.item(id).style.display == "block")
+		{
+			obj_ul.item(id).style.display = "none"
+			obj_img.item(id).src = "themes/ecmoban_meilishuo/images/btn_fold.gif"
+			return false;
+		}
+		else(obj_ul.item(id).style.display == "none")
+		{
+			obj_ul.item(id).style.display = "block"
+			obj_img.item(id).src = "themes/ecmoban_meilishuo/images/btn_unfold.gif"
+		}
+}
+</script><div style="display: none;" class="box" id="history_div"> <div class="box_1">
+ <h3><span>浏览历史</span></h3>
+
+  <div class="boxCenterList clearfix" id="history_list">
+      </div>
+ </div>
 </div>
-<div class="AreaL">
+<div class="blank5"></div>
+<script type="text/javascript">
+if (document.getElementById('history_list').innerHTML.replace(/\s/g,'').length<1)
+{
+    document.getElementById('history_div').style.display='none';
+}
+else
+{
+    document.getElementById('history_div').style.display='block';
+}
+function clear_history()
+{
+Ajax.call('user.php', 'act=clear_history',clear_history_Response, 'GET', 'TEXT',1,1);
+}
+function clear_history_Response(res)
+{
+document.getElementById('history_list').innerHTML = '您已清空最近浏览过的商品';
+}
+</script>
+
+  </div>
+
+
+  <div class="AreaR">
+
+	  	  <div class="box">
+		 <div class="box_1">
+			<h3><span>商品筛选</span></h3>
+						<div class="screeBox">
+			  <strong>品牌：</strong>
+														<span>全部</span>
+																			<a href="mbmeilishuo/category.php?id=21&amp;brand=2&amp;price_min=0&amp;price_max=0">APPLE</a>&nbsp;
+																			<a href="mbmeilishuo/category.php?id=21&amp;brand=3&amp;price_min=0&amp;price_max=0">方正</a>&nbsp;
+																			<a href="mbmeilishuo/category.php?id=21&amp;brand=4&amp;price_min=0&amp;price_max=0">希捷</a>&nbsp;
+																			<a href="mbmeilishuo/category.php?id=21&amp;brand=5&amp;price_min=0&amp;price_max=0">漫步者</a>&nbsp;
+																			<a href="mbmeilishuo/category.php?id=21&amp;brand=6&amp;price_min=0&amp;price_max=0">天翼</a>&nbsp;
+																			<a href="mbmeilishuo/category.php?id=21&amp;brand=7&amp;price_min=0&amp;price_max=0">美的</a>&nbsp;
+																			<a href="mbmeilishuo/category.php?id=21&amp;brand=11&amp;price_min=0&amp;price_max=0">  恒基伟业</a>&nbsp;
+																			<a href="mbmeilishuo/category.php?id=21&amp;brand=43&amp;price_min=0&amp;price_max=0">帮宝适</a>&nbsp;
+												</div>
+									<div class="screeBox">
+			<strong>价格：</strong>
+											<span>全部</span>
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=100&amp;price_max=110">100&nbsp;-&nbsp;110</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=120&amp;price_max=130">120&nbsp;-&nbsp;130</a>&nbsp;
+										</div>
+						      <div class="screeBox">
+			<strong>袖型 :</strong>
+											<span>全部</span>
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=2839.0.0.0.0">七分袖</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=2841.0.0.0.0">无袖</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=2836.0.0.0.0">短袖</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=2203.0.0.0.0">长袖</a>&nbsp;
+										</div>
+            <div class="screeBox">
+			<strong>尺寸 :</strong>
+											<span>全部</span>
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.2149.0.0.0">L</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.2150.0.0.0">M</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.2148.0.0.0">XL</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.2151.0.0.0">XXL</a>&nbsp;
+										</div>
+            <div class="screeBox">
+			<strong>颜色 :</strong>
+											<span>全部</span>
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.2145.0.0">红</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.2146.0.0">蓝</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.2147.0.0">黄</a>&nbsp;
+										</div>
+            <div class="screeBox">
+			<strong>风格 :</strong>
+											<span>全部</span>
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.2847.0">卡通</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.2837.0">日韩</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.2842.0">民族</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.2834.0">甜美淑女</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.2840.0">简约</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.2852.0">英伦学院</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.2844.0">街头</a>&nbsp;
+										</div>
+            <div class="screeBox">
+			<strong>花型 :</strong>
+											<span>全部</span>
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.0.2838">印花/绣花</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.0.2845">大方格</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.0.2835">小碎花</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.0.2833">撞色</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.0.2843">条纹</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.0.2850">波点</a>&nbsp;
+															<a href="mbmeilishuo/category.php?id=21&amp;price_min=0&amp;price_max=0&amp;filter_attr=0.0.0.0.2224">素色</a>&nbsp;
+										</div>
+      		 </div>
+		</div>
+		<div class="blank"></div>
+
 
 <div class="box">
  <div class="box_1">
   <h3>
-  <span><a href="mbmeilishuo/article_cat.php?id=12">站内快讯</a></span>
-  <a href="mbmeilishuo/article_cat.php?id=12"><img src="__PUBLIC__/images/more.gif" alt="more"></a>
+  <span>商品列表</span>
+  <form method="GET" class="sort" name="listform">
+  显示方式：
+  <a href="javascript:;" onclick="javascript:display_mode('list')"><img src="__PUBLIC__/images/display_mode_list.gif" alt=""></a>
+  <a href="javascript:;" onclick="javascript:display_mode('grid')"><img src="__PUBLIC__/images/display_mode_grid_act.gif" alt=""></a>
+  <a href="javascript:;" onclick="javascript:display_mode('text')"><img src="__PUBLIC__/images/display_mode_text.gif" alt=""></a>&nbsp;&nbsp;
+
+  <a href="mbmeilishuo/category.php?category=21&amp;display=grid&amp;brand=0&amp;price_min=0&amp;price_max=0&amp;filter_attr=0&amp;page=1&amp;sort=goods_id&amp;order=ASC#goods_list"><img src="__PUBLIC__/images/goods_id_DESC.gif" alt="按上架时间排序"></a>
+  <a href="mbmeilishuo/category.php?category=21&amp;display=grid&amp;brand=0&amp;price_min=0&amp;price_max=0&amp;filter_attr=0&amp;page=1&amp;sort=shop_price&amp;order=ASC#goods_list"><img src="__PUBLIC__/images/shop_price_default.gif" alt="按价格排序"></a>
+  <a href="mbmeilishuo/category.php?category=21&amp;display=grid&amp;brand=0&amp;price_min=0&amp;price_max=0&amp;filter_attr=0&amp;page=1&amp;sort=last_update&amp;order=DESC#goods_list"><img src="__PUBLIC__/images/last_update_default.gif" alt="按更新时间排序"></a>
+  <input name="category" value="21" type="hidden">
+  <input name="display" value="grid" id="display" type="hidden">
+  <input name="brand" value="0" type="hidden">
+  <input name="price_min" value="0" type="hidden">
+  <input name="price_max" value="0" type="hidden">
+  <input name="filter_attr" value="0" type="hidden">
+  <input name="page" value="1" type="hidden">
+  <input name="sort" value="goods_id" type="hidden">
+  <input name="order" value="DESC" type="hidden">
+  </form>
   </h3>
-  <div class="boxCenterList RelaArticle">
-    <a href="mbmeilishuo/article.php?id=41" title="卡帕春装仅需139起！重庆九龙坡自提点变更！">卡帕春装仅需139起！重庆九龙坡自提点变更！</a> 2012-03-01<br>
-    <a href="mbmeilishuo/article.php?id=40" title="春天花花读书会6折封顶苏川辽大家电配送范围扩">春天花花读书会6折封顶苏川辽大家电配送范围扩</a> 2012-03-01<br>
-    <a href="mbmeilishuo/article.php?id=39" title="酷派7260黑白首发试用用电视也能上京东购物">酷派7260黑白首发试用用电视也能上京东购物</a> 2012-03-01<br>
-    <a href="mbmeilishuo/article.php?id=38" title="3.8女人节电脑数码攻略!重庆江北自提点变更！">3.8女人节电脑数码攻略!重庆江北自提点变更！</a> 2012-03-01<br>
-    </div>
+      <form name="compareForm" action="compare.php" method="post" onsubmit="return compareGoods(this);">
+            <div class="clearfix goodsBox" style="border:none;">
+             <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
+           <a href="mbmeilishuo/goods.php?id=208"><img src="__PUBLIC__/images/208_thumb_G_1419373849576.png" alt="简约纯色时尚保暖" class="goodsimg"></a><br>
+           <p><a href="mbmeilishuo/goods.php?id=208" title="简约纯色时尚保暖">简约纯色时尚保暖</a></p>
+                                    市场价：<font class="market_s">120元</font><br>
+                                                                        本店价：<font class="shop_s">100元</font><br>
+
+        </div>
+                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
+           <a href="mbmeilishuo/goods.php?id=141"><img src="__PUBLIC__/images/141_thumb_G_1413926445469.jpg" alt="高质感毛呢大衣" class="goodsimg"></a><br>
+           <p><a href="mbmeilishuo/goods.php?id=141" title="高质感毛呢大衣">高质感毛呢大衣</a></p>
+                                    市场价：<font class="market_s">144元</font><br>
+                                                                        促销价：<font class="shop_s">110元</font><br>
+
+        </div>
+                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
+           <a href="mbmeilishuo/goods.php?id=140"><img src="__PUBLIC__/images/140_thumb_G_1413928959052.jpg" alt="毛貂毛边卫衣套装" class="goodsimg"></a><br>
+           <p><a href="mbmeilishuo/goods.php?id=140" title="毛貂毛边卫衣套装">毛貂毛边卫衣套装</a></p>
+                                    市场价：<font class="market_s">144元</font><br>
+                                                                        促销价：<font class="shop_s">110元</font><br>
+
+        </div>
+                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
+           <a href="mbmeilishuo/goods.php?id=139"><img src="__PUBLIC__/images/139_thumb_G_1413929154297.jpg" alt="秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装" class="goodsimg"></a><br>
+           <p><a href="mbmeilishuo/goods.php?id=139" title="秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装">秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装</a></p>
+                                    市场价：<font class="market_s">144元</font><br>
+                                                                        促销价：<font class="shop_s">110元</font><br>
+
+        </div>
+                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
+           <a href="mbmeilishuo/goods.php?id=138"><img src="__PUBLIC__/images/138_thumb_G_1413929827659.jpg" alt="现货发售 马海毛保暖毛衣" class="goodsimg"></a><br>
+           <p><a href="mbmeilishuo/goods.php?id=138" title="现货发售 马海毛保暖毛衣">现货发售 马海毛保暖毛衣</a></p>
+                                    市场价：<font class="market_s">144元</font><br>
+                                                                        本店价：<font class="shop_s">120元</font><br>
+
+        </div>
+                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
+           <a href="mbmeilishuo/goods.php?id=137"><img src="__PUBLIC__/images/137_thumb_G_1413930199355.jpg" alt="蜜糖家 METIME 秋季新品 自制薄毛呢西装长马甲" class="goodsimg"></a><br>
+           <p><a href="mbmeilishuo/goods.php?id=137" title="蜜糖家 METIME 秋季新品 自制薄毛呢西装长马甲">蜜糖家 METIME 秋季新品 自制薄毛呢西装长马甲</a></p>
+                                    市场价：<font class="market_s">144元</font><br>
+                                                                        本店价：<font class="shop_s">120元</font><br>
+
+        </div>
+                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
+           <a href="mbmeilishuo/goods.php?id=136"><img src="__PUBLIC__/images/136_thumb_G_1413930502490.jpg" alt="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸..." class="goodsimg"></a><br>
+           <p><a href="mbmeilishuo/goods.php?id=136" title="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸靴">米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸...</a></p>
+                                    市场价：<font class="market_s">144元</font><br>
+                                                                        促销价：<font class="shop_s">110元</font><br>
+
+        </div>
+                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
+           <a href="mbmeilishuo/goods.php?id=134"><img src="__PUBLIC__/images/134_thumb_G_1413930635678.jpg" alt="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气..." class="goodsimg"></a><br>
+           <p><a href="mbmeilishuo/goods.php?id=134" title="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气质长袖针织衫+半身裙 两件套连衣裙套装">韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气...</a></p>
+                                    市场价：<font class="market_s">144元</font><br>
+                                                                        促销价：<font class="shop_s">110元</font><br>
+
+        </div>
+            </div>
+        </form>
+
  </div>
 </div>
 <div class="blank5"></div>
-
-</div>
-<div class="Arear">
-<div class="sale_box clearfix">
-<h3><span>特价商品</span></h3>
-
-      <div class="clearfix">
-
-           <ul class="clearfix">
-           <li class="goodsimg"><a href="mbmeilishuo/goods.php?id=134"><img src="__PUBLIC__/images/134_thumb_G_1413930635678.jpg" alt="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气质长袖针织衫+半身裙 两件套连衣裙套装" class="B_blue" border="0"></a></li>
-			<li> <p><a href="mbmeilishuo/goods.php?id=134" title="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气质长袖针织衫+半身裙 两件套连衣裙套装">韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气...</a></p>
-           促销价：<font class="f1">110元</font></li>
-           </ul>
-
-           <ul class="clearfix">
-           <li class="goodsimg"><a href="mbmeilishuo/goods.php?id=136"><img src="__PUBLIC__/images/136_thumb_G_1413930502490.jpg" alt="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸靴" class="B_blue" border="0"></a></li>
-			<li> <p><a href="mbmeilishuo/goods.php?id=136" title="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸靴">米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸...</a></p>
-           促销价：<font class="f1">110元</font></li>
-           </ul>
-
-           <ul class="clearfix">
-           <li class="goodsimg"><a href="mbmeilishuo/goods.php?id=140"><img src="__PUBLIC__/images/140_thumb_G_1413928959052.jpg" alt="毛貂毛边卫衣套装" class="B_blue" border="0"></a></li>
-			<li> <p><a href="mbmeilishuo/goods.php?id=140" title="毛貂毛边卫衣套装">毛貂毛边卫衣套装</a></p>
-           促销价：<font class="f1">110元</font></li>
-           </ul>
-
-           <ul class="clearfix">
-           <li class="goodsimg"><a href="mbmeilishuo/goods.php?id=139"><img src="__PUBLIC__/images/139_thumb_G_1413929154297.jpg" alt="秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装" class="B_blue" border="0"></a></li>
-			<li> <p><a href="mbmeilishuo/goods.php?id=139" title="秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装">秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装</a></p>
-           促销价：<font class="f1">110元</font></li>
-           </ul>
-                </div>
- </div>
-
-<div class="blank" style="height:1px;"></div>
-
-</div>
-  <div class="goodsBox_1">
-
-
-
-<div class="xm-box">
-<h4 class="title"><span>新品上架</span> <a class="more" href="mbmeilishuo/search.php?intro=new">更多</a></h4>
-<div id="show_new_area" class="clearfix">
-      <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=140"><img src="__PUBLIC__/images/140_thumb_G_1413928959052.jpg" alt="毛貂毛边卫衣套装" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=140" title="毛貂毛边卫衣套装">毛貂毛边卫衣套装</a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     110元                     </font>
-
-        </div>
-    <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=209"><img src="__PUBLIC__/images/209_thumb_G_1420405700910.jpg" alt="女鞋" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=209" title="女鞋">女鞋</a></p>
-
-
- 市场价：<font class="market">120元</font> <br>
-
-           本店价：<font class="f1">
-                     100元                     </font>
-
-        </div>
-    <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=137"><img src="__PUBLIC__/images/137_thumb_G_1413930199355.jpg" alt="蜜糖家 METIME 秋季新品 自制薄毛呢西装长马甲" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=137" title="蜜糖家 METIME 秋季新品 自制薄毛呢西装长马甲">蜜糖家 METIME 秋季新品 自制薄毛呢西装长马甲</a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     120元                     </font>
-
-        </div>
-    <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=138"><img src="__PUBLIC__/images/138_thumb_G_1413929827659.jpg" alt="现货发售 马海毛保暖毛衣" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=138" title="现货发售 马海毛保暖毛衣">现货发售 马海毛保暖毛衣</a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     120元                     </font>
-
-        </div>
-    <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=139"><img src="__PUBLIC__/images/139_thumb_G_1413929154297.jpg" alt="秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=139" title="秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装">秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装</a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     110元                     </font>
-
-        </div>
-
-    </div>
-</div>
-<div class="blank"></div>
-  <div class="xm-box">
-<h4 class="title"><span>热卖商品</span> <a class="more" href="mbmeilishuo/search.php?intro=hot">更多</a></h4>
-<div id="show_hot_area" class="clearfix">
-      <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=134"><img src="__PUBLIC__/images/134_thumb_G_1413930635678.jpg" alt="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气质长袖针织衫+半身裙 两件套连衣裙套装" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=134" title="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气质长袖针织衫+半身裙 两件套连衣裙套装">韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气...</a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     110元                     </font>
-
-        </div>
-    <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=136"><img src="__PUBLIC__/images/136_thumb_G_1413930502490.jpg" alt="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸靴" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=136" title="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸靴">米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸...</a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     110元                     </font>
-
-        </div>
-    <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=140"><img src="__PUBLIC__/images/140_thumb_G_1413928959052.jpg" alt="毛貂毛边卫衣套装" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=140" title="毛貂毛边卫衣套装">毛貂毛边卫衣套装</a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     110元                     </font>
-
-        </div>
-    <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=137"><img src="__PUBLIC__/images/137_thumb_G_1413930199355.jpg" alt="蜜糖家 METIME 秋季新品 自制薄毛呢西装长马甲" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=137" title="蜜糖家 METIME 秋季新品 自制薄毛呢西装长马甲">蜜糖家 METIME 秋季新品 自制薄毛呢西装长马甲</a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     120元                     </font>
-
-        </div>
-    <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=138"><img src="__PUBLIC__/images/138_thumb_G_1413929827659.jpg" alt="现货发售 马海毛保暖毛衣" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=138" title="现货发售 马海毛保暖毛衣">现货发售 马海毛保暖毛衣</a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     120元                     </font>
-
-        </div>
-
-    </div>
-</div>
-<div class="blank"></div>
-  <div class="xm-box">
-<h4 class="title"><span>精品推荐</span> <a class="more" href="mbmeilishuo/search.php?intro=best">更多</a></h4>
-<div id="show_best_area" class="clearfix">
-      <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=134"><img src="__PUBLIC__/images/134_thumb_G_1413930635678.jpg" alt="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气质长袖针织衫+半身裙 两件套连衣裙套装" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=134" title="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气质长袖针织衫+半身裙 两件套连衣裙套装">韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气...</a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     110元                     </font>
-
-        </div>
-    <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=136"><img src="__PUBLIC__/images/136_thumb_G_1413930502490.jpg" alt="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸靴" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=136" title="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸靴">米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸...</a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     110元                     </font>
-
-        </div>
-    <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=209"><img src="__PUBLIC__/images/209_thumb_G_1420405700910.jpg" alt="女鞋" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=209" title="女鞋">女鞋</a></p>
-
-
- 市场价：<font class="market">120元</font> <br>
-
-           本店价：<font class="f1">
-                     100元                     </font>
-
-        </div>
-    <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=138"><img src="__PUBLIC__/images/138_thumb_G_1413929827659.jpg" alt="现货发售 马海毛保暖毛衣" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=138" title="现货发售 马海毛保暖毛衣">现货发售 马海毛保暖毛衣</a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     120元                     </font>
-
-        </div>
-    <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=139"><img src="__PUBLIC__/images/139_thumb_G_1413929154297.jpg" alt="秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=139" title="秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装">秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装</a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     110元                     </font>
-
-        </div>
-
-    </div>
-</div>
-<div class="blank"></div>
-
-<div class="xm-box">
-<h4 class="title"><span>女装</span> <a class="more" href="mbmeilishuo/category.php?id=21">更多</a></h4>
-<div id="show_hot_area" class="clearfix">
-
-            <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=134"><img src="__PUBLIC__/images/134_thumb_G_1413930635678.jpg" alt="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气质长袖针织衫+半身裙 两件套连衣裙套装" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=134" title="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气质长袖针织衫+半身裙 两件套连衣裙套装"></a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     110元                     </font>
-
-        </div>
-            <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=136"><img src="__PUBLIC__/images/136_thumb_G_1413930502490.jpg" alt="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸靴" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=136" title="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸靴"></a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     110元                     </font>
-
-        </div>
-            <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=140"><img src="__PUBLIC__/images/140_thumb_G_1413928959052.jpg" alt="毛貂毛边卫衣套装" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=140" title="毛貂毛边卫衣套装"></a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     110元                     </font>
-
-        </div>
-            <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=208"><img src="__PUBLIC__/images/208_thumb_G_1419373849576.png" alt="简约纯色时尚保暖" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=208" title="简约纯色时尚保暖"></a></p>
-
-
- 市场价：<font class="market">120元</font> <br>
-
-           本店价：<font class="f1">
-                     100元                     </font>
-
-        </div>
-            <div class="goodsItem">
-
-           <a href="mbmeilishuo/goods.php?id=141"><img src="__PUBLIC__/images/141_thumb_G_1413926445469.jpg" alt="高质感毛呢大衣" class="goodsimg"></a><br>
-           <p class="f1"><a href="mbmeilishuo/goods.php?id=141" title="高质感毛呢大衣"></a></p>
-
-
- 市场价：<font class="market">144元</font> <br>
-
-           本店价：<font class="f1">
-                     110元                     </font>
-
-        </div>
-          </div>
-
-
-</div>
-<div class="blank"></div>
+<script type="Text/Javascript" language="JavaScript">
+<!--
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+//-->
+</script>
+<script type="text/javascript">
+window.onload = function()
+{
+  Compare.init();
+  fixpng();
+}
+var button_compare = '';
+var exist = "您已经选择了%s";
+var count_limit = "最多只能选择4个商品进行对比";
+var goods_type_different = "\"%s\"和已选择商品类型不同无法进行对比";
+var compare_no_goods = "您没有选定任何需要比较的商品或者比较的商品数少于 2 个。";
+var btn_buy = "购买";
+var is_cancel = "取消";
+var select_spe = "请选择商品属性";
+</script>
+<form name="selectPageForm" action="/mbmeilishuo/category.php" method="get">
+ <div id="pager" class="pagebar">
+  <span class="f_l " style="margin-right:10px;">总计 <b>8</b>  个记录</span>
+
+      </div>
+</form>
+<script type="Text/Javascript" language="JavaScript">
+<!--
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+//-->
+</script>
   </div>
 
-    </div>
-
-
-
-
-    <a href="http://www.chuanke.com/s2260700.html/" class="ecmoban">ecshop</a>
+</div>
 
 <include file="Common/footer" />
 <div class="blank"></div>
@@ -1223,26 +1007,8 @@ $(function(){
     <div class="infobox">我们营业的时间<br>9:00-18:00</div>
     <div class="con">
         <ul>
-
-
-
-
-
-
                 <li><a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=851818184&amp;Site=%E9%BC%8E%E6%96%B0%E6%96%87%E5%8C%96QQ851818184&amp;Menu=yes" target="_blank"><img src="__PUBLIC__/images/pa.gif" alt="QQ" border="0" height="16"> 851818184</a> </li>
                                                                   <li><img src="__PUBLIC__/images/msn.gif" alt="MSN" border="0" height="17" width="18"> <a href="msnim:chat?contact=ecmoban@msn.com">ecmoban@msn.com</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
 	      <li> 服务热线: 123456</li>
          </ul>
     </div>
@@ -1331,4 +1097,4 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-</body></html>
+<div style="display: none; top: 200px;" id="compareBox" align="center"><ul id="compareList"></ul><input value="" type="button"></div></body></html>

@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>lst</title>
+    <title>add</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -152,6 +152,21 @@
       <li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-gear"></i>
+                <span class="menu-text">导航设置</span>
+                <i class="menu-expand"></i>
+            </a>
+              <ul class="submenu">
+                  <li>
+                    <a href="/shop/index.php/Admin/Nav/lst">
+                      <span class="menu-text">导航管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+            </ul>
+      </li>
+      <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gear"></i>
                 <span class="menu-text">文章模块</span>
                 <i class="menu-expand"></i>
             </a>
@@ -253,58 +268,67 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                    <li>
-                        <a href="#">系统</a>
+                                        <li>
+                        <a href="/shop/index.php/Admin/Index/index">系统</a>
                     </li>
-                    <li class="active">文章管理</li>
-                    </ul>
+                                        <li>
+                        <a href="/shop/index.php/Admin/Nav/lst">导航列表</a>
+                    </li>
+                                        <li class="active">添加导航</li>
+                                        </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
 
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '/shop/index.php/Admin/Article/add'">
-	<i class="fa fa-plus"></i> Add
-</button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">新增导航</span>
+            </div>
             <div class="widget-body">
-                <div class="flip-scroll">
-                    <table class="table table-bordered table-hover">
-                        <thead class="">
-                            <tr>
-                                <th class="text-center" width="10%">ID</th>
-                                <th class="text-center">文章标题</th>
-																<th class="text-center">所属栏目</th>
-                                <th class="text-center" width="15%">操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-													<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                                <td align="center"><?php echo ($vo["id"]); ?></td>
-                                <td align="center"><?php echo ($vo["title"]); ?></td>
-																<td align="center"><?php echo ($vo["catename"]); ?></td>
-                                <td align="center">
-                                    <a href="/shop/index.php/Admin/Article/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
-                                        <i class="fa fa-edit"></i> 编辑
-                                    </a>
-                                    <a href="#" onClick="warning('确实要删除吗', '/shop/index.php/Admin/Article/del/id/<?php echo ($vo["id"]); ?>')" class="btn btn-danger btn-sm shiny">
-                                        <i class="fa fa-trash-o"></i> 删除
-                                    </a>
-                                </td>
-                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </tbody>
-                    </table>
-										<div style="height:40px;">
-                    <ul class="pagination" style="float:right; margin:10px 0 0 0; ">
-                    <?php echo ($page); ?>
-                    </ul>
-                    </div>
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+											<div class="form-group">
+													<label for="username" class="col-sm-2 control-label no-padding-right">导航名称</label>
+													<div class="col-sm-6">
+															<input class="form-control" placeholder="" name="nav_name" required="" type="text">
+													</div>
+													<p class="help-block col-sm-4 red">* 必填</p>
+											</div>
+											<div class="form-group">
+													<label for="username" class="col-sm-2 control-label no-padding-right">导航地址</label>
+													<div class="col-sm-6">
+															<input class="form-control" placeholder="" name="nav_url" required="" type="text">
+													</div>
+													<p class="help-block col-sm-4 red">* 必填</p>
+											</div>
+											<div class="form-group">
+													<label for="username" class="col-sm-2 control-label no-padding-right">新窗口打开</label>
+													<div class="col-sm-6">
+															<label class="radio" style="float:left; margin-right:10px;"><input class="radio" checked="checked"  name="nav_blank" value="1" type="radio"> <span class="text">是</span></label>
+															<label class="radio" style="float:left;"><input class="radio"  name="nav_blank" value="0" type="radio"> <span class="text">否</span></label>
+													</div>
+													<p class="help-block col-sm-4 red">* 必填</p>
+											</div>
+											<div class="form-group">
+													<label for="username" class="col-sm-2 control-label no-padding-right">导航位置</label>
+													<div class="col-sm-6">
+															<label class="radio" style="float:left;"><input class="radio"  name="nav_pos" value="1" type="radio"> <span class="text">顶部</span></label>
+															<label class="radio" style="float:left; margin:0 10px;"><input class="radio"  name="nav_pos" checked="checked" value="2" type="radio"> <span class="text">中间</span></label>
+															<label class="radio" style="float:left;"><input class="radio"  name="nav_pos" value="3" type="radio"> <span class="text">底部</span></label>
+													</div>
+													<p class="help-block col-sm-4 red">* 必填</p>
+											</div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div>
-                	                </div>
             </div>
         </div>
     </div>

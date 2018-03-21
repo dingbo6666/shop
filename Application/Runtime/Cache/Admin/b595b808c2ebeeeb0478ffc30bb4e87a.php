@@ -184,7 +184,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="/shop/index.php/Admin/Article/lst">
+                    <a href="/shop/index.php/Admin/Ad/lst">
                       <span class="menu-text">广告管理</span>
                       <i class="menu-expand"></i>
                     </a>
