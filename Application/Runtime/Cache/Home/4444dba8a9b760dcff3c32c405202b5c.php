@@ -102,19 +102,9 @@ catch (e) {
         <script type="text/javascript" src="list_files/transport.js"></script><script type="text/javascript" src="list_files/utils.js"></script>        <font id="ECS_MEMBERZONE">
 
 
-欢迎光临本店，<a href="mbmeilishuo/user.php">登录</a> | <a href="mbmeilishuo/user.php?act=register">注册</a> |
-
-
-  </font>
-
-                                        <a href="mbmeilishuo/user.php">我的账户</a>
-                                         |
-                                                   <a href="mbmeilishuo/pick_out.php">选购中心</a>
-                                         |
-                                                   <a href="mbmeilishuo/tag_cloud.php">标签云</a>
-                                         |
-                                                   <a href="mbmeilishuo/quotation.php">报价单</a>
-
+欢迎光临本店，
+<?php if(is_array($topnav)): $i = 0; $__LIST__ = $topnav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><a href="<?php echo ($nav["nav_url"]); ?>"><?php echo ($nav["nav_name"]); ?></a>
+<?php if($i != 4): ?><span>|</span><?php endif; endforeach; endif; else: echo "" ;endif; ?>
         </div>
     </div>
 </div>
@@ -146,25 +136,7 @@ catch (e) {
 <div class="block">
 <div class="menu">
   <a href="mbmeilishuo/index.php">首页<span></span></a>
-    <a href="mbmeilishuo/category.php?id=21" class="cur">
-女装 <span></span>
-</a>
-
-   <a href="mbmeilishuo/category.php?id=132">
-男装 <span></span>
-</a>
-
-   <a href="mbmeilishuo/category.php?id=170">
-裤子 <span></span>
-</a>
-
-   <a href="mbmeilishuo/brand.php">
-品牌专区 <span></span>
-</a>
-
-   <a href="mbmeilishuo/group_buy.php">
-团购 <span></span>
-</a>
+	<?php if(is_array($midnav)): $i = 0; $__LIST__ = $midnav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><a href="<?php echo ($nav["nav_url"]); ?>" <?php if($nav['nav_blank'] == 1): ?>target="_blank"<?php endif; ?>><?php echo ($nav["nav_name"]); ?><span></span></a><?php endforeach; endif; else: echo "" ;endif; ?>
 
  </div>
 </div>
@@ -1329,48 +1301,27 @@ $(function(){
 
 
 
-    <a href="http://www.chuanke.com/s2260700.html/" class="ecmoban">ecshop童老师</a>
+    <a href="http://www.chuanke.com/s2260700.html/" class="ecmoban">ecshop</a>
 
 <div class="footer">
   <div class="foot_con">
     <div class="f_list service_info">
       <div class="kefu"> <span class="tel_ico"></span>
         <p class="f20_f">4000-021-758</p>
-        <p class="f14_f mt4_f">童老师客服热线</p>
+        <p class="f14_f mt4_f">模板堂客服热线</p>
       </div>
       <ol class="business">
         <li>周一至周日：09:00-22:00</li>
       </ol>
     </div>
+    <?php if(is_array($hcres)): $i = 0; $__LIST__ = $hcres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="f_list">
+        <h4><?php echo ($vo["catename"]); ?></h4>
+        <ul>
+          <?php if(is_array($vo['article'])): $i = 0; $__LIST__ = $vo['article'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($i % 2 );++$i;?><li><a target="_blank" href="/mbmeilishuo/article.php?id=9" title="售后流程"><?php echo ($vo2["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+        </ul>
+      </div><?php endforeach; endif; else: echo "" ;endif; ?>
 
-
-        <div class="f_list">
-      <h4>新手上路 </h4>
-      <ul>
-                <li><a target="_blank" href="mbmeilishuo/article.php?id=9" title="售后流程">售后流程</a></li>
-                <li><a target="_blank" href="mbmeilishuo/article.php?id=10" title="购物流程">购物流程</a></li>
-                <li><a target="_blank" href="mbmeilishuo/article.php?id=11" title="订购方式">订购方式</a></li>
-              </ul>
-    </div>
-
-
-        <div class="f_list">
-      <h4>购物常识 </h4>
-      <ul>
-                <li><a target="_blank" href="mbmeilishuo/article.php?id=12" title="如何分辨原装电池">如何分辨原装电池</a></li>
-                <li><a target="_blank" href="mbmeilishuo/article.php?id=13" title="如何分辨水货手机 ">如何分辨水货手机</a></li>
-                <li><a target="_blank" href="mbmeilishuo/article.php?id=14" title="如何享受全国联保">如何享受全国联保</a></li>
-              </ul>
-    </div>
-
-
-
-
-
-
-
-
-        <div class="f_list">
+      <div class="f_list">
       <h4>关注我们</h4>
       <ul>
         <li class="sina_attention"> <a href="http://weibo.com/ECMBT/home?topnav=1&amp;wvr=5" target="_blank"><span class="i_sina">&nbsp;</span>新浪微博</a></li>
@@ -1379,89 +1330,34 @@ $(function(){
       </ul>
     </div>
     <div class="f_list qr-code">
-      <h4>童老师微信服务号</h4>
-      <img src="/shop/Public/images/weixinfuwuhao.png" alt="童老师服务号二维码"> </div>
+      <h4>模板堂微信服务号</h4>
+      <img src="/shop/Public/images/weixinfuwuhao.png" alt="模板堂服务号二维码"> </div>
     <div class="f_list weixin_code">
-      <h4>童老师客户端下载</h4>
-      <a class="client_pic" href="http://www.chuanke.com/s2260700.html" target="_blank"></a> </div>
+      <h4>模板堂客户端下载</h4>
+      <a class="client_pic" href="http://www.ecmoban.com/topic/ecmoban_app/" target="_blank"></a> </div>
     <div class="blank"></div>
-
-            <div>
-      <dl class="sncompany box_1" style="text-align:left; border-left:none; border-right:none; background:none;">
-        <dd class="">
-        <span>友情链接：</span>
-
-
-
-          <a href="http://www.tiantianxc.com/" target="_blank" title="天天学车网">天天学车网</a>
-
-
-        </dd>
-      </dl>
-      </div>
-
-
       <div class="blank"></div>
-
     <div id="bottomNav" class="rolling">
     <h4 class="f_links">底部导航：</h4>
       <ul id="link_slide">
-      <li>
-
-
-            <a href="mbmeilishuo/article.php?id=1">免责条款</a>
-
-            <a href="mbmeilishuo/article.php?id=2">隐私保护</a>
-
-            <a href="mbmeilishuo/article.php?id=3">咨询热点</a>
-
-            <a href="mbmeilishuo/article.php?id=4">联系我们</a>
-
-            <a href="mbmeilishuo/article.php?id=5">公司简介</a>
-
-            <a href="mbmeilishuo/wholesale.php">批发方案</a>
-
-            <a href="mbmeilishuo/myship.php">配送方式</a>
-
-
-          </li>
-          </ul>
+       <li>
+        <?php if(is_array($bottomnav)): $i = 0; $__LIST__ = $bottomnav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><a href="<?php echo ($nav["nav_url"]); ?>"><?php echo ($nav["nav_name"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+       </li>
+      </ul>
     </div>
-
-
-
-
     <div class="text" style="height:1px ; width:1px; overflow:hidden;">
-
       Tel: 123456
-
-
-
-
       <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=851818184&amp;Site=%E9%BC%8E%E6%96%B0%E6%96%87%E5%8C%96QQ851818184&amp;Menu=yes" target="_blank"><img src="/shop/Public/images/pa.gif" alt="QQ" border="0" height="16"> 851818184</a>
-
-
-
-
-
-
-
-
-
-
       <img src="/shop/Public/images/msn.gif" alt="MSN" border="0" height="17" width="18"> <a href="msnim:chat?contact=ecmoban@msn.com">ecmoban@msn.com</a>
-
-
-
-
       <br>
     </div>
-    <div class="record"> © 2005-2016 童老师thinkphp交流群：484519446 版权所有，并保留所有权利。  &nbsp; <a href="#" target="_blank">电信与信息服务业务经营许可证100798号</a>&nbsp; <a href="#" target="_blank">企业法人营业执照</a>&nbsp; 京ICP备11031139号&nbsp; 京公网安备110108006045&nbsp;<br>
-      客服邮箱：kf@mobantang.com&nbsp;&nbsp;客服电话：4000-021-758&nbsp; 文明办网文明上网举报电话：010-0000000 &nbsp; <a href="#" target="_blank">违法不良信息举报中心</a> </div>
+    <div class="record"> © 2018 Ding  &nbsp; <a href="#" target="_blank">暂无内容</a>&nbsp; <a href="#" target="_blank">企业法人营业执照</a>&nbsp; 京ICP备11031139号&nbsp; 京公网安备110108006045&nbsp;<br>
+      客服邮箱：暂无&nbsp;&nbsp;客服电话：18525703670&nbsp; 文明办网文明上网举报电话：010-0000000 &nbsp; <a href="#" target="_blank">违法不良信息举报中心</a> </div>
   </div>
   <div class="blank10"></div>
-
+  <div align="center"><a href="http://www.ecmoban.com/" target="_blank"><img src="/shop/Public/images/ecmoban.gif" alt="ECShop模板"></a></div>
 </div>
+
 <div class="blank"></div>
 
 <link href="/shop/Public/style/qq.css" rel="stylesheet" type="text/css">

@@ -39,16 +39,12 @@
     <div id="bottomNav" class="rolling">
     <h4 class="f_links">底部导航：</h4>
       <ul id="link_slide">
-      <li>
-            <a href="/mbmeilishuo/article.php?id=1">免责条款</a>
-            <a href="/mbmeilishuo/article.php?id=2">隐私保护</a>
-            <a href="/mbmeilishuo/article.php?id=3">咨询热点</a>
-            <a href="/mbmeilishuo/article.php?id=4">联系我们</a>
-            <a href="/mbmeilishuo/article.php?id=5">公司简介</a>
-            <a href="/mbmeilishuo/wholesale.php">批发方案</a>
-            <a href="/mbmeilishuo/myship.php">配送方式</a>
-          </li>
-          </ul>
+       <li>
+        <volist name="bottomnav" id="nav">
+        <a href="{$nav.nav_url}" <if condition="$nav['nav_blank'] eq 1">target="_blank"</if>>{$nav.nav_name}</a>
+        </volist>
+       </li>
+      </ul>
     </div>
     <div class="text" style="height:1px ; width:1px; overflow:hidden;">
       Tel: 123456
