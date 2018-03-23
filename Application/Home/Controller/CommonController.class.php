@@ -2,10 +2,12 @@
 namespace Home\Controller;
 use Think\Controller;
 class CommonController extends Controller {
+    public $config;
     public function _initialize(){
        //底部帮助信息
         $this->gethelp();
         $this->getnav();
+        $this->getconfig();
     }
 
     public function gethelp(){
@@ -27,6 +29,15 @@ class CommonController extends Controller {
             'midnav'=>$navres['2'],
             'bottomnav'=>$navres['3'],
             ));
+    }
+
+    public function getconfig(){
+        $_configres=D('config')->field('enname,value')->select();
+        foreach ($_configres as $k => $v) {
+            $configres[$v['enname']]=$v['value'];
+        }
+        $this->config=$configres;
+        $this->assign('configres',$configres);
     }
 
 }

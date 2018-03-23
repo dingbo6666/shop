@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>lst</title>
+    <title>config</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
 </head>
 <body>
 	<!-- 头部 -->
-<div class="navbar">
+	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
             <!-- Navbar Barnd -->
@@ -89,7 +89,7 @@
 
 	<div class="main-container container-fluid">
 		<div class="page-container">
-			      <!-- Page Sidebar -->
+			            <!-- Page Sidebar -->
             <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
     <div class="sidebar-header-wrapper">
@@ -274,70 +274,99 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li>
-                        <a href="#">系统</a>
-                    </li>
-                                        <li class="active">广告管理</li>
-                                        </ul>
+                      <li>
+                        <a href="/shop/index.php/Admin/Index/index">系统</a>
+                      </li>
+                      <li>
+                        <a href="/shop/index.php/Admin/Config/lst">配置列表</a>
+                      </li>
+                        <li class="active">站点配置</li>
+                    </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
 
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '/shop/index.php/Admin/Ad/add'">
-	<i class="fa fa-plus"></i> Add
-</button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">站点配置</span>
+            </div>
             <div class="widget-body">
-                <div class="flip-scroll">
-                    <table class="table table-bordered table-hover">
-                        <thead class="">
-                            <tr>
-                                <th class="text-center" width="10%">ID</th>
-                                <th class="text-center">广告名称</th>
-																<th class="text-center">所属广告位</th>
-																<th class="text-center">是否启用</th>
-																<th class="text-center">广告类型</th>
-                                <th class="text-center" width="15%">操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-													<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-																<td align="center"><?php echo ($vo["id"]); ?></td>
-																<td align="center"><?php echo ($vo["adname"]); ?></td>
-																<td align="center"><?php echo ($vo["pname"]); ?></td>
-																<td align="center">
-																<?php if($vo['ison'] == 1): ?>启用
-																<?php else: ?>
-																关闭<?php endif; ?>
-																</td>
-																<td align="center">
-																<?php if($vo['type'] == 1): ?>图片
-																<?php else: ?>
-																动画<?php endif; ?>
-																</td>
-																<td align="center">
-																		<a href="/shop/index.php/Admin/Ad/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
-																				<i class="fa fa-edit"></i> 编辑
-																		</a>
-																		<a href="#" onClick="warning('确实要删除吗', '/shop/index.php/Admin/Ad/del/id/<?php echo ($vo["id"]); ?>')" class="btn btn-danger btn-sm shiny">
-																				<i class="fa fa-trash-o"></i> 删除
-																		</a>
-																</td>
-														</tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </tbody>
-                    </table>
-										<div style="height:40px;">
-                    <ul class="pagination" style="float:right; margin:10px 0 0 0; ">
-                    <?php echo ($page); ?>
-                    </ul>
-                    </div>
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data" >
+                        <?php foreach ($configres as $k => $v):?>
+                            <?php if($v['type']==1):?>
+                                <div class="form-group">
+                                    <label for="username" class="col-sm-2 control-label no-padding-right"><?php echo $v['cnname'];?></label>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" placeholder="" value="<?php echo $v['value'];?>" name="<?php echo $v['enname'];?>" required="" type="text">
+                                    </div>
+                                </div>
+                            <?php endif;?>
+                            <?php if($v['type']==2):?>
+                                <div class="form-group">
+                                    <label for="username" class="col-sm-2 control-label no-padding-right"><?php echo $v['cnname'];?></label>
+                                    <div class="col-sm-6">
+                                        <textarea class="form-control" name="<?php echo $v['enname'];?>"><?php echo $v['value'];?></textarea>
+                                    </div>
+                                    <p class="help-block col-sm-4 red">* 必填</p>
+                                </div>
+                            <?php endif;?>
+                            <?php if($v['type']==3):?>
+                                <div class="form-group">
+                                    <label for="username" class="col-sm-2 control-label no-padding-right"><?php echo $v['cnname'];?></label>
+                                    <div class="col-sm-6">
+                                        <?php $v_arr=explode(',', $v['values']); foreach ($v_arr as $k1=> $v1): ?>
+                                            <div class="radio" style="float:left; margin-right:10px;">
+                                                    <label>
+                                                        <input <?php if($v1==$v['value']){echo 'checked="checked"';}?> name="<?php echo $v['enname'];?>" value="<?php echo $v1;?>" class="inverted" type="radio">
+                                                        <span class="text"><?php echo $v1;?></span>
+                                                    </label>
+                                            </div>
+                                        <?php endforeach;?>
+                                    </div>
+                                    <p class="help-block col-sm-4 red">* 必填</p>
+                                </div>
+                            <?php endif;?>
+                            <?php if($v['type']==4):?>
+                                <div class="form-group">
+                                    <label for="username" class="col-sm-2 control-label no-padding-right"><?php echo $v['cnname'];?></label>
+                                    <div class="col-sm-6">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input <?php if($v['values']==$v['value']){echo 'checked="checked"';}?> value="<?php echo $v['values'];?>" name="<?php echo $v['enname'];?>" class="colored-success"  type="checkbox">
+                                                <span class="text"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <p class="help-block col-sm-4 red">* 必填</p>
+                                </div>
+                            <?php endif;?>
+                            <?php if($v['type']==5):?>
+                                <div class="form-group">
+                                    <label for="username" class="col-sm-2 control-label no-padding-right"><?php echo $v['cnname'];?></label>
+                                    <div class="col-sm-6">
+                                        <select name="<?php echo $v['enname'];?>">
+                                            <option value="">请选择</option>
+                                            <?php $v_arr=explode(',', $v['values']); foreach ($v_arr as $k1=> $v1): ?>
+                                            <option <?php if($v1 == $v['value']){echo 'selected="selected"';}?> value="<?php echo $v1;?>"><?php echo $v1;?></option>
+                                            <?php endforeach;?>
+                                        </select>
+                                    </div>
+                                    <p class="help-block col-sm-4 red">* 必填</p>
+                                </div>
+                            <?php endif;?>
+                        <?php endforeach;?>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div>
-                	                </div>
             </div>
         </div>
     </div>

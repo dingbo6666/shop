@@ -3,26 +3,19 @@
           //初始化主菜单
             function sw_nav(obj,tag)
             {
-
             var DisSub = document.getElementById("DisSub_"+obj);
             var HandleLI= document.getElementById("HandleLI_"+obj);
                 if(tag==1)
                 {
                     DisSub.style.display = "block";
-
-
                 }
                 else
                 {
                     DisSub.style.display = "none";
-
                 }
-
             }
-
     </script>
     <div class="block">
-
         <ul class="top_bav_l">
         <li class="top_sc">
            <a href="javascript:void(0);" onclick="AddFavorite('我的网站',location.href)">收藏本站</a>
@@ -74,6 +67,15 @@
       <div class="clear_f"></div>
       <ul class="searchType none_f">
       </ul>
+			<div style="padding:10px 0;">
+      <span>热门搜索：</span>
+      <?php
+      $keywordsarr=explode(',', $configres['searchkeywords']);
+      foreach ($keywordsarr as $k => $v):
+      ?>
+      <a href="htt://127.0.0.1/shop/index.php/index/search/index/keywords/<?php echo $v;?>"><?php echo $v;?></a>
+      <?php endforeach;?>
+      </div>
     </div>
     <ul class="cart_info">
       <li id="ECS_CARTINFO"><span class="carts_num none_f"><a href="mbmeilishuo/flow.php" title="查看购物车">0</a></span> <em class="i_cart">&nbsp;</em><a href="mbmeilishuo/flow.php">查看购物车</a></li>

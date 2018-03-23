@@ -250,7 +250,7 @@
             </a>
               <ul class="submenu">
                   <li>
-                    <a href="/admin/user/index.html">
+                    <a href="/shop/index.php/Admin/Config/config">
                       <span class="menu-text">站点配置</span>
                       <i class="menu-expand"></i>
                     </a>

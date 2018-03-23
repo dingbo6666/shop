@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>lst</title>
+    <title>add</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -275,9 +275,12 @@
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
                                         <li>
-                        <a href="#">系统</a>
+                        <a href="/shop/index.php/Admin/Index/index">系统</a>
                     </li>
-                                        <li class="active">广告管理</li>
+                                        <li>
+                        <a href="/shop/index.php/Admin/Config/lst">配置列表</a>
+                    </li>
+                                        <li class="active">修改配置</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -285,59 +288,58 @@
                 <!-- Page Body -->
                 <div class="page-body">
 
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '/shop/index.php/Admin/Ad/add'">
-	<i class="fa fa-plus"></i> Add
-</button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">修改配置</span>
+            </div>
             <div class="widget-body">
-                <div class="flip-scroll">
-                    <table class="table table-bordered table-hover">
-                        <thead class="">
-                            <tr>
-                                <th class="text-center" width="10%">ID</th>
-                                <th class="text-center">广告名称</th>
-																<th class="text-center">所属广告位</th>
-																<th class="text-center">是否启用</th>
-																<th class="text-center">广告类型</th>
-                                <th class="text-center" width="15%">操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-													<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-																<td align="center"><?php echo ($vo["id"]); ?></td>
-																<td align="center"><?php echo ($vo["adname"]); ?></td>
-																<td align="center"><?php echo ($vo["pname"]); ?></td>
-																<td align="center">
-																<?php if($vo['ison'] == 1): ?>启用
-																<?php else: ?>
-																关闭<?php endif; ?>
-																</td>
-																<td align="center">
-																<?php if($vo['type'] == 1): ?>图片
-																<?php else: ?>
-																动画<?php endif; ?>
-																</td>
-																<td align="center">
-																		<a href="/shop/index.php/Admin/Ad/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
-																				<i class="fa fa-edit"></i> 编辑
-																		</a>
-																		<a href="#" onClick="warning('确实要删除吗', '/shop/index.php/Admin/Ad/del/id/<?php echo ($vo["id"]); ?>')" class="btn btn-danger btn-sm shiny">
-																				<i class="fa fa-trash-o"></i> 删除
-																		</a>
-																</td>
-														</tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </tbody>
-                    </table>
-										<div style="height:40px;">
-                    <ul class="pagination" style="float:right; margin:10px 0 0 0; ">
-                    <?php echo ($page); ?>
-                    </ul>
-                    </div>
+                <div id="horizontal-form">
+									<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data" >
+											<input type="hidden" name="id" value="<?php echo ($configs["id"]); ?>">
+											<div class="form-group">
+													<label for="username" class="col-sm-2 control-label no-padding-right">中文名称</label>
+													<div class="col-sm-6">
+															<input class="form-control" placeholder="" value="<?php echo ($configs["cnname"]); ?>" name="cnname" required="" type="text">
+													</div>
+													<p class="help-block col-sm-4 red">* 必填</p>
+											</div>
+											<div class="form-group">
+													<label for="username" class="col-sm-2 control-label no-padding-right">英文名称</label>
+													<div class="col-sm-6">
+															<input class="form-control" placeholder="" value="<?php echo ($configs["enname"]); ?>" name="enname" required="" type="text">
+													</div>
+													<p class="help-block col-sm-4 red">* 必填</p>
+											</div>
+											<div class="form-group">
+													<label for="username" class="col-sm-2 control-label no-padding-right">配置类型</label>
+													<div class="col-sm-6">
+															<select disabled="disabled" name="type">
+																	<option value="">请选择</option>
+																	<option <?php if($configs['type'] == 1): ?>selected='selected'<?php endif; ?> value="1">文本框</option>
+																	<option <?php if($configs['type'] == 2): ?>selected='selected'<?php endif; ?> value="2">文本域</option>
+																	<option <?php if($configs['type'] == 3): ?>selected='selected'<?php endif; ?> value="3">单选框</option>
+																	<option <?php if($configs['type'] == 4): ?>selected='selected'<?php endif; ?> value="4">复选框</option>
+																	<option <?php if($configs['type'] == 5): ?>selected='selected'<?php endif; ?> value="5">下拉框</option>
+															</select>
+													</div>
+													<p class="help-block col-sm-4 red">* 必填</p>
+											</div>
+											<div class="form-group">
+													<label for="username" class="col-sm-2 control-label no-padding-right">可选值</label>
+													<div class="col-sm-6">
+															<textarea name="values" class="form-control"><?php echo ($configs["values"]); ?></textarea>
+													</div>
+													<p class="help-block col-sm-4 red">* 必填</p>
+											</div>
+											<div class="form-group">
+													<div class="col-sm-offset-2 col-sm-10">
+															<button type="submit" class="btn btn-default">保存信息</button>
+													</div>
+											</div>
+									</form>
                 </div>
-                <div>
-                	                </div>
             </div>
         </div>
     </div>

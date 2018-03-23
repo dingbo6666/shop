@@ -250,7 +250,7 @@
             </a>
               <ul class="submenu">
                   <li>
-                    <a href="/admin/user/index.html">
+                    <a href="/shop/index.php/Admin/Config/config">
                       <span class="menu-text">站点配置</span>
                       <i class="menu-expand"></i>
                     </a>
@@ -316,7 +316,6 @@
 																	<?php if($vo['type'] == 5): ?>下拉框<?php endif; ?>
 																	</if>
 															</td>
-																<td align="center"><a target="_brank" href="<?php echo ($vo["brand_url"]); ?>"><?php echo ($vo["brand_url"]); ?></a></td>
                                 <td align="center">
                                     <a href="/shop/index.php/Admin/Config/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 编辑
