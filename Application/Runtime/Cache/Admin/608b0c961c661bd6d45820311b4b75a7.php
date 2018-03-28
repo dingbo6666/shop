@@ -156,6 +156,63 @@
       <li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-gear"></i>
+                <span class="menu-text">导航设置</span>
+                <i class="menu-expand"></i>
+            </a>
+              <ul class="submenu">
+                  <li>
+                    <a href="/shop/index.php/Admin/Nav/lst">
+                      <span class="menu-text">导航管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+            </ul>
+      </li>
+      <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gear"></i>
+                <span class="menu-text">文章模块</span>
+                <i class="menu-expand"></i>
+            </a>
+              <ul class="submenu">
+                  <li>
+                    <a href="/shop/index.php/Admin/Category/lst">
+                      <span class="menu-text">栏目管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Article/lst">
+                      <span class="menu-text">文章管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+            </ul>
+      </li>
+      <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gear"></i>
+                <span class="menu-text">广告模块</span>
+                <i class="menu-expand"></i>
+            </a>
+              <ul class="submenu">
+                  <li>
+                    <a href="/shop/index.php/Admin/Adpos/lst">
+                      <span class="menu-text">广告位管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Ad/lst">
+                      <span class="menu-text">广告管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+            </ul>
+      </li>
+      <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gear"></i>
                 <span class="menu-text">会员模块</span>
                 <i class="menu-expand"></i>
             </a>
@@ -169,6 +226,21 @@
                   <li>
                     <a href="/shop/index.php/Admin/MemberLevel/lst">
                       <span class="menu-text">会员等级</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+            </ul>
+      </li>
+      <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gear"></i>
+                <span class="menu-text">推荐位管理</span>
+                <i class="menu-expand"></i>
+            </a>
+              <ul class="submenu">
+                  <li>
+                    <a href="/shop/index.php/Admin/Recpos/lst">
+                      <span class="menu-text">推荐位列表</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>
@@ -197,8 +269,14 @@
             </a>
               <ul class="submenu">
                   <li>
-                    <a href="/admin/user/index.html">
+                    <a href="/shop/index.php/Admin/Config/config">
                       <span class="menu-text">站点配置</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Config/lst">
+                      <span class="menu-text">配置列表</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>
@@ -348,9 +426,11 @@
 																		 <div class="col-sm-6">
 																				 <div class="checkbox">
 																							<?php if(is_array($recposres)): $i = 0; $__LIST__ = $recposres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$recpos): $mod = ($i % 2 );++$i;?><label style="margin-right:15px;">
-																											<input type="checkbox" name="recid[]" value="<?php echo ($recpos["id"]); ?>"  class="colored-success">
-																											<span class="text"><?php echo ($recpos["recname"]); ?></span>
-																									</label><?php endforeach; endif; else: echo "" ;endif; ?>
+																										<input
+																										<?php if(in_array($recpos['id'],$recids)){echo'checked="checked"';}?>
+																										type="checkbox" name="recid[]" value="<?php echo ($recpos["id"]); ?>"  class="colored-success">
+																										<span class="text"><?php echo ($recpos["recname"]); ?></span>
+																								</label><?php endforeach; endif; else: echo "" ;endif; ?>
 																					</div>
 																			</div>
 																	</div>
@@ -365,7 +445,9 @@
 																	<?php if(is_array($levres)): $i = 0; $__LIST__ = $levres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="form-group">
 																					<label class="col-sm-2 control-label no-padding-right" for="username"><?php echo ($vo["level_name"]); ?></label>
 																					<div class="col-sm-6">
-																							<input type="text" name="mp[<?php echo ($vo["id"]); ?>]" class="form-control">
+																							<input type="text"
+																									<?php if(is_array($mpres)): foreach($mpres as $key=>$vo1): if($vo1['level_id'] == $vo['id']): ?>value="<?php echo ($vo1["price"]); ?>"<?php endif; endforeach; endif; ?>
+																							 name="mp[<?php echo ($vo["id"]); ?>]" class="form-control">
 																					</div>
 																			</div><?php endforeach; endif; else: echo "" ;endif; ?>
 															</div>
@@ -374,17 +456,67 @@
 																	<div class="form-group">
 																					<label class="col-sm-2 control-label no-padding-right" for="username">选择商品类型</label>
 																					<div class="col-sm-6">
-																						 <select name="type_id">
+																						 <select <?php if($goods['type_id'] != 0): ?>disabled="disabled"<?php endif; ?> name="type_id">
 																								 <option>选择商品类型</option>
-																								 <?php if(is_array($typeres)): $i = 0; $__LIST__ = $typeres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["type_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+																								 <?php if(is_array($typeres)): $i = 0; $__LIST__ = $typeres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option <?php if($goods['type_id'] == $vo['id']): ?>selected="selected"<?php endif; ?> value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["type_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 																						 </select>
 																					</div>
 																	</div>
-																	<div id="attr"></div>
+																	<div id="attr">
+																			<?php if($attrres): foreach ($attrres as $k=>$v): ?>
+																			<?php if($v['attr_type'] == '1'): $_attr=explode(',', $v['attr_values']); foreach ($gattrres[$v['id']] as $k2 => $v2): ?>
+																					<div class='form-group' gaid=<?php echo $v2['id'];?>><label class='col-sm-2 control-label no-padding-right'><a href='javascript:;' onclick='attrad(this);'><?php if($k2==0){echo '[+]';}else{echo '[-]';}?></a><?php echo $v['attr_name'];?></label>
+																					<div class='col-sm-6'>
+																							<select name="old_goods_attr[<?php echo $v['id'];?>][]">
+																									<option value="">请选择</option>
+																									<?php foreach ($_attr as $k1 => $v1): if($v2['attr_value'] == $v1){ $selected='selected="selected"'; }else{ $selected=''; } ?>
+																											<option value="<?php echo $v1;?>" <?php echo $selected;?>><?php echo $v1;?></option>
+																									<?php endforeach;?>
+																							</select>
+																							<span>￥<input type='text' name='old_goods_price[<?php echo $v2['id'];?>]' value="<?php echo $v2['attr_price'];?>" style='padding:6px 12px; width:70px;' value='0' /> 元</span>
+																					</div>
+																					</div>
+																			<?php endforeach;?>
+																			<?php else: ?>
+																					<?php if($v['attr_values']): $_attr=explode(',', $v['attr_values']); ?>
+																							<div class='form-group'><label class='col-sm-2 control-label no-padding-right'><?php echo $v['attr_name'];?></label>
+																					<div class='col-sm-6'>
+																							<select name="old_goods_attr[<?php echo $v['id'];?>]">
+																									<option value="">请选择</option>
+																									<?php foreach ($_attr as $k1 => $v1): if($gattrres[$v['id']][0]['attr_value']==$v1){ $selected='selected="selected"'; }else{ $selected=''; } ?>
+																											<option value="<?php echo $v1;?>" <?php echo $selected;?>><?php echo $v1;?></option>
+																									<?php endforeach;?>
+																							</select>
+																							<input type='hidden' name='old_goods_price[<?php echo $gattrres[$v['id']][0]['id'];?>]' value='0' />
+																					</div>
+																					</div>
+																					<?php else: ?>
+																							<div class='form-group'><label class='col-sm-2 control-label no-padding-right'><?php echo $v['attr_name'];?></label>
+																					<div class='col-sm-6'>
+																							<input name="old_goods_attr[<?php echo $v['id'];?>]" value="<?php echo $gattrres[$v['id']][0]['attr_value'];?>" type='text' class='form-control' />
+																							<input type='hidden' name='old_goods_price[<?php echo $gattrres[$v['id']][0]['id'];?>]' value='0' />
+																					</div>
+																					</div>
+																					<?php endif;?>
+																			<?php endif;?>
+																			<?php endforeach; endif;?>
+																	</div>
 															</div>
 
 															<div class="tab-pane" id="profile14">
-																	<div class="form-group">
+																			<div class="form-group">
+																					<label class="col-sm-2 control-label no-padding-right" for="username">
+																					</label>
+																					<div class="col-sm-6">
+																							<ul style="padding:0;">
+																									<?php if(is_array($picres)): $i = 0; $__LIST__ = $picres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li picid="<?php echo ($vo["id"]); ?>" style="list-style:none; float:left;  margin:0 8px;">
+																											<img height="50" src="/shop<?php echo ($vo["sm_thumb"]); ?>"><br />
+																											<a href="#" onclick="delpic(this);"><i class="fa fa-times sky circular"></i>删除</a>
+																											</li><?php endforeach; endif; else: echo "" ;endif; ?>
+																							</ul>
+																					</div>
+																			</div>
+																			<div class="form-group">
 																					<label class="col-sm-2 control-label no-padding-right" for="username">
 																							<a id="addImg" href="javascript:;">[+]</a>
 																					</label>
@@ -432,13 +564,40 @@
 				var div=$(o).parent().parent();
 				if($(o).html() == '[+]'){
 						var newdiv=div.clone();
+						var sel=newdiv.find("select");
+						var oldname=sel.attr('name');
+						var newname=oldname.replace('old_','');
+						sel.attr('name',newname);
+						newdiv.find(":text").attr('name','goods_price[]');
 						newdiv.find('a').html('[-]');
 						div.after(newdiv);
 				}else{
-						div.remove();
+					if(confirm('确定要删除该商品属性吗？')){
+							var gaid=div.attr('gaid');
+							$.ajax({
+							type:"GET",
+							url:"/shop/index.php/Admin/Goods/ajaxdelga/gaid/"+gaid,
+							success:function(data){
+									div.remove();
+							}
+					});
+					}
 				}
 		}
-
+		//处理删除商品图片
+		function delpic(o){
+				if(confirm('确定要删除该图片吗？')){
+						var li=$(o).parent();
+						var picid=li.attr('picid');
+						$.ajax({
+								type:"GET",
+								url:"/shop/index.php/Admin/Goods/ajaxdelpic/picid/"+picid,
+								success:function(data){
+										li.remove();
+								}
+						});
+				}
+		}
 		$("select[name=type_id]").change(function(){
         var typeid=$(this).val();
         $.ajax({

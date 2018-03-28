@@ -42,4 +42,33 @@ class CateModel extends Model {
         return array_unique($ret);
     }
 
+    public function _after_insert($data,$option){
+        //处理商品推荐位
+        $recid=I('recid');
+        if($recid){
+            foreach ($recid as $k => $v) {
+                D('recvalue')->add(array(
+                    'valueid'=>$data['id'],
+                    'recid'=>$v,
+                    'rectype'=>2,
+                    ));
+            }
+        }
+    }
+
+    public function _before_update(&$data,$option){
+        //处理商品推荐位
+        D('recvalue')->where(array('valueid'=>$option['where']['id'],'rectype'=>2))->delete();
+        $recid=I('recid');
+        if($recid){
+            foreach ($recid as $k => $v) {
+                D('recvalue')->add(array(
+                    'valueid'=>$option['where']['id'],
+                    'recid'=>$v,
+                    'rectype'=>2,
+                    ));
+            }
+        }
+    }
+
 }

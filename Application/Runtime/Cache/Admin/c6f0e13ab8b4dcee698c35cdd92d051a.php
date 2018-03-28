@@ -152,6 +152,21 @@
       <li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-gear"></i>
+                <span class="menu-text">导航设置</span>
+                <i class="menu-expand"></i>
+            </a>
+              <ul class="submenu">
+                  <li>
+                    <a href="/shop/index.php/Admin/Nav/lst">
+                      <span class="menu-text">导航管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+            </ul>
+      </li>
+      <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gear"></i>
                 <span class="menu-text">文章模块</span>
                 <i class="menu-expand"></i>
             </a>
@@ -235,8 +250,14 @@
             </a>
               <ul class="submenu">
                   <li>
-                    <a href="/admin/user/index.html">
+                    <a href="/shop/index.php/Admin/Config/config">
                       <span class="menu-text">站点配置</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Config/lst">
+                      <span class="menu-text">配置列表</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>
@@ -276,6 +297,8 @@
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+											<input type="hidden" name="id" value="<?php echo ($ads["id"]); ?>">
+											<input type="hidden" name="oldpicurl" value="<?php echo ($ads["picurl"]); ?>">
                         <div class="form-group">
                             <label for="username" class="col-sm-2 control-label no-padding-right">所属广告位</label>
 														<div class="col-sm-6">
@@ -305,12 +328,12 @@
                             <label for="username" class="col-sm-2 control-label no-padding-right">广告类型</label>
                             <div class="col-sm-6">
 															<?php if($ads['type'] == 1): ?><label>
-                                    <input name="type" value="1" onclick='$("#pic").show(); $(".img").hide();' checked="checked" class="inverted" type="radio">
+                                    <input name="type" value="1" checked="checked" class="inverted" type="radio">
                                     <span class="text">图片</span>
                                 </label>
 																<?php else: ?>
                                 <label>
-                                    <input name="type" value="2" onclick='$("#pic").hide(); $(".img").show();' checked="checked" class="inverted" type="radio">
+                                    <input name="type" value="2" checked="checked" class="inverted" type="radio">
                                     <span class="text">轮播</span>
                                 </label><?php endif; ?>
                             </div>
@@ -375,9 +398,22 @@
         if($(o).html() == '[+]'){
             var newdiv=div.clone();
             newdiv.find('a').html('[-]');
+            newdiv.find('input').attr("value","");
+            newdiv.find('input').eq(0).attr("name","imgurl[]");
+            newdiv.find('input').eq(1).attr("name","links[]");
+            newdiv.find('img').remove();
             div.after(newdiv);
         }else{
-            div.remove();
+            if(confirm('确定要删除该广告图片吗？')){
+                var id=div.attr('id');
+                $.ajax({
+                type:"GET",
+                url:"/shop/index.php/Admin/Ad/ajaxdeladpic/id/"+id,
+                success:function(data){
+                    div.remove();
+                }
+            });
+            }
         }
     }
     </script>

@@ -230,6 +230,21 @@
       <li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-gear"></i>
+                <span class="menu-text">推荐位管理</span>
+                <i class="menu-expand"></i>
+            </a>
+              <ul class="submenu">
+                  <li>
+                    <a href="/shop/index.php/Admin/Recpos/lst">
+                      <span class="menu-text">推荐位列表</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+            </ul>
+      </li>
+      <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gear"></i>
                 <span class="menu-text">订单管理</span>
                 <i class="menu-expand"></i>
             </a>
@@ -274,18 +289,18 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                    <li>
+                                        <li>
                         <a href="#">系统</a>
                     </li>
-                    <li class="active">文章管理</li>
-                    </ul>
+                                        <li class="active">推荐位管理</li>
+                                        </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
 
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '/shop/index.php/Admin/Article/add'">
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '/shop/index.php/Admin/Recpos/add'">
 	<i class="fa fa-plus"></i> Add
 </button>
 <div class="row">
@@ -297,21 +312,25 @@
                         <thead class="">
                             <tr>
                                 <th class="text-center" width="10%">ID</th>
-                                <th class="text-center">文章标题</th>
-																<th class="text-center">所属栏目</th>
+																<th align="center">推荐位名称</th>
+                                <th align="center">推荐位类型</th>
                                 <th class="text-center" width="15%">操作</th>
                             </tr>
                         </thead>
                         <tbody>
 													<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                                 <td align="center"><?php echo ($vo["id"]); ?></td>
-                                <td align="center"><?php echo ($vo["title"]); ?></td>
-																<td align="center"><?php echo ($vo["catename"]); ?></td>
+																<td align="center"><?php echo ($vo["recname"]); ?></td>
+																<td align="center">
+																		<?php if($vo['rectype'] == 1): ?>商品推荐位
+																		<?php else: ?>
+																		分类推荐位<?php endif; ?>
+																</td>
                                 <td align="center">
-                                    <a href="/shop/index.php/Admin/Article/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
+                                    <a href="/shop/index.php/Admin/Recpos/edit/id/<?php echo ($vo["id"]); ?>" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 编辑
                                     </a>
-                                    <a href="#" onClick="warning('确实要删除吗', '/shop/index.php/Admin/Article/del/id/<?php echo ($vo["id"]); ?>')" class="btn btn-danger btn-sm shiny">
+                                    <a href="#" onClick="warning('确实要删除吗', '/shop/index.php/Admin/Recpos/del/id/<?php echo ($vo["id"]); ?>')" class="btn btn-danger btn-sm shiny">
                                         <i class="fa fa-trash-o"></i> 删除
                                     </a>
                                 </td>

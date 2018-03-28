@@ -173,7 +173,18 @@ class GoodsModel extends Model {
                 }
             }
         }
-        
+        //处理商品推荐位
+        D('recvalue')->where(array('valueid'=>$option['where']['id'],'rectype'=>1))->delete();
+        $recid=I('recid');
+        if($recid){
+            foreach ($recid as $k => $v) {
+                D('recvalue')->add(array(
+                    'valueid'=>$option['where']['id'],
+                    'recid'=>$v,
+                    'rectype'=>1,
+                    ));
+            }
+        }
     }
 
     public function _before_delete($option){
@@ -266,7 +277,17 @@ class GoodsModel extends Model {
               }
           }
       }
-
+        //处理商品推荐位
+        $recid=I('recid');
+        if($recid){
+            foreach ($recid as $k => $v) {
+                D('recvalue')->add(array(
+                    'valueid'=>$data['id'],
+                    'recid'=>$v,
+                    'rectype'=>1,
+                    ));
+            }
+        }
     }
 
     public function hasimg($files){

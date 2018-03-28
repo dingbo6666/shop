@@ -119,13 +119,31 @@
       <li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-gear"></i>
-                <span class="menu-text">商品管理</span>
+                <span class="menu-text">商品模块</span>
                 <i class="menu-expand"></i>
             </a>
               <ul class="submenu">
                   <li>
                     <a href="/shop/index.php/Admin/Cate/lst">
-                      <span class="menu-text">商品分类</span>
+                      <span class="menu-text">分类管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Brand/lst">
+                      <span class="menu-text">品牌管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Goods/lst">
+                      <span class="menu-text">商品管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Type/lst">
+                      <span class="menu-text">商品类型</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>
@@ -134,13 +152,91 @@
       <li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-gear"></i>
-                <span class="menu-text">文章管理</span>
+                <span class="menu-text">导航设置</span>
+                <i class="menu-expand"></i>
+            </a>
+              <ul class="submenu">
+                  <li>
+                    <a href="/shop/index.php/Admin/Nav/lst">
+                      <span class="menu-text">导航管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+            </ul>
+      </li>
+      <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gear"></i>
+                <span class="menu-text">文章模块</span>
+                <i class="menu-expand"></i>
+            </a>
+              <ul class="submenu">
+                  <li>
+                    <a href="/shop/index.php/Admin/Category/lst">
+                      <span class="menu-text">栏目管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Article/lst">
+                      <span class="menu-text">文章管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+            </ul>
+      </li>
+      <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gear"></i>
+                <span class="menu-text">广告模块</span>
+                <i class="menu-expand"></i>
+            </a>
+              <ul class="submenu">
+                  <li>
+                    <a href="/shop/index.php/Admin/Adpos/lst">
+                      <span class="menu-text">广告位管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Ad/lst">
+                      <span class="menu-text">广告管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+            </ul>
+      </li>
+      <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gear"></i>
+                <span class="menu-text">会员模块</span>
                 <i class="menu-expand"></i>
             </a>
               <ul class="submenu">
                   <li>
                     <a href="/admin/user/index.html">
-                      <span class="menu-text">文章列表</span>
+                      <span class="menu-text">会员管理</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/MemberLevel/lst">
+                      <span class="menu-text">会员等级</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+            </ul>
+      </li>
+      <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gear"></i>
+                <span class="menu-text">推荐位管理</span>
+                <i class="menu-expand"></i>
+            </a>
+              <ul class="submenu">
+                  <li>
+                    <a href="/shop/index.php/Admin/Recpos/lst">
+                      <span class="menu-text">推荐位列表</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>
@@ -169,8 +265,14 @@
             </a>
               <ul class="submenu">
                   <li>
-                    <a href="/admin/user/index.html">
+                    <a href="/shop/index.php/Admin/Config/config">
                       <span class="menu-text">站点配置</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Config/lst">
+                      <span class="menu-text">配置列表</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>
@@ -226,6 +328,17 @@
                                 	<option value="0">顶级分类</option>
 																	<?php if(is_array($cateres)): $i = 0; $__LIST__ = $cateres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option <?php if($cates['pid'] == $vo['id']): ?>selected = "selected"<?php endif; ?> value="<?php echo ($vo["id"]); ?>"><?php if($vo['pid'] != 0): ?>|<?php endif; echo str_repeat('——', $vo['level']); echo ($vo["catename"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </select>
+                            </div>
+                        </div>
+												<div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">设置推荐</label>
+                            <div class="col-sm-6">
+                                <div class="checkbox">
+                                    <?php if(is_array($recposres)): $i = 0; $__LIST__ = $recposres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$recpos): $mod = ($i % 2 );++$i;?><label style="margin-right:15px;">
+                                            <input <?php if(in_array($recpos['id'],$recids)){echo'checked="checked"';}?> type="checkbox" name="recid[]" value="<?php echo ($recpos["id"]); ?>"  class="colored-success">
+                                            <span class="text"><?php echo ($recpos["recname"]); ?></span>
+                                        </label><?php endforeach; endif; else: echo "" ;endif; ?>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">

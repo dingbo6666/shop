@@ -24,7 +24,14 @@ class CateController extends CommonController {
           return;
       }
       $cateres=$cate->catetree();
-      $this->assign('cateres',$cateres);//获取栏目树
+      $recposres=D('recpos')->where(array('rectype'=>2))->select();
+      //商品类型
+      $typeRes=D('type')->select();
+      $this->assign(array(
+          'cateres'=>$cateres,
+          'recposres'=>$recposres,
+          'typeRes'=>$typeRes,
+      ));//获取栏目树
       $this->display();
     }
 
@@ -45,8 +52,18 @@ class CateController extends CommonController {
         $id=I('id');
         $cates=$cate->find($id);
         $cateres=$cate->catetree();
-        $this->assign('cateres',$cateres);//获取栏目树
-        $this->assign('cates',$cates);
+        $recposres=D('recpos')->where(array('rectype'=>2))->select();
+        $_recids=D('recvalue')->field('recid')->where(array('valueid'=>$id,'rectype'=>2))->select();
+        $recids=array();
+        foreach ($_recids as $k => $v) {
+            $recids[]=$v['recid'];
+        }
+        $this->assign(array(
+            'cateres'=>$cateres,
+            'cates'=>$cates,
+            'recposres'=>$recposres,
+            'recids'=>$recids,
+        ));
         $this->display();
       }
 
@@ -60,5 +77,20 @@ class CateController extends CommonController {
               $this->error('删除栏目失败！');
           }
       }
+
+    public function _before_update(&$data,$option){
+    //处理商品推荐位
+    D('recvalue')->where(array('valueid'=>$option['where']['id'],'rectype'=>2))->delete();
+    $recid=I('recid');
+    if($recid){
+        foreach ($recid as $k => $v) {
+            D('recvalue')->add(array(
+                'valueid'=>$option['where']['id'],
+                'recid'=>$v,
+                'rectype'=>2,
+                ));
+          }
+      }
+  }
 
 }

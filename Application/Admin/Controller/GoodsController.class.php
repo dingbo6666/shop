@@ -31,11 +31,13 @@ class GoodsController extends CommonController {
         $brandres=D('brand')->select();
         $levres=D('memberLevel')->select();
         $typeres=D('type')->select();
+        $recposres=D('recpos')->where(array('rectype'=>1))->select();
         $this->assign(array(
             'cateres'=>$cateres,
             'brandres'=>$brandres,
             'levres'=>$levres,
             'typeres'=>$typeres,
+            'recposres'=>$recposres,
             ));
         $this->display();
     }
@@ -64,6 +66,12 @@ class GoodsController extends CommonController {
         $typeres=D('type')->select();
         $attrres=D('attr')->where(array('type_id'=>$goods['type_id']))->select();
         $_gattrres=D('GoodsAttr')->where(array('goods_id'=>$id))->select();
+        $recposres=D('recpos')->where(array('rectype'=>1))->select();
+        $_recids=D('recvalue')->field('recid')->where(array('valueid'=>$id,'rectype'=>1))->select();
+        $recids=array();
+        foreach ($_recids as $k => $v) {
+            $recids[]=$v['recid'];
+        }
         $gattrres=array();
         foreach ($_gattrres as $k => $v) {
             $gattrres[$v['attr_id']][]=$v;
@@ -77,6 +85,8 @@ class GoodsController extends CommonController {
             'picres'=>$picres,
             'typeres'=>$typeres,
             'attrres'=>$attrres, //当前类型的所有属性
+            'recposres'=>$recposres,
+            'recids'=>$recids,//当前商品所属推荐位的id组成的数组
             'gattrres'=>$gattrres//当前商品的所有属性
             ));
         $this->display();

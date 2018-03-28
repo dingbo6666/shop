@@ -177,10 +177,12 @@
 																		 <div class="col-sm-6">
 																				 <div class="checkbox">
 																							<volist name="recposres" id="recpos">
-																									<label style="margin-right:15px;">
-																											<input type="checkbox" name="recid[]" value="{$recpos.id}"  class="colored-success">
-																											<span class="text">{$recpos.recname}</span>
-																									</label>
+																								<label style="margin-right:15px;">
+																										<input
+																										<?php if(in_array($recpos['id'],$recids)){echo'checked="checked"';}?>
+																										type="checkbox" name="recid[]" value="{$recpos.id}"  class="colored-success">
+																										<span class="text">{$recpos.recname}</span>
+																								</label>
 																							</volist>
 																					</div>
 																			</div>
