@@ -1,38 +1,37 @@
 <?php
 namespace Admin\Controller;
-use Think\Controller;
 class CateController extends CommonController {
     public function lst(){
-      $cate=D('cate');
-      $cateres=$cate->catetree();
-      $this->assign('cateres',$cateres);//获取栏目树
-      $this->display();
+        $cate=D('cate');
+        $cateres=$cate->catetree();
+        $this->assign('cateres',$cateres);//获取栏目树
+        $this->display();
     }
 
     public function add(){
-      $cate=D('cate');
-      if(IS_POST){
-          if($cate->create()){
-              if($cate->add()){
-                  $this->success('添加栏目成功！',U('lst'));
-              }else{
-                  $this->error('添加栏目失败！');
-              }
-          }else{
-              $this->error($cate->getError());
-          }
-          return;
-      }
-      $cateres=$cate->catetree();
-      $recposres=D('recpos')->where(array('rectype'=>2))->select();
-      //商品类型
-      $typeRes=D('type')->select();
-      $this->assign(array(
-          'cateres'=>$cateres,
-          'recposres'=>$recposres,
-          'typeRes'=>$typeRes,
-      ));//获取栏目树
-      $this->display();
+        $cate=D('cate');
+        if(IS_POST){
+            if($cate->create()){
+                if($cate->add()){
+                    $this->success('添加栏目成功！',U('lst'));
+                }else{
+                    $this->error('添加栏目失败！');
+                }
+            }else{
+                $this->error($cate->getError());
+            }
+            return;
+        }
+        $cateres=$cate->catetree();
+        $recposres=D('recpos')->where(array('rectype'=>2))->select();
+        //商品类型
+        $typeRes=D('type')->select();
+        $this->assign(array(
+            'cateres'=>$cateres,
+            'recposres'=>$recposres,
+            'typeRes'=>$typeRes,
+        ));//获取栏目树
+        $this->display();
     }
 
     public function edit(){
@@ -65,32 +64,30 @@ class CateController extends CommonController {
             'recids'=>$recids,
         ));
         $this->display();
-      }
+    }
 
-      public function del($id){
-          $cate=D('cate');
-          $childids=$cate->getchild($id);
-          $childids=implode(',', $childids);
-          if($cate->delete($childids)){
-              $this->success('删除栏目成功！',U('lst'));
-          }else{
-              $this->error('删除栏目失败！');
-          }
-      }
-
-    public function _before_update(&$data,$option){
-    //处理商品推荐位
-    D('recvalue')->where(array('valueid'=>$option['where']['id'],'rectype'=>2))->delete();
-    $recid=I('recid');
-    if($recid){
-        foreach ($recid as $k => $v) {
-            D('recvalue')->add(array(
-                'valueid'=>$option['where']['id'],
-                'recid'=>$v,
-                'rectype'=>2,
-                ));
-          }
-      }
-  }
+    public function del($id){
+        $cate=D('cate');
+        $goods=D('goods');
+        $recvalue=D('recvalue');
+        $childids=$cate->getchild($id);
+        $childids=implode(',', $childids);
+        $goodsres=$goods->where("cate_id IN($childids)")->select();
+        if($goodsres){
+            foreach ($goodsres as $k => $v) {
+                @unlink($v['original']);
+                @unlink($v['sm_thumb']);
+                @unlink($v['mid_thumb']);
+                @unlink($v['max_thumb']);
+                $goods->delete($v['id']);
+                $recvalue->where(array('valueid'=>$v['id'],'rectype'=>1))->delete();
+            }
+        }
+        if($cate->delete($childids)){
+            $this->success('删除栏目成功！',U('lst'));
+        }else{
+            $this->error('删除栏目失败！');
+        }
+    }
 
 }

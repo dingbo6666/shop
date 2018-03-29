@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta name="Generator" content="ECSHOP v2.7.3">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<title>登录</title>
+
+<link rel="shortcut icon" href="mbmeilishuo/favicon.ico">
+<link rel="icon" href="mbmeilishuo/animated_favicon.gif" type="image/gif">
+<link href="__PUBLIC__/style/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<link href="__PUBLIC__/style/qq.htm" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+var process_request = "正在处理您的请求...";
+</script>
+<script type="text/javascript">
+//设为首页 www.chuanke.com/s2260700.html
+function SetHome(obj,url){
+    try{
+        obj.style.behavior='url(#default#homepage)';
+       obj.setHomePage(url);
+   }catch(e){
+       if(window.netscape){
+          try{
+              netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+         }catch(e){
+              alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入“about:config”并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+          }
+       }else{
+        alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将【"+url+"】设置为首页。");
+       }
+  }
+}
+
+function AddFavorite(title, url) {
+  try {
+      window.external.addFavorite(url, title);
+  }
+catch (e) {
+     try {
+       window.sidebar.addPanel(title, url, "");
+    }
+     catch (e) {
+         alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D进行添加");
+     }
+  }
+}
+</script>
+<include file="Common/head" />
+<div class="block block1">
+  <div class="block box">
+<div class="blank"></div>
+ <div id="ur_here">
+当前位置: <a href="mbmeilishuo/">首页</a> <code>&gt;</code> 用户中心
+</div>
+</div>
+<div class="blank"></div>
+
+<div class="usBox clearfix">
+  <div class="usBox_1 f_l">
+    <div class="login_tab">
+    <ul>
+        <li class="active"><a href="mbmeilishuo/user.php">用户登录</a></li>
+        <li><a href="mbmeilishuo/user.php?act=register">用户注册</a></li>
+    </ul>
+    </div>
+   <form name="formLogin" action="" method="post" >
+        <table align="left" border="0" cellpadding="3" cellspacing="5" width="100%">
+          <tbody><tr>
+            <td align="right" width="25%">用户名</td>
+            <td width="65%"><input name="username" size="25" class="inputBg" type="text"></td>
+          </tr>
+          <tr>
+            <td align="right">密码</td>
+            <td>
+            <input name="password" size="15" class="inputBg" type="password">            </td>
+          </tr>
+                    <tr>
+            <td align="right">验证码</td>
+            <td><input size="8" name="captcha" class="inputBg" type="text">
+            <img src="__CONTROLLER__/verify" height="30" alt="captcha" style="vertical-align: middle;cursor: pointer;" onclick="this.src='__CONTROLLER__/verify?'+Math.random()"> </td>
+          </tr>
+                    <tr>
+            <td> </td>
+            <td><input value="1" name="remember" id="remember" type="checkbox"><label for="remember">请保存我这次的登录信息。</label></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="left">
+            <input name="submit" value="" class="us_Submit" type="submit">            </td>
+          </tr>
+	  <tr><td></td><td><a href="mbmeilishuo/user.php?act=qpassword_name" class="f3">密码问题找回密码</a>&nbsp;&nbsp;&nbsp;<a href="mbmeilishuo/user.php?act=get_password" class="f3">注册邮件找回密码</a></td></tr>
+      </tbody></table>
+    </form>
+    <div class="blank"></div>
+  </div>
+
+</div>
+
+</div>
+<div class="blank"></div>
+<include file="Common/footer" />
+
+<div class="blank"></div>
+
+<link href="style/qq.css" rel="stylesheet" type="text/css">
+<div class="QQbox" id="divQQbox" style="width: 170px; top: 124.5px;">
+<div class="Qlist" id="divOnline" onmouseout="hideMsgBox(event);" style="display: none; " onmouseover="OnlineOver();">
+    <div class="t"></div>
+    <div class="infobox">我们营业的时间<br>9:00-18:00</div>
+    <div class="con">
+        <ul>
+                <li><a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=851818184&amp;Site=%E9%BC%8E%E6%96%B0%E6%96%87%E5%8C%96QQ851818184&amp;Menu=yes" target="_blank"><img src="images/pa.gif" alt="QQ" border="0" height="16"> 851818184</a> </li>
+                                                                  <li><img src="images/msn.gif" alt="MSN" border="0" height="17" width="18"> <a href="msnim:chat?contact=ecmoban@msn.com">ecmoban@msn.com</a></li>
+	      <li> 服务热线: 123456</li>
+         </ul>
+    </div>
+    <div class="b"></div>
+</div>
+<div id="divMenu" onmouseover="OnlineOver();" style="display: block; "><img src="images/qq_1.gif" class="press" alt="在线咨询"></div>
+</div>
+
+</body></html>

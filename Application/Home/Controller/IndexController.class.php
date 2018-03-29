@@ -21,4 +21,9 @@ class IndexController extends CommonController {
       		));
         $this->display();
       }
+
+      public function sendmail(){
+          $send=SendMail('18504239629@163.com','测试邮件','欢迎光临美妆电子商城，点击一下链接验证账号。');
+          dump($send);
+      }
 }

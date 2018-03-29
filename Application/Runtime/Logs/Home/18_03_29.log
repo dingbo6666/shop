@@ -1,0 +1,428 @@
+[ 2018-03-29T11:48:05+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T11:48:06+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T11:48:36+08:00 ] 127.0.0.1 /shop/index.php/home/index/phpmail
+ERR: 非法操作:phpmail
+
+[ 2018-03-29T11:53:27+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T11:53:28+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:17:43+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:17:45+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:20:43+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:20:44+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:23:45+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:23:46+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:23:56+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:23:57+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:23:58+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:23:59+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:26:09+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:26:10+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:26:11+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:26:13+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:29:11+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:29:12+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:29:13+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:29:14+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:31:48+08:00 ] 127.0.0.1 /shop/index.php/home/user/mbmeilishuo/article.php?cat_id=-1
+ERR: 非法操作:mbmeilishuo
+
+[ 2018-03-29T12:32:13+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:32:14+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:32:15+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:32:16+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:32:19+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:32:21+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:32:22+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:32:23+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:33:15+08:00 ] 127.0.0.1 /shop/index.php/home/user/mbmeilishuo/user.php?act=qpassword_name
+ERR: 非法操作:mbmeilishuo
+
+[ 2018-03-29T12:33:18+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:33:19+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:33:20+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:33:21+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:33:27+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:33:28+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:33:29+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:33:30+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:45:52+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:45:53+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:45:54+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:45:56+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:46:09+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:46:10+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:46:12+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:46:13+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:52:27+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:52:28+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:52:30+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T12:52:31+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T12:52:58+08:00 ] 127.0.0.1 /shop/index.php/home/user/user.php?act=is_registered&username=2111111&1522299177319319
+ERR: 非法操作:user.php
+
+[ 2018-03-29T12:53:04+08:00 ] 127.0.0.1 /shop/index.php/home/user/user.php?act=is_registered&username=2111111&152229918307878
+ERR: 非法操作:user.php
+
+[ 2018-03-29T12:53:40+08:00 ] 127.0.0.1 /shop/index.php/home/user/user.php?act=is_registered&username=2222222&152229921906969
+ERR: 非法操作:user.php
+
+[ 2018-03-29T13:14:35+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T13:14:36+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:14:39+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:14:40+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T13:15:10+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T13:15:11+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:15:13+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:15:14+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T13:15:44+08:00 ] 127.0.0.1 /shop/index.php/home/user/user.php?act=is_registered&username=11212121&1522300543194194
+ERR: 非法操作:user.php
+
+[ 2018-03-29T13:17:15+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T13:17:16+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:17:17+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:17:19+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T13:18:04+08:00 ] 127.0.0.1 /shop/index.php/home/user/reg
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN points_min AND points_max ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_member_level` WHERE (  BETWEEN points_min AND points_max ) LIMIT 1  
+
+[ 2018-03-29T13:18:11+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:18:12+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T13:18:13+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:18:15+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T13:19:34+08:00 ] 127.0.0.1 /shop/index.php/Home/index/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:19:35+08:00 ] 127.0.0.1 /shop/index.php/Home/index/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:29:27+08:00 ] 127.0.0.1 /shop/index.php/home/user/mbmeilishuo/user.php
+ERR: 非法操作:mbmeilishuo
+
+[ 2018-03-29T13:29:29+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T13:29:30+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:29:31+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:29:33+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T13:29:36+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T13:29:37+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:29:38+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T13:29:40+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T15:26:16+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T15:26:17+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T15:26:18+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T15:26:20+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001358s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0042s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000833s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000864s ]
+
+[ 2018-03-29T15:26:21+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T15:26:43+08:00 ] 127.0.0.1 /shop/index.php/home/user/login
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN points_min AND points_max ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_member_level` WHERE (  BETWEEN points_min AND points_max ) LIMIT 1  
+
+[ 2018-03-29T15:30:22+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T15:30:23+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T15:30:24+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T15:30:26+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T15:30:27+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001160s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001723s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0034s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000800s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2018-03-29T15:30:41+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T15:30:42+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T15:30:43+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T15:30:44+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001159s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0037s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000888s ]
+
+[ 2018-03-29T15:30:46+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T15:31:09+08:00 ] 127.0.0.1 /shop/index.php/home/user/login
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN points_min AND points_max ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_member_level` WHERE (  BETWEEN points_min AND points_max ) LIMIT 1  
+
+[ 2018-03-29T15:34:57+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T15:34:58+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T15:34:59+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T15:35:01+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0040s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000787s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000816s ]
+
+[ 2018-03-29T15:35:02+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T15:35:32+08:00 ] 127.0.0.1 /shop/index.php/home/user/login
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN points_min AND points_max ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_member_level` WHERE (  BETWEEN points_min AND points_max ) LIMIT 1  
+
+[ 2018-03-29T15:43:21+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T15:43:22+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T15:43:23+08:00 ] 127.0.0.1 /shop/index.php/home/user/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-03-29T15:43:26+08:00 ] 127.0.0.1 /shop/index.php/home/user/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-03-29T15:43:27+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002804s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0039s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001131s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001166s ]
+

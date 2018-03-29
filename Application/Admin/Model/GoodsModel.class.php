@@ -207,6 +207,8 @@ class GoodsModel extends Model {
             @unlink($v['sm_thumb']);
         }
         D('GoodsPic')->where(array('goods_id'=>$id))->delete();
+        //处理商品推荐删除
+        D('recvalue')->where(array('rectype'=>1,'valueid'=>$id))->delete();
     }
 
     public function _after_insert($data,$option){
