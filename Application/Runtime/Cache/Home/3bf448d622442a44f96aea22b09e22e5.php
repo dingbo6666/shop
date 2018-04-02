@@ -88,8 +88,8 @@ catch (e) {
             </li>
         </ul>
         <div class="header_r">
-        <script type="text/javascript" src="list_files/transport.js"></script>
-				<script type="text/javascript" src="list_files/utils.js"></script>
+        <script type="text/javascript" src="/shop/Public/style/transport.js"></script>
+				<script type="text/javascript" src="/shop/Public/style/utils.js"></script>
 				<font id="login_check"></font>
         </div>
     </div>

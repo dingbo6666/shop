@@ -6,25 +6,20 @@
 <meta name="Keywords" content="">
 <meta name="Description" content="">
 
-<title>1</title>
+<title>注册</title>
 
 <link rel="shortcut icon" href="mbmeilishuo/favicon.ico">
 <link rel="icon" href="mbmeilishuo/animated_favicon.gif" type="image/gif">
 <link href="/shop/Public/style/style.css" rel="stylesheet" type="text/css">
-
 <script src="/shop/Public/style/hm.js"></script>
-<script type="text/javascript" src="/shop/Public/style/common.js"></script>
-<!-- <script type="text/javascript" src="/shop/Public/style/user.js"></script> -->
-<script type="text/javascript" src="/shop/Public/style/transport.js"></script>
 </head>
 <body>
-<link href="/shop/Public/style/qq.htm" rel="stylesheet" type="text/css">
+<link href="/shop/Public/style/qq.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript">
 var process_request = "正在处理您的请求...";
 </script>
 <script type="text/javascript">
-//设为首页 www.chuanke.com/s2260700.html
 function SetHome(obj,url){
     try{
         obj.style.behavior='url(#default#homepage)';
@@ -41,8 +36,6 @@ function SetHome(obj,url){
        }
   }
 }
-
-//收藏本站 bbs.ecmoban.com
 function AddFavorite(title, url) {
   try {
       window.external.addFavorite(url, title);
@@ -79,7 +72,7 @@ catch (e) {
         <ul class="top_bav_l">
         <li class="top_sc">
            <a href="javascript:void(0);" onclick="AddFavorite('我的网站',location.href)">收藏本站</a>
-</li>
+        </li>
             <li>关注我们：</li>
             <li style="border:none" class="menuPopup" onmouseover="sw_nav(1,1);" onmouseout="sw_nav(1,0);">
             <a id="HandleLI_1" href="javascript:;" title="微博" class="attention"></a>
@@ -91,20 +84,14 @@ catch (e) {
             <li class="menuPopup" onmouseover="sw_nav(2,1);" onmouseout="sw_nav(2,0);">
             <a id="HandleLI_2" href="javascript:;" title="微信" class="top_weixin"></a>
             <div id="DisSub_2" class="weixinBox" style="display: none;">
-
             <img src="/shop/Public/images/weixin.png" style="width:150px; height:190px;  background:#0000CC" height="190" width="150">
             </div>
             </li>
         </ul>
-
         <div class="header_r">
-
-        <script type="text/javascript" src="list_files/transport.js"></script><script type="text/javascript" src="list_files/utils.js"></script>        <font id="ECS_MEMBERZONE">
-
-
-欢迎光临本店，
-<?php if(is_array($topnav)): $i = 0; $__LIST__ = $topnav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><a href="<?php echo ($nav["nav_url"]); ?>" <?php if($nav['nav_blank'] == 1): ?>target="_blank"<?php endif; ?>><?php echo ($nav["nav_name"]); ?></a>
-<?php if($i != 4): ?><span>|</span><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+        <script type="text/javascript" src="list_files/transport.js"></script>
+				<script type="text/javascript" src="list_files/utils.js"></script>
+				<font id="login_check"></font>
         </div>
     </div>
 </div>
@@ -193,18 +180,6 @@ catch (e) {
             <span style="color:#FF0000" id="password_notice"> *</span>
           </td>
         </tr>
-        <!-- <tr>
-          <td align="right">密码强度</td>
-          <td>
-            <table border="0" cellpadding="1" cellspacing="0" width="145">
-              <tbody><tr align="center">
-                <td id="pwd_lower" width="33%">弱</td>
-                <td id="pwd_middle" width="33%">中</td>
-                <td id="pwd_high" width="33%">强</td>
-              </tr>
-            </tbody></table>
-          </td>
-        </tr> -->
         <tr>
           <td align="right">确认密码</td>
           <td>
@@ -237,8 +212,6 @@ catch (e) {
     </form>
   <div class="blank"></div>
   </div>
-  <div class="usTxt">
-   <a href="http://bbs.ecmoban.com/" title="ecshop童老师论坛 ecshop资源下载第一站" target="_blank"><img alt="ecshop童老师论坛 ecshop资源下载第一站" src="register_files/ecmoban.jpg"></a>   </div>
 </div>
 
 
@@ -305,6 +278,8 @@ catch (e) {
   <div class="blank10"></div>
   <div align="center"><a href="http://www.ecmoban.com/" target="_blank"><img src="/shop/Public/images/ecmoban.gif" alt="ECShop模板"></a></div>
 </div>
+<script src="/shop/Public/style/jquery.min.js"></script>
+<script type="text/javascript" src="/shop/Public/style/login.js"></script>
 
 
 <div class="blank"></div>
@@ -318,7 +293,7 @@ catch (e) {
 
 
 
-<link href="style/qq.css" rel="stylesheet" type="text/css">
+<link href="/shop/Public/style/qq.css" rel="stylesheet" type="text/css">
 <div class="QQbox" id="divQQbox" style="width: 170px; top: 124.5px;">
 <div class="Qlist" id="divOnline" onmouseout="hideMsgBox(event);" style="display: none; " onmouseover="OnlineOver();">
     <div class="t"></div>

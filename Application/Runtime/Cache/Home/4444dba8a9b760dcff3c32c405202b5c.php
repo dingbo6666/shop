@@ -72,7 +72,7 @@ catch (e) {
         <ul class="top_bav_l">
         <li class="top_sc">
            <a href="javascript:void(0);" onclick="AddFavorite('我的网站',location.href)">收藏本站</a>
-</li>
+        </li>
             <li>关注我们：</li>
             <li style="border:none" class="menuPopup" onmouseover="sw_nav(1,1);" onmouseout="sw_nav(1,0);">
             <a id="HandleLI_1" href="javascript:;" title="微博" class="attention"></a>
@@ -84,20 +84,14 @@ catch (e) {
             <li class="menuPopup" onmouseover="sw_nav(2,1);" onmouseout="sw_nav(2,0);">
             <a id="HandleLI_2" href="javascript:;" title="微信" class="top_weixin"></a>
             <div id="DisSub_2" class="weixinBox" style="display: none;">
-
             <img src="/shop/Public/images/weixin.png" style="width:150px; height:190px;  background:#0000CC" height="190" width="150">
             </div>
             </li>
         </ul>
-
         <div class="header_r">
-
-        <script type="text/javascript" src="list_files/transport.js"></script><script type="text/javascript" src="list_files/utils.js"></script>        <font id="ECS_MEMBERZONE">
-
-
-欢迎光临本店，
-<?php if(is_array($topnav)): $i = 0; $__LIST__ = $topnav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><a href="<?php echo ($nav["nav_url"]); ?>" <?php if($nav['nav_blank'] == 1): ?>target="_blank"<?php endif; ?>><?php echo ($nav["nav_name"]); ?></a>
-<?php if($i != 4): ?><span>|</span><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+        <script type="text/javascript" src="/shop/Public/style/transport.js"></script>
+				<script type="text/javascript" src="/shop/Public/style/utils.js"></script>
+				<font id="login_check"></font>
         </div>
     </div>
 </div>
@@ -419,6 +413,8 @@ $(function(){
   <div class="blank10"></div>
   <div align="center"><a href="http://www.ecmoban.com/" target="_blank"><img src="/shop/Public/images/ecmoban.gif" alt="ECShop模板"></a></div>
 </div>
+<script src="/shop/Public/style/jquery.min.js"></script>
+<script type="text/javascript" src="/shop/Public/style/login.js"></script>
 
 <div class="blank"></div>
 

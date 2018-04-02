@@ -54,7 +54,7 @@
                                 <section>
                                     <h2><span class="profile">
                                       <span>
-                                        <?php echo (session('username')); ?>
+                                        <?php echo (session('uname')); ?>
                                       </span>
                                     </span>
                                   </h2>

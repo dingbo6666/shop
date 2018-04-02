@@ -50,7 +50,7 @@
                                 <section>
                                     <h2><span class="profile">
                                       <span>
-                                        <?php echo (session('username')); ?>
+                                        <?php echo (session('uname')); ?>
                                       </span>
                                     </span>
                                   </h2>
@@ -222,6 +222,21 @@
                   <li>
                     <a href="/shop/index.php/Admin/MemberLevel/lst">
                       <span class="menu-text">会员等级</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+            </ul>
+      </li>
+      <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gear"></i>
+                <span class="menu-text">推荐位管理</span>
+                <i class="menu-expand"></i>
+            </a>
+              <ul class="submenu">
+                  <li>
+                    <a href="/shop/index.php/Admin/Recpos/lst">
+                      <span class="menu-text">推荐位列表</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>

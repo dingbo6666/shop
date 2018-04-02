@@ -99,13 +99,4 @@ class UserController extends CommonController {
         $this->success('退出成功！',U('login'));
     }
 
-    public function ceshi(){
-        $des_key=C('DES_KEY');
-        $a='abcdefg';
-        $b=Crypt::encrypt($a,$des_key);
-        echo $b;
-        $c=Crypt::decrypt($b,$des_key);
-        echo "<br/>".$c;
-    }
-
 }
