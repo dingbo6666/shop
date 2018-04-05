@@ -21,4 +21,34 @@ class FlowController extends CommonController {
         $this->display();
     }
 
+    public function flow2(){
+        if(!session('id')){
+            session('returnUrl','./home/flow/flow2');
+            $this->error('请先登录！',U('User/login'));
+        }
+        $car=D('Car');
+        $goodsInfo=$car->getGoodsInfo();
+        $mid=session('id');
+        $shrInfos=D('shrinfo')->where(array('mid'=>$mid))->find();
+        $this->assign(array(
+            'goodsInfo'=>$goodsInfo,
+            'shrInfos'=>$shrInfos,
+            ));
+        $this->display();
+    }
+
+    public function ajaxupdateGN($gi,$gattr='',$gn=0){
+        $car=D('Car');
+        if($gn==0){
+            $car->delGoods($gi,$gattr);
+        }else{
+            $car->uploadGoodsNum($gi,$gattr,$gn);
+        }
+    }
+
+    public function clearCart(){
+        $car=D('car');
+        $car->clearCar();
+    }
+
 }

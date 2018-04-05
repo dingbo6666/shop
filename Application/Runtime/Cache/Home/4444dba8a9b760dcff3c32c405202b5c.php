@@ -52,11 +52,10 @@ catch (e) {
 </script>
 
 <div class="top_nav">
-	<script type="text/javascript">
+<script type="text/javascript">
           //初始化主菜单
-            function sw_nav(obj,tag)
-            {
-            var DisSub = document.getElementById("DisSub_"+obj);
+            function sw_nav(obj,tag){
+						var DisSub = document.getElementById("DisSub_"+obj);
             var HandleLI= document.getElementById("HandleLI_"+obj);
                 if(tag==1)
                 {
@@ -64,10 +63,10 @@ catch (e) {
                 }
                 else
                 {
-                    DisSub.style.display = "none";
+                    DisSub.style.display = "none"
                 }
             }
-    </script>
+</script>
     <div class="block">
         <ul class="top_bav_l">
         <li class="top_sc">
@@ -89,9 +88,9 @@ catch (e) {
             </li>
         </ul>
         <div class="header_r">
-        <script type="text/javascript" src="/shop/Public/style/transport.js"></script>
-				<script type="text/javascript" src="/shop/Public/style/utils.js"></script>
-				<font id="login_check"></font>
+        <script type="text/javascript" src="list_files/transport.js"></script>
+        <script type="text/javascript" src="list_files/utils.js"></script>
+        <font id="login_check"></font>
         </div>
     </div>
 </div>
@@ -102,7 +101,7 @@ catch (e) {
       <form id="searchForm" class="searchBox" name="searchForm" method="get" action="search.php" onsubmit="return checkSearchForm()">
         <div class="search-table"> <span class="cur" data-type="1">宝贝</span> <em class="arrow"></em> </div>
         <span class="ipt1"><em class="i_search"></em>
-        <input name="keywords" id="keyword"  value="1111111111" class="searchKey" type="text">
+        <input name="keywords" id="keyword"  value="请输入你想要搜索的内容" class="searchKey" type="text">
         </span> <span class="ipt2">
         <input name="imageField" class="fm_hd_btm_shbx_bttn" value="搜 索" type="submit">
         </span>
@@ -110,7 +109,7 @@ catch (e) {
       <div class="clear_f"></div>
       <ul class="searchType none_f">
       </ul>
-			<div style="padding:10px 0;">
+      <div style="padding:10px 0;">
       <span>热门搜索：</span>
       <?php
  $keywordsarr=explode(',', $configres['searchkeywords']); foreach ($keywordsarr as $k => $v): ?>
@@ -125,13 +124,11 @@ catch (e) {
   </div>
 </div>
 <div style="clear:both"></div>
-
 <div class="menu_box clearfix">
 <div class="block">
 <div class="menu">
   <a href="mbmeilishuo/index.php">首页<span></span></a>
-	<?php if(is_array($midnav)): $i = 0; $__LIST__ = $midnav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><a href="<?php echo ($nav["nav_url"]); ?>" <?php if($nav['nav_blank'] == 1): ?>target="_blank"<?php endif; ?>><?php echo ($nav["nav_name"]); ?><span></span></a><?php endforeach; endif; else: echo "" ;endif; ?>
-
+  <?php if(is_array($midnav)): $i = 0; $__LIST__ = $midnav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><a href="<?php echo ($nav["nav_url"]); ?>" <?php if($nav['nav_blank'] == 1): ?>target="_blank"<?php endif; ?>><?php echo ($nav["nav_name"]); ?><span></span></a><?php endforeach; endif; else: echo "" ;endif; ?>
  </div>
 </div>
 </div>
