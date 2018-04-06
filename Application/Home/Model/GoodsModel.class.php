@@ -52,4 +52,11 @@ class GoodsModel extends Model{
         return $mprice;
     }
 
+    //获取商品库存数量
+    public function getGoodsNum($gid,$gaid){
+        $product=D('product');
+        $product->field('goods_number')->where(array('goods_id'=>$gid,'goods_attr'=>$gaid))->find();
+        return $product->goods_number;
+    }
+
 }

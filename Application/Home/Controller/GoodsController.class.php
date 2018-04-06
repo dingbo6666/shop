@@ -45,4 +45,10 @@ class GoodsController extends CommonController {
        $this->display();
     }
 
+    //获取商品库存量
+    public function getgoodsnum($gid,$gaid=''){
+        $goods=D('goods');
+        echo $goods->getGoodsNum($gid,$gaid);
+    }
+
 }
