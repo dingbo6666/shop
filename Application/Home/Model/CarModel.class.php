@@ -17,7 +17,6 @@ class CarModel extends Model{
         setcookie('car','',1,'/');
     }
 
-
     public function uploadGoodsNum($goodsID,$goodsAttrID,$goodsNum){
         $car=unserialize($_COOKIE['car']);
         $key=$goodsID.'-'.$goodsAttrID;

@@ -43,7 +43,24 @@ class FlowController extends CommonController {
             session('returnUrl','./home/flow/flow2');
             $this->error('请先登录！',U('User/login'));
         }
-
+        //检查购物车是否有商品
+        $car=D('Car');
+        $cardata=$car->getGoodsInfo();
+        if(!count($cardata)){
+            $this->error('购物车没有商品数据！');
+        }
+        //php文件锁
+        $fp=fopen('./order.lock', 'r');
+        flock($fp,LOCK_EX);//排他锁
+        //检查商品库存量
+        $tweight=0;
+        foreach ($cardata as $k => $v) {
+            $tweight+=$v['goods_weight'];
+            $gn=D('goods')->getGoodsNum($v['goods_id'],$v['goods_attr_ids']);
+            if($v['number']>$gn){
+                $this->error('商品名为：'.$v['goodsName'].'商品属性为：'.$v['attrStr'].'库存不足！请减少购买数量！');
+            }
+        }
         //处理订单
         //1、收货地址
         $data=I('post.');
@@ -91,8 +108,6 @@ class FlowController extends CommonController {
             ));
             //3、订单的商品信息
             if($order_id){
-                // $car=D('Car');
-                // $cardata=$car->getGoodsInfo();
                 $orderGoods=D('orderGoods');
                 foreach ($cardata as $k => $v) {
                   $orderGoods->add(array(
@@ -109,6 +124,15 @@ class FlowController extends CommonController {
                 $car=D('car');
                 $car->clearCar();
             }
+            //减少商品库存量
+            if($this->config['delpro']=='下单时'){
+                foreach ($cardata as $k => $v) {
+                    D('product')->where(array('goods_id'=>$v['goods_id'],'goods_attr'=>$v['goods_attr_ids']))->setDec('goods_number',$v['number']);
+                }
+            }
+            //释放锁
+            flock($fp,LOCK_UN);
+            fclose($fp);
             $this->success('下单成功！',U('flow4',array('order_id'=>$order_id,'torder'=>$torder)));
     }
 
