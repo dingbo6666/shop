@@ -28,3 +28,12 @@ $mail->Password=C('MAIL_PASSWORD');
 // 发送邮件。
 return($mail->Send());
 }
+
+//运费计算接口
+function yfjs($tweight,$peisong,$province,$city,$county){
+	if($peisong=='邮政小包'){
+		return 15;
+	}else{
+		return 20;
+	}
+}

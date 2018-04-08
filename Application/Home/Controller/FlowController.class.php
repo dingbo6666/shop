@@ -64,6 +64,22 @@ class FlowController extends CommonController {
         //处理订单
         //1、收货地址
         $data=I('post.');
+        //快递运费
+        $yunfei=yfjs($tweight,$data['peisong'],$data['province'],$data['city'],$data['county']);
+        //余额支付
+        //订单总费用（含运费）
+        $pay_status=0;
+        $torder=$data['gtprice']+$yunfei;
+        if($data['pay']=='余额'){
+            D('member')->field('money')->find(session('id'));
+            $yue=D('member')->money;
+            if($yue>=$torder){
+                 D('member')->where(array('id'=>session('id')))->setDec('money',$torder);
+                 $pay_status=1;
+            }else{
+                $this->error('余额不足，请充值！');
+            }
+        }
         $shrInfo=D('shrinfo');
         $mid=session('id');
         $shrInfos=$shrInfo->where(array('mid'=>$mid))->find();
