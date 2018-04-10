@@ -17,6 +17,8 @@ class GoodsController extends CommonController {
         $goods=D('goods');
         if(IS_POST){
             if($goods->create()){
+                  $goods->addtime=time();
+                  $goods->updatetime=time();
                 if($goods->add()){
                     $this->success('添加商品成功！',U('lst'));
                 }else{
@@ -46,6 +48,7 @@ class GoodsController extends CommonController {
         $goods=D('goods');
         if(IS_POST){
             if($goods->create()){
+                $goods->updatetime=time();
                 if($goods->save() !== false){
                     $this->success('修改品牌成功！',U('lst'));
                 }else{

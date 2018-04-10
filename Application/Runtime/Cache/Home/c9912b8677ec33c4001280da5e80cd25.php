@@ -44,7 +44,7 @@ function reg(str){
 var process_request = "正在处理您的请求...";
 </script>
 <script type="text/javascript">
-//设为首页 www.ecmoban.com
+
 function SetHome(obj,url){
     try{
         obj.style.behavior='url(#default#homepage)';
@@ -62,7 +62,7 @@ function SetHome(obj,url){
   }
 }
 
-//收藏本站 bbs.ecmoban.com
+
 function AddFavorite(title, url) {
   try {
       window.external.addFavorite(url, title);
@@ -407,10 +407,6 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
             alert('当前货品数量不足！');
             $("#addcart").attr("disabled","disabled");
             return false;
-            // $("#addcart").click(function(){
-            //   $("#product").html("您要购买的货品数量不足！");
-            //   return false;
-            // });
           }
         }
       });
@@ -437,7 +433,6 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
       <div class="none" id="com_h">
        <blockquote>
 
-       <!-- <?php echo ($goodsInfo["goods_desc"]); ?> -->
        <?php echo htmlspecialchars_decode($goodsInfo['goods_desc']);?>
         </blockquote>
 

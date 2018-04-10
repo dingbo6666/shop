@@ -33,7 +33,6 @@ function SetHome(obj,url){
   }
 }
 
-//收藏本站 bbs.ecmoban.com
 function AddFavorite(title, url) {
   try {
       window.external.addFavorite(url, title);
@@ -54,7 +53,10 @@ catch (e) {
   <div class="block box">
 <div class="blank"></div>
  <div id="ur_here">
-当前位置: <a href="mbmeilishuo/">首页</a> <code>&gt;</code> <a href="mbmeilishuo/category.php?id=21">女装</a>
+当前位置: <a href="__APP__">首页</a> <code>&gt;</code>
+<volist name="pos" id="cate">
+<a href="__CONTROLLER__/index/id/{$cate.id}">{$cate.catename}</a> <code>&gt;</code>
+</volist>
 </div>
 </div>
 <div class="blank"></div>
@@ -220,113 +222,54 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
   <a href="javascript:;" onclick="javascript:display_mode('list')"><img src="__PUBLIC__/images/display_mode_list.gif" alt=""></a>
   <a href="javascript:;" onclick="javascript:display_mode('grid')"><img src="__PUBLIC__/images/display_mode_grid_act.gif" alt=""></a>
   <a href="javascript:;" onclick="javascript:display_mode('text')"><img src="__PUBLIC__/images/display_mode_text.gif" alt=""></a>&nbsp;&nbsp;
-
-  <a href="mbmeilishuo/category.php?category=21&amp;display=grid&amp;brand=0&amp;price_min=0&amp;price_max=0&amp;filter_attr=0&amp;page=1&amp;sort=goods_id&amp;order=ASC#goods_list"><img src="__PUBLIC__/images/goods_id_DESC.gif" alt="按上架时间排序"></a>
-  <a href="mbmeilishuo/category.php?category=21&amp;display=grid&amp;brand=0&amp;price_min=0&amp;price_max=0&amp;filter_attr=0&amp;page=1&amp;sort=shop_price&amp;order=ASC#goods_list"><img src="__PUBLIC__/images/shop_price_default.gif" alt="按价格排序"></a>
-  <a href="mbmeilishuo/category.php?category=21&amp;display=grid&amp;brand=0&amp;price_min=0&amp;price_max=0&amp;filter_attr=0&amp;page=1&amp;sort=last_update&amp;order=DESC#goods_list"><img src="__PUBLIC__/images/last_update_default.gif" alt="按更新时间排序"></a>
-  <input name="category" value="21" type="hidden">
-  <input name="display" value="grid" id="display" type="hidden">
-  <input name="brand" value="0" type="hidden">
-  <input name="price_min" value="0" type="hidden">
-  <input name="price_max" value="0" type="hidden">
-  <input name="filter_attr" value="0" type="hidden">
-  <input name="page" value="1" type="hidden">
-  <input name="sort" value="goods_id" type="hidden">
-  <input name="order" value="DESC" type="hidden">
+  <?php if($ob=='addtime'&& $ow=='asc'):?>
+  <a href="__MODULE__/category/index/id/{$cateid}/ob/addtime/ow/desc"><img src="__PUBLIC__/images/goods_id_ASC.gif" alt="按上架时间排序"></a>
+  <?php elseif($ob=='addtime'&& $ow=='desc'):?>
+  <a href="__MODULE__/category/index/id/{$cateid}/ob/addtime/ow/asc"><img src="__PUBLIC__/images/goods_id_DESC.gif" alt="按上架时间排序"></a>
+  <?php else:?>
+  <a href="__MODULE__/category/index/id/{$cateid}/ob/addtime/ow/desc"><img src="__PUBLIC__/images/goods_id_default.gif" alt="按上架时间排序"></a>
+  <?php endif;?>
+  <?php if($ob=='shop_price'&& $ow=='asc'):?>
+  <a href="__MODULE__/category/index/id/{$cateid}/ob/shop_price/ow/desc"><img src="__PUBLIC__/images/shop_price_ASC.gif" alt="按价格排序"></a>
+  <?php elseif($ob=='shop_price'&& $ow=='desc'):?>
+  <a href="__MODULE__/category/index/id/{$cateid}/ob/shop_price/ow/asc"><img src="__PUBLIC__/images/shop_price_DESC.gif" alt="按价格排序"></a>
+  <?php else:?>
+  <a href="__MODULE__/category/index/id/{$cateid}/ob/shop_price/ow/asc"><img src="__PUBLIC__/images/shop_price_default.gif" alt="按价格排序"></a>
+  <?php endif;?>
+  <?php if($ob=='updatetime'&& $ow=='asc'):?>
+  <a href="__MODULE__/category/index/id/{$cateid}/ob/updatetime/ow/desc"><img src="__PUBLIC__/images/last_update_ASC.gif" alt="按更新时间排序"></a>
+  <?php elseif($ob=='updatetime'&& $ow=='desc'):?>
+  <a href="__MODULE__/category/index/id/{$cateid}/ob/updatetime/ow/asc"><img src="__PUBLIC__/images/last_update_DESC.gif" alt="按更新时间排序"></a>
+  <?php else:?>
+  <a href="__MODULE__/category/index/id/{$cateid}/ob/updatetime/ow/desc"><img src="__PUBLIC__/images/last_update_default.gif" alt="按更新时间排序"></a>
+  <?php endif;?>
   </form>
   </h3>
-      <form name="compareForm" action="compare.php" method="post" onsubmit="return compareGoods(this);">
-            <div class="clearfix goodsBox" style="border:none;">
-             <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
-           <a href="mbmeilishuo/goods.php?id=208"><img src="__PUBLIC__/images/208_thumb_G_1419373849576.png" alt="简约纯色时尚保暖" class="goodsimg"></a><br>
-           <p><a href="mbmeilishuo/goods.php?id=208" title="简约纯色时尚保暖">简约纯色时尚保暖</a></p>
-                                    市场价：<font class="market_s">120元</font><br>
-                                                                        本店价：<font class="shop_s">100元</font><br>
-
+  <form name="compareForm" action="compare.php" method="post">
+        <div class="clearfix goodsBox" style="border:none;">
+         <volist name="list" id="goods">
+          <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
+             <a href="__MODULE__/goods/index/id/{$goods.id}"><img src="__ROOT__{$goods.mid_thumb}" alt="{$goods.goods_name}" class="goodsimg"></a><br>
+             <p><a href="__MODULE__/goods/index/id/{$goods.id}" title="{$goods.goods_name}">{$goods.goods_name}</a></p>
+             <font>市场价：<font class="market_s">{$goods.market_price}元</font><br>
+             <font>本店价：<font class="shop_s">{$goods.shop_price}元</font><br>
+          </div>
+         </volist>
         </div>
-                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
-           <a href="mbmeilishuo/goods.php?id=141"><img src="__PUBLIC__/images/141_thumb_G_1413926445469.jpg" alt="高质感毛呢大衣" class="goodsimg"></a><br>
-           <p><a href="mbmeilishuo/goods.php?id=141" title="高质感毛呢大衣">高质感毛呢大衣</a></p>
-                                    市场价：<font class="market_s">144元</font><br>
-                                                                        促销价：<font class="shop_s">110元</font><br>
-
-        </div>
-                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
-           <a href="mbmeilishuo/goods.php?id=140"><img src="__PUBLIC__/images/140_thumb_G_1413928959052.jpg" alt="毛貂毛边卫衣套装" class="goodsimg"></a><br>
-           <p><a href="mbmeilishuo/goods.php?id=140" title="毛貂毛边卫衣套装">毛貂毛边卫衣套装</a></p>
-                                    市场价：<font class="market_s">144元</font><br>
-                                                                        促销价：<font class="shop_s">110元</font><br>
-
-        </div>
-                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
-           <a href="mbmeilishuo/goods.php?id=139"><img src="__PUBLIC__/images/139_thumb_G_1413929154297.jpg" alt="秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装" class="goodsimg"></a><br>
-           <p><a href="mbmeilishuo/goods.php?id=139" title="秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装">秋冬黑色天鹅毛衣七分袖休闲套头毛衣蕾丝网纱半身裙蓬蓬裙套装</a></p>
-                                    市场价：<font class="market_s">144元</font><br>
-                                                                        促销价：<font class="shop_s">110元</font><br>
-
-        </div>
-                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
-           <a href="mbmeilishuo/goods.php?id=138"><img src="__PUBLIC__/images/138_thumb_G_1413929827659.jpg" alt="现货发售 马海毛保暖毛衣" class="goodsimg"></a><br>
-           <p><a href="mbmeilishuo/goods.php?id=138" title="现货发售 马海毛保暖毛衣">现货发售 马海毛保暖毛衣</a></p>
-                                    市场价：<font class="market_s">144元</font><br>
-                                                                        本店价：<font class="shop_s">120元</font><br>
-
-        </div>
-                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
-           <a href="mbmeilishuo/goods.php?id=137"><img src="__PUBLIC__/images/137_thumb_G_1413930199355.jpg" alt="蜜糖家 METIME 秋季新品 自制薄毛呢西装长马甲" class="goodsimg"></a><br>
-           <p><a href="mbmeilishuo/goods.php?id=137" title="蜜糖家 METIME 秋季新品 自制薄毛呢西装长马甲">蜜糖家 METIME 秋季新品 自制薄毛呢西装长马甲</a></p>
-                                    市场价：<font class="market_s">144元</font><br>
-                                                                        本店价：<font class="shop_s">120元</font><br>
-
-        </div>
-                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
-           <a href="mbmeilishuo/goods.php?id=136"><img src="__PUBLIC__/images/136_thumb_G_1413930502490.jpg" alt="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸..." class="goodsimg"></a><br>
-           <p><a href="mbmeilishuo/goods.php?id=136" title="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸靴">米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸...</a></p>
-                                    市场价：<font class="market_s">144元</font><br>
-                                                                        促销价：<font class="shop_s">110元</font><br>
-
-        </div>
-                 <div class="goodsItem" style="padding: 10px 3px 15px 2px;">
-           <a href="mbmeilishuo/goods.php?id=134"><img src="__PUBLIC__/images/134_thumb_G_1413930635678.jpg" alt="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气..." class="goodsimg"></a><br>
-           <p><a href="mbmeilishuo/goods.php?id=134" title="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气质长袖针织衫+半身裙 两件套连衣裙套装">韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气...</a></p>
-                                    市场价：<font class="market_s">144元</font><br>
-                                                                        促销价：<font class="shop_s">110元</font><br>
-
-        </div>
-            </div>
-        </form>
-
+    </form>
  </div>
 </div>
 <div class="blank5"></div>
-<script type="Text/Javascript" language="JavaScript">
-<!--
-function selectPage(sel)
-{
-  sel.form.submit();
-}
-//-->
-</script>
-<script type="text/javascript">
-window.onload = function()
-{
-  Compare.init();
-  fixpng();
-}
-var button_compare = '';
-var exist = "您已经选择了%s";
-var count_limit = "最多只能选择4个商品进行对比";
-var goods_type_different = "\"%s\"和已选择商品类型不同无法进行对比";
-var compare_no_goods = "您没有选定任何需要比较的商品或者比较的商品数少于 2 个。";
-var btn_buy = "购买";
-var is_cancel = "取消";
-var select_spe = "请选择商品属性";
-</script>
+<style type="text/css">
+  .prev{border: 1px solid #ccc; padding: 2px;}
+  .next{border: 1px solid #ccc; padding: 2px;}
+  .num{border: 1px solid #ccc; padding: 2px;}
+  .current{border: 1px solid #f69; padding: 2px; float: left; background: #f69; color: #fff; }
+</style>
 <form name="selectPageForm" action="/mbmeilishuo/category.php" method="get">
- <div id="pager" class="pagebar">
-  <span class="f_l " style="margin-right:10px;">总计 <b>8</b>  个记录</span>
-
-      </div>
+  <div id="pager" class="pagebar" style="height:30px;">
+  {$Page}
+  </div>
 </form>
 <script type="Text/Javascript" language="JavaScript">
 <!--

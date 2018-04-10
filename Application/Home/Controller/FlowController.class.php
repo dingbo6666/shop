@@ -152,6 +152,13 @@ class FlowController extends CommonController {
             $this->success('下单成功！',U('flow4',array('order_id'=>$order_id,'torder'=>$torder)));
     }
 
+    public function flow4(){
+        if(!session('id')){
+            $this->error('请先登录！',U('User/login'));
+        }
+        $this->display();
+    }
+
     public function ajaxupdateGN($gi,$gattr='',$gn=0){
         $car=D('Car');
         if($gn==0){
