@@ -57,11 +57,18 @@ class CateController extends CommonController {
         foreach ($_recids as $k => $v) {
             $recids[]=$v['recid'];
         }
+        //商品类型
+        $typeRes=D('type')->select();
+        //筛选属性
+        $attrIds=$cates['search_attr_id'];
+        $attrRes=D('attr')->where(array('id'=>array('in',$attrIds)))->select();
         $this->assign(array(
             'cateres'=>$cateres,
             'cates'=>$cates,
             'recposres'=>$recposres,
             'recids'=>$recids,
+            'typeRes'=>$typeRes,
+            'attrRes'=>$attrRes,
         ));
         $this->display();
     }

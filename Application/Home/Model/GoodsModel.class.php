@@ -59,4 +59,30 @@ class GoodsModel extends Model{
         return $product->goods_number;
     }
 
+    //商品筛选属性
+    public function getSearchAttr($cateId){
+      $cate=D('cate');
+      $cateIds=$cate->getchild($cateId);
+      $cateIds=implode(',', $cateIds);
+      $brandRes=$this->field('DISTINCT(b.id),b.brand_name')->alias('a')->join('sp_brand b ON a.brand_id = b.id')->where("cate_id IN ($cateIds)")->select();
+      //计算价格区间
+      $price=$this->field('MAX(shop_price) max_price,MIN(shop_price) min_price')->where("cate_id IN ($cateIds)")->find();
+      $price_section=[];
+      $minPrice=intval($price['min_price']);
+      $maxPrice=intval($price['max_price']);
+      $cha=intval(ceil(($maxPrice-$minPrice)/5));
+      for ($i=0; $i < 5 ; $i++) {
+          if($i==4){
+             $price_section[]=$minPrice.'-'.$maxPrice;
+          }else{
+          $price_section[]=$minPrice.'-'.($minPrice+$cha);
+          $minPrice+=$cha;
+          }
+      }
+      return [
+          'brandRes'=>$brandRes,
+
+      ];
+    }
+
 }

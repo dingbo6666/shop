@@ -56,6 +56,19 @@ class CateModel extends Model {
         }
     }
 
+    public function _before_insert(&$data,$option){
+        $attrIds=I('attr_id');
+        foreach ($attrIds as $k => $v) {
+            if(empty($v)){
+                unset($attrIds[$k]);
+            }
+        }
+        if($attrIds){
+                $attrIds=implode(',',$attrIds);
+            }
+        $data['search_attr_id']=$attrIds;
+    }
+
     public function _before_update(&$data,$option){
         //处理商品推荐位
         D('recvalue')->where(array('valueid'=>$option['where']['id'],'rectype'=>2))->delete();
@@ -69,6 +82,17 @@ class CateModel extends Model {
                     ));
             }
         }
+        //关联属性处理
+        $attrIds=I('attr_id');
+        foreach ($attrIds as $k => $v) {
+            if(empty($v)){
+                unset($attrIds[$k]);
+            }
+        }
+        if($attrIds){
+                $attrIds=implode(',',$attrIds);
+            }
+        $data['search_attr_id']=$attrIds;
     }
 
 }
