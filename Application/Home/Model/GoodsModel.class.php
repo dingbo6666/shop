@@ -79,9 +79,32 @@ class GoodsModel extends Model{
           $minPrice+=$cha;
           }
       }
+      //获取自定义筛选属性
+      $sai=$cate->field('search_attr_id')->find($cateId);
+      $sai=$sai['search_attr_id'];
+      $attrRes=D('attr')->field('id,attr_name')->where(array('id'=>array('in',$sai),'attr_type'=>'1'))->select();
+      $goodsAttr=D('goodsAttr');
+      $arrser=D('attrser');
+      foreach ($attrRes as $k => $v) {
+          $attrvalRes=$goodsAttr->field('DISTINCT attr_value')->where(array('attr_id'=>array('eq',$v['id'])))->select();
+          //
+          foreach ($attrvalRes as $k1 => $v1) {
+              $attrsers=$arrser->where(array('attr_id'=>$v['id'],'attr_value'=>$v1['attr_value']))->find();
+              $attrserid=$attrsers['id'];
+              $attrvalRes[$k1]['attrserid']=$attrserid;
+          }
+          //
+          if(!$attrvalRes){
+              unset($attrRes[$k]);
+          }else{
+              $attrRes[$k]['attr_vals']=$attrvalRes;
+
+          }
+      }
       return [
           'brandRes'=>$brandRes,
-
+          'price_section'=>$price_section,
+          'searchAttr'=>$attrRes
       ];
     }
 
