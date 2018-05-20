@@ -1,0 +1,18 @@
+[ 2018-05-11T09:31:18+08:00 ] 127.0.0.1 /shop/index.php/Admin/Order/add/id/2
+ERR: 模板不存在:./Application/Admin/View/Order/add.html
+
+[ 2018-05-11T09:50:35+08:00 ] 127.0.0.1 /shop/index.php/Admin/Order/add/id/2
+ERR: 非法操作:add
+
+[ 2018-05-11T10:17:23+08:00 ] 127.0.0.1 /shop/index.php/Admin/Order/del/id/2
+ERR: 模板不存在:./Application/Admin/View/Order/del.html
+
+[ 2018-05-11T10:35:31+08:00 ] 127.0.0.1 /shop/index.php/Admin/Order/del%7D
+ERR: 非法操作:del}
+
+[ 2018-05-11T10:36:43+08:00 ] 127.0.0.1 /shop/index.php/Admin/Order/del%7D
+ERR: 非法操作:del}
+
+[ 2018-05-11T10:36:46+08:00 ] 127.0.0.1 /shop/index.php/Admin/Order/del%7D
+ERR: 非法操作:del}
+

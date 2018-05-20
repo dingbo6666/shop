@@ -86,6 +86,7 @@
 <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
   <tr>
     <td bgcolor="#ffffff"><input name="pay" value="余额" type="radio">余额支付</td>
+    <td bgcolor="#ffffff">您的账户余额:{$memres.money}元</td>
   </tr>
 </table>
 
@@ -97,12 +98,12 @@
     <th bgcolor="#ffffff">说明</th>
   </tr>
   <tr>
-    <td bgcolor="#ffffff"><input name="peisong" value="顺丰" type="radio">邮政小包</td>
+    <td bgcolor="#ffffff"><input name="peisong" value="邮政小包" type="radio">邮政小包</td>
     <td bgcolor="#ffffff">10元</td>
     <td bgcolor="#ffffff">邮政小包</td>
   </tr>
   <tr>
-    <td bgcolor="#ffffff"><input name="peisong" value="申通" type="radio">百世汇通</td>
+    <td bgcolor="#ffffff"><input name="peisong" value="百世汇通" type="radio">百世汇通</td>
     <td bgcolor="#ffffff">10元</td>
     <td bgcolor="#ffffff">百世汇通</td>
   </tr>
@@ -152,24 +153,13 @@
       </td>
   </tr>
 </tbody></table>
-</div>           <div style="margin:8px auto;" align="center">
-            <input src="./images/bnt_subOrder.gif" type="image">
+</div>
+            <div style="margin:8px auto;" align="center">
+            <input src="__PUBLIC__/images/bnt_subOrder.gif" type="image">
             </div>
     </div>
 </form>
 </div>
 <include file="Common/footer" />
 <div class="blank"></div>
-<link href="ecmoban_qq/images/qq.css" rel="stylesheet" type="text/css" />
-<div class="QQbox" id="divQQbox" style="width: 170px; ">
-<div class="Qlist" id="divOnline" onmouseout="hideMsgBox(event);" style="display: none; " onmouseover="OnlineOver();">
-    <div class="t"></div>
-    <div class="infobox">我们营业的时间<br>9:00-18:00</div>
-    <div class="con">
-        <ul></ul>
-    </div>
-    <div class="b"></div>
-</div>
-<div id="divMenu" onmouseover="OnlineOver();" style="display: block; "><img src="ecmoban_qq/images/qq_1.gif" class="press" alt="在线咨询"></div>
-</div>
 </html>

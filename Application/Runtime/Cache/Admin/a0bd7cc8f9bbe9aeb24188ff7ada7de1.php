@@ -28,7 +28,7 @@
             <div class="navbar-header pull-left">
                 <a href="#" class="navbar-brand">
                     <small>
-                            <img src="http://127.0.0.1/shop/Application/Admin/Public/images/logo.png" alt="">
+                            <img src="http://127.0.0.1/shop/Application/Admin/Public/images/logo.jpg" alt="">
                         </small>
                 </a>
             </div>
@@ -45,12 +45,12 @@
                         <li>
                             <a class="login-area dropdown-toggle" data-toggle="dropdown">
                                 <div class="avatar" title="View your public profile">
-                                    <img src="http://127.0.0.1/shop/Application/Admin/Public/images/adam-jansen.jpg">
+                                    <img src="http://127.0.0.1/shop/Application/Admin/Public/images/adam-jansen.png">
                                 </div>
                                 <section>
                                     <h2><span class="profile">
                                       <span>
-                                        <?php echo (session('username')); ?>
+                                        <?php echo (session('uname')); ?>
                                       </span>
                                     </span>
                                   </h2>
@@ -72,14 +72,9 @@
                             </ul>
                             <!--/Login Area Dropdown-->
                         </li>
-                        <!-- /Account Area -->
-                        <!--Note: notice that setting div must start right after account area list.
-                            no space must be between these elements-->
-                        <!-- Settings -->
                     </ul>
                 </div>
             </div>
-            <!-- /Account Area and Settings -->
         </div>
     </div>
 </div>
@@ -91,13 +86,7 @@
 		<div class="page-container">
 			      <!-- Page Sidebar -->
             <div class="page-sidebar" id="sidebar">
-    <!-- Page Sidebar Header-->
-    <div class="sidebar-header-wrapper">
-        <input class="searchinput" type="text">
-        <i class="searchicon fa fa-search"></i>
-        <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
-    </div>
-    <!-- /Page Sidebar Header -->
+
     <!-- Sidebar Menu -->
     <ul class="nav sidebar-menu">
         <!--Dashboard-->
@@ -214,12 +203,6 @@
             </a>
               <ul class="submenu">
                   <li>
-                    <a href="/admin/user/index.html">
-                      <span class="menu-text">会员管理</span>
-                      <i class="menu-expand"></i>
-                    </a>
-                  </li>
-                  <li>
                     <a href="/shop/index.php/Admin/MemberLevel/lst">
                       <span class="menu-text">会员等级</span>
                       <i class="menu-expand"></i>
@@ -250,8 +233,14 @@
             </a>
               <ul class="submenu">
                   <li>
-                    <a href="/admin/user/index.html">
+                    <a href="/shop/index.php/Admin/Order/lst">
                       <span class="menu-text">订单列表</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Ordergoods/lst">
+                      <span class="menu-text">订单详情</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>
@@ -341,6 +330,47 @@
                                 </div>
                             </div>
                         </div>
+												<style type="text/css">
+                        div.col-sm-6 ul {padding: 0px; margin: 0px;}
+                        div.col-sm-6 ul li{list-style: none; margin: 10px 0;}
+                        div.col-sm-6 ul li select{margin-left:10px; width: 120px;}
+                        </style>
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">筛选属性</label>
+                            <div class="col-sm-6">
+                                <?php if($attrRes):?>
+                                <ul>
+                                    <?php foreach($attrRes as $k=>$v): if($k==0){ $add='[+]'; }else{ $add='[-]'; } ?>
+                                    <li>
+                                        <a style="padding" href="javascript:void(0);" onclick="addli(this)"><?php echo ($add); ?></a>
+                                        <select name="type_id[]">
+                                            <option value="">选择类型</option>
+                                            <?php foreach($typeRes as $k1=>$v1): if($v1['id']==$v['type_id']){ $select='selected="selected"'; }else{ $select=''; } ?>
+                                            <option <?php echo ($select); ?> value="<?php echo ($v1["id"]); ?>"><?php echo ($v1["type_name"]); ?></option>
+                                            <?php endforeach;?>
+                                        </select>
+                                        <select attr_id="<?php echo ($v['id']); ?>" name="attr_id[]">
+                                            <option value="">选择属性</option>
+                                        </select>
+                                    </li>
+                                <?php endforeach;?>
+                                </ul>
+                            <?php else:?>
+                                <ul>
+                                    <li>
+                                        <a style="padding" href="javascript:void(0);" onclick="addli(this)">[+]</a>
+                                        <select name="type_id[]">
+                                            <option value="">选择类型</option>
+                                            <?php if(is_array($typeRes)): $i = 0; $__LIST__ = $typeRes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$type): $mod = ($i % 2 );++$i;?><option value="<?php echo ($type["id"]); ?>"><?php echo ($type["type_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                                        </select>
+                                        <select name="attr_id[]">
+                                            <option value="">选择属性</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            <?php endif;?>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" class="btn btn-default">保存信息</button>
@@ -366,7 +396,45 @@
     <script src="http://127.0.0.1/shop/Application/Admin/Public/style/jquery.js"></script>
     <!--Beyond Scripts-->
     <script src="http://127.0.0.1/shop/Application/Admin/Public/style/beyond.js"></script>
+		<script type="text/javascript">
+    $("select[name='type_id[]']").change(function(){
+        var type_id=$(this).val();
+        var selectobj=$(this);
+        var opt="<option value=''>选择属性</option>";
+        if(type_id!=""){
+            $.ajax({
+                type:"GET",
+                url:"/shop/index.php/Admin/Goods/ajaxgetattr/typeid/"+type_id,
+                dataType:"json",
+                success:function(data){
+                    var attr_id=selectobj.next('select').attr('attr_id');
+                    $(data).each(function(k,v){
+                        if(v.id==attr_id){
+                            var select='selected="selected"';
+                        }else{
+                            var select='';
+                        }
+                        opt +="<option "+select+" value='"+v.id+"'>"+v.attr_name+"</option>";
+                    });
+                    selectobj.next('select').html(opt);
+                }
+            });
+        }else{
+            selectobj.next('select').html(opt);          
+        }
+    });
 
-
+    function addli(o){
+        var li=$(o).parent();
+        if($(o).html()=='[+]'){
+            var newli=li.clone(true);
+            newli.find("a").html('[-]');
+            li.after(newli);
+        }else{
+            li.remove();
+        }
+    }
+    $("select[name='type_id[]']").trigger("change");
+    </script>
 
 </body></html>

@@ -1,0 +1,508 @@
+[ 2018-05-09T12:31:25+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:31:26+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:31:27+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000987s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0032s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2018-05-09T12:31:39+08:00 ] 127.0.0.1 /shop/index.php/home/index/mbmeilishuo/flow.php
+ERR: 非法操作:mbmeilishuo
+
+[ 2018-05-09T12:31:41+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:31:42+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:31:43+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001008s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0033s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000737s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2018-05-09T12:32:40+08:00 ] 127.0.0.1 /shop/index.php/home/index/mbmeilishuo/search.php?intro=hot
+ERR: 非法操作:mbmeilishuo
+
+[ 2018-05-09T12:32:42+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:32:43+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:32:44+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001127s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0036s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000662s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000694s ]
+
+[ 2018-05-09T12:32:57+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:32:58+08:00 ] 127.0.0.1 /shop/index.php/home/index/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:32:59+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001357s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0039s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2018-05-09T12:34:04+08:00 ] 127.0.0.1 /shop/index.php/home/index/mbmeilishuo/user.php
+ERR: 非法操作:mbmeilishuo
+
+[ 2018-05-09T12:34:09+08:00 ] 127.0.0.1 /shop/index.php/home/index/mbmeilishuo/goods.php?id=134
+ERR: 非法操作:mbmeilishuo
+
+[ 2018-05-09T12:34:37+08:00 ] 127.0.0.1 /shop/index.php/home/goods
+ERR: 参数错误或者未定义:id
+
+[ 2018-05-09T12:34:52+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001479s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0031s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0035s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 1 AND `goods_attr` = '' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000709s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000738s ]
+
+[ 2018-05-09T12:35:02+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001156s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0033s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0037s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 1 AND `goods_attr` = '' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000783s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000813s ]
+
+[ 2018-05-09T12:35:03+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0031s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0032s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 1 AND `goods_attr` = '' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000694s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000722s ]
+
+[ 2018-05-09T12:35:04+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001027s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0031s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0031s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 1 AND `goods_attr` = '' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000773s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000805s ]
+
+[ 2018-05-09T12:35:05+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000960s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0032s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0037s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 1 AND `goods_attr` = '' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2018-05-09T12:35:09+08:00 ] 127.0.0.1 /shop/index.php/Home/Flow/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:35:10+08:00 ] 127.0.0.1 /shop/index.php/Home/Flow/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:35:11+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001097s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0035s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2018-05-09T12:35:31+08:00 ] 127.0.0.1 /shop/index.php/Home/User/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-05-09T12:35:32+08:00 ] 127.0.0.1 /shop/index.php/Home/User/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:35:34+08:00 ] 127.0.0.1 /shop/index.php/Home/User/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:35:35+08:00 ] 127.0.0.1 /shop/index.php/Home/User/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-05-09T12:35:36+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001172s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0034s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000765s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000794s ]
+
+[ 2018-05-09T12:36:01+08:00 ] 127.0.0.1 /shop/index.php/Home/User/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:36:02+08:00 ] 127.0.0.1 /shop/index.php/Home/User/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-05-09T12:36:03+08:00 ] 127.0.0.1 /shop/index.php/Home/User/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:36:05+08:00 ] 127.0.0.1 /shop/index.php/Home/User/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-05-09T12:36:06+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000965s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0032s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000779s ]
+
+[ 2018-05-09T12:36:18+08:00 ] 127.0.0.1 /shop/index.php/Home/User/mbmeilishuo/user.php?act=qpassword_name
+ERR: 非法操作:mbmeilishuo
+
+[ 2018-05-09T12:36:21+08:00 ] 127.0.0.1 /shop/index.php/Home/User/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-05-09T12:36:22+08:00 ] 127.0.0.1 /shop/index.php/Home/User/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:36:23+08:00 ] 127.0.0.1 /shop/index.php/Home/User/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:36:24+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001726s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0034s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000775s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000806s ]
+
+[ 2018-05-09T12:36:25+08:00 ] 127.0.0.1 /shop/index.php/Home/User/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-05-09T12:36:29+08:00 ] 127.0.0.1 /shop/index.php/Home/User/mbmeilishuo/user.php?act=register
+ERR: 非法操作:mbmeilishuo
+
+[ 2018-05-09T12:36:31+08:00 ] 127.0.0.1 /shop/index.php/Home/User/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-05-09T12:36:32+08:00 ] 127.0.0.1 /shop/index.php/Home/User/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:36:34+08:00 ] 127.0.0.1 /shop/index.php/Home/User/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:36:35+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001378s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0033s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000813s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000845s ]
+
+[ 2018-05-09T12:36:36+08:00 ] 127.0.0.1 /shop/index.php/Home/User/style/qq.css
+ERR: 非法操作:style
+
+[ 2018-05-09T12:36:50+08:00 ] 127.0.0.1 /shop/index.php/home/flow/themes/ecmoban_suning/qq/images/qq.css
+ERR: 非法操作:themes
+
+[ 2018-05-09T12:36:51+08:00 ] 127.0.0.1 /shop/index.php/home/flow/ecmoban_qq/images/qq.css
+ERR: 非法操作:ecmoban_qq
+
+[ 2018-05-09T12:36:52+08:00 ] 127.0.0.1 /shop/index.php/home/flow/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:36:53+08:00 ] 127.0.0.1 /shop/index.php/home/flow/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:36:54+08:00 ] 127.0.0.1 /shop/index.php/home/flow/ecmoban_qq/images/qq.css
+ERR: 非法操作:ecmoban_qq
+
+[ 2018-05-09T12:36:55+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000936s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0038s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000723s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2018-05-09T12:37:23+08:00 ] 127.0.0.1 /shop/index.php/Home/Flow/flow3
+ERR: 1048:Column 'peisong' cannot be null
+ [ SQL语句 ] : INSERT INTO `sp_order` (`sn`,`addtime`,`shr`,`province`,`city`,`adress`,`phone`,`mid`,`peisong`,`pay`,`pay_status`,`gtprice`,`yprice`,`tprice`) VALUES ('1525840643839138','1525840643','丁一','天津市','天津市','？？？？？？？？','18502436985','1',NULL,NULL,'0','20','20','40')
+
+[ 2018-05-09T12:37:36+08:00 ] 127.0.0.1 /shop/index.php/home/flow/themes/ecmoban_suning/qq/images/qq.css
+ERR: 非法操作:themes
+
+[ 2018-05-09T12:37:37+08:00 ] 127.0.0.1 /shop/index.php/home/flow/ecmoban_qq/images/qq.css
+ERR: 非法操作:ecmoban_qq
+
+[ 2018-05-09T12:37:38+08:00 ] 127.0.0.1 /shop/index.php/home/flow/list_files/transport.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:37:39+08:00 ] 127.0.0.1 /shop/index.php/home/flow/list_files/utils.js
+ERR: 非法操作:list_files
+
+[ 2018-05-09T12:37:40+08:00 ] 127.0.0.1 /shop/index.php/home/flow/ecmoban_qq/images/qq.css
+ERR: 非法操作:ecmoban_qq
+
+[ 2018-05-09T12:37:41+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001204s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0031s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000787s ]
+
+[ 2018-05-09T12:38:16+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001741s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0030s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2018-05-09T12:38:37+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001437s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 3 G:\phpstudy\PHPTutorial\WWW\shop\Application\Home\Controller\CommonController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0036s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000842s ]
+

@@ -4,13 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=8">
 <meta name="Keywords" content="">
-<meta name="Description" content="国庆大促，下单再减10%">
 <title>商品详情页</title>
 <link rel="shortcut icon" href="/mbmeilishuo/favicon.ico">
 <link href="/shop/Public/style/base.css" rel="stylesheet" type="text/css" />
-<link rel="icon" href="/mbmeilishuo/animated_favicon.gif" type="image/gif">
 <link href="/shop/Public/style/style.css" rel="stylesheet" type="text/css">
-<script src="style/hm.js"></script><script type="text/javascript" src="/shop/Public/style/common.js"></script><script type="text/javascript" src="/shop/Public/style/action.js"></script>
+<link href="/shop/Public/style/table.css" rel="stylesheet" type="text/css" />
+<script src="style/hm.js"></script><script type="text/javascript" src="/shop/Public/style/action.js"></script>
 <script type="text/javascript" src="/shop/Public/style/mzp-packed-me.js"></script>
 <script type="text/javascript">
 function $id(element) {
@@ -102,24 +101,11 @@ catch (e) {
         <li class="top_sc">
            <a href="javascript:void(0);" onclick="AddFavorite('我的网站',location.href)">收藏本站</a>
         </li>
-            <li>关注我们：</li>
-            <li style="border:none" class="menuPopup" onmouseover="sw_nav(1,1);" onmouseout="sw_nav(1,0);">
-            <a id="HandleLI_1" href="javascript:;" title="微博" class="attention"></a>
-            <div id="DisSub_1" class="top_nav_box  top_weibo">
-            <a href="http://e.weibo.com/ECMBT" target="_blank" title="新浪微博" class="top_weibo"></a>
-            <a href="http://e.t.qq.com/ecmoban_com" target="_blank" title="QQ微博" class="top_qq"></a>
-            </div>
-            </li>
-            <li class="menuPopup" onmouseover="sw_nav(2,1);" onmouseout="sw_nav(2,0);">
-            <a id="HandleLI_2" href="javascript:;" title="微信" class="top_weixin"></a>
-            <div id="DisSub_2" class="weixinBox" style="display: none;">
-            <img src="/shop/Public/images/weixin.png" style="width:150px; height:190px;  background:#0000CC" height="190" width="150">
-            </div>
-            </li>
+            <li>联系我们:QQ1051078011</li>
         </ul>
         <div class="header_r">
-        <script type="text/javascript" src="list_files/transport.js"></script>
-        <script type="text/javascript" src="list_files/utils.js"></script>
+        <script type="text/javascript" src="/shop/Public/style/transport.js"></script>
+        <script type="text/javascript" src="/shop/Public/style/utils.js"></script>
         <font id="login_check"></font>
         </div>
     </div>
@@ -128,28 +114,19 @@ catch (e) {
   <div class="clear_f"></div>
   <div class="header_top logo_wrap"> <a class="logo_new" href="mbmeilishuo/index.php"><img src="/shop/Public/images/logo.gif"></a>
     <div class="ser_n">
-      <form id="searchForm" class="searchBox" name="searchForm" method="get" action="search.php" onsubmit="return checkSearchForm()">
-        <div class="search-table"> <span class="cur" data-type="1">宝贝</span> <em class="arrow"></em> </div>
-        <span class="ipt1"><em class="i_search"></em>
-        <input name="keywords" id="keyword"  value="请输入你想要搜索的内容" class="searchKey" type="text">
-        </span> <span class="ipt2">
-        <input name="imageField" class="fm_hd_btm_shbx_bttn" value="搜 索" type="submit">
-        </span>
-      </form>
       <div class="clear_f"></div>
       <ul class="searchType none_f">
       </ul>
       <div style="padding:10px 0;">
-      <span>热门搜索：</span>
-      <?php
- $keywordsarr=explode(',', $configres['searchkeywords']); foreach ($keywordsarr as $k => $v): ?>
-      <a href="htt://127.0.0.1/shop/index.php/index/search/index/keywords/<?php echo $v;?>"><?php echo $v;?></a>
-      <?php endforeach;?>
+      <span style="font-size:20px;"></span>
+      <!-- <?php
+ $keywordsarr=explode(',', $configres['searchkeywords']); foreach ($keywordsarr as $k => $v): ?> -->
+      <!-- <a href="htt://127.0.0.1/shop/index.php/index/search/index/keywords/<?php echo $v;?>" style="font-size:20px;"><?php echo $v;?></a>
+      <?php endforeach;?> -->
       </div>
     </div>
     <ul class="cart_info">
-      <li id="ECS_CARTINFO"><span class="carts_num none_f"><a href="mbmeilishuo/flow.php" title="查看购物车">0</a></span> <em class="i_cart">&nbsp;</em><a href="mbmeilishuo/flow.php">查看购物车</a></li>
-      <li><a href="mbmeilishuo/user.php" target="_blank"><em class="i_order">&nbsp;</em>我的订单</a></li>
+      <li id="ECS_CARTINFO"><em class="i_cart">&nbsp;</em><a href="http://127.0.0.1/shop/index.php/Home/Flow/flow1.html">查看购物车</a></li>
     </ul>
   </div>
 </div>
@@ -157,7 +134,7 @@ catch (e) {
 <div class="menu_box clearfix">
 <div class="block">
 <div class="menu">
-  <a href="mbmeilishuo/index.php">首页<span></span></a>
+  <a href="http://127.0.0.1/shop/index.php/home/index/index">首页<span></span></a>
   <?php if(is_array($midnav)): $i = 0; $__LIST__ = $midnav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><a href="<?php echo ($nav["nav_url"]); ?>" <?php if($nav['nav_blank'] == 1): ?>target="_blank"<?php endif; ?>><?php echo ($nav["nav_name"]); ?><span></span></a><?php endforeach; endif; else: echo "" ;endif; ?>
  </div>
 </div>
@@ -221,13 +198,7 @@ function tab(id)
 }
 </script>
 
-    <div style="display: block;" class="box" id="history_div"> <div class="box_1">
- <h3><span>浏览历史</span></h3>
 
-  <div class="boxCenterList clearfix" id="history_list">
-    <ul class="clearfix"><li class="goodsimg"><a href="/mbmeilishuo/goods.php?id=208" target="_blank"><img src="/shop/Public/images/208_thumb_G_1419373849576.png" alt="简约纯色时尚保暖" class="B_blue"></a></li><li><a href="/mbmeilishuo/goods.php?id=208" target="_blank" title="简约纯色时尚保暖">简约纯色时尚保暖</a><br>本店售价：<font class="f1">100元</font><br></li></ul><ul id="clear_history"><a onclick="clear_history()">[清空]</a></ul>  </div>
- </div>
-</div>
 <div class="blank5"></div>
 <script type="text/javascript">
 if (document.getElementById('history_list').innerHTML.replace(/\s/g,'').length<1)
@@ -262,7 +233,7 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
 <div class="spec-scroll"> <a class="prev">&lt;</a> <a class="next">&gt;</a>
   <div class="items">
     <ul>
-		<?php if(is_array($gpRes)): $i = 0; $__LIST__ = $gpRes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$goodspic): $mod = ($i % 2 );++$i;?><li><img alt="佳能" bimg="/shop/<?php echo ($goodspic["original"]); ?>" src="/shop/<?php echo ($goodspic["max_thumb"]); ?>" onmousemove="preview(this);"></li><?php endforeach; endif; else: echo "" ;endif; ?>
+		<?php if(is_array($gpRes)): $i = 0; $__LIST__ = $gpRes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$goodspic): $mod = ($i % 2 );++$i;?><li><img alt="" bimg="/shop/<?php echo ($goodspic["original"]); ?>" src="/shop/<?php echo ($goodspic["max_thumb"]); ?>" onmousemove="preview(this);"></li><?php endforeach; endif; else: echo "" ;endif; ?>
 
     </ul>
   </div>
@@ -294,14 +265,7 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
        <strong>商品货号：</strong><?php echo ($goodsInfo["goods_sn"]); ?>
        </dd>
        </li>
-                      <li class="clearfix">
-       <dd>
-
-                  <strong>商品库存：</strong>
-          99
-       </dd>
-       </li>
-                    <li class="clearfix">
+        <li class="clearfix">
        <dd>
 
        <strong>商品品牌：</strong><a target="_blank" href="<?php echo ($goodsInfo["brand_url"]); ?>"><?php echo ($goodsInfo["brand_name"]); ?></a>
@@ -350,7 +314,6 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
 
       <li class="padd">
       <button id="addcart">加入购物车</button>
-
       </li>
 
       </ul>
@@ -423,35 +386,28 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
         <div id="com_b" class="history clearfix">
         <h2 style="cursor: pointer;">商品描述</h2>
         <h2 style="cursor: pointer;" class="h2bg">商品属性</h2>
-         <h2 style="cursor: pointer;" class="h2bg">商品标签</h2>
-           <h2 style="cursor: pointer;" class="h2bg">相关商品</h2>
-                </div>
-      </div>    <div class="box_1">
+        </div>
+      </div>
+      <div class="box_1">
       <div id="com_v" class="  " style="padding:6px;">
        1111
-        </div>
+      </div>
       <div class="none" id="com_h">
        <blockquote>
-
        <?php echo htmlspecialchars_decode($goodsInfo['goods_desc']);?>
         </blockquote>
 
        <blockquote>
 
-     	    <table  border="0" bgcolor="#ccc"
-    cellpadding="0" cellspacing="1">
+    <table id="table-5">
     <?php if(is_array($uniAttr)): $i = 0; $__LIST__ = $uniAttr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$uAttr): $mod = ($i % 2 );++$i;?><tr>
-    <td bgcolor="white"><?php echo ($uAttr["attr_name"]); ?></td><td  bgcolor="white"><?php echo ($uAttr["attr_value"]); ?></td>
+    <td><?php echo ($uAttr["attr_name"]); ?></td>
+    <td><?php echo ($uAttr["attr_value"]); ?></td>
     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
     </table>
      </blockquote>
      <blockquote>
 
-     <div class="box">
-     <div class="box_1">
-      44444
-     </div>
-    </div>
     <div class="blank5"></div>
      </blockquote>
 
@@ -470,33 +426,6 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
     //-->
     </script>
 
-     <div class="box">
-     <div class="box_1">
-      <h3><span class="text">购买过此商品的人还购买过</span></h3>
-      <div class="boxCenterList clearfix ie6" style="padding:2px;">
-               <div class="goodsItem" style="padding: 10px 2px 15px 2px;">
-         <a href="/mbmeilishuo/goods.php?id=138"><img src="/shop/Public/images/138_thumb_G_1413929827659.jpg" alt="现货发售 马海毛保暖毛衣" class="goodsimg"></a><br>
-         <p><a href="/mbmeilishuo/goods.php?id=138" title="现货发售 马海毛保暖毛衣">现货发售 马海毛保暖毛衣</a></p>
-                 <font class="shop_s">120元</font>
-                </div>
-                <div class="goodsItem" style="padding: 10px 2px 15px 2px;">
-         <a href="/mbmeilishuo/goods.php?id=136"><img src="/shop/Public/images/136_thumb_G_1413930502490.jpg" alt="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸靴" class="goodsimg"></a><br>
-         <p><a href="/mbmeilishuo/goods.php?id=136" title="米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸靴">米兰时装周同款 法式优雅女人味性感尖头及踝靴 细跟高跟短靴裸...</a></p>
-                 <font class="shop_s">110元</font>
-                </div>
-                <div class="goodsItem" style="padding: 10px 2px 15px 2px;">
-         <a href="/mbmeilishuo/goods.php?id=141"><img src="/shop/Public/images/141_thumb_G_1413926445469.jpg" alt="高质感毛呢大衣" class="goodsimg"></a><br>
-         <p><a href="/mbmeilishuo/goods.php?id=141" title="高质感毛呢大衣">高质感毛呢大衣</a></p>
-                 <font class="shop_s">110元</font>
-                </div>
-                <div class="goodsItem" style="padding: 10px 2px 15px 2px;">
-         <a href="/mbmeilishuo/goods.php?id=134"><img src="/shop/Public/images/134_thumb_G_1413930635678.jpg" alt="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气质长袖针织衫+半身裙 两件套连衣裙套装" class="goodsimg"></a><br>
-         <p><a href="/mbmeilishuo/goods.php?id=134" title="韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气质长袖针织衫+半身裙 两件套连衣裙套装">韩味HW-2014初冬套装 毛衣外套 长袖连衣裙 蓬蓬裙 气...</a></p>
-                 <font class="shop_s">110元</font>
-                </div>
-              </div>
-     </div>
-    </div>
     <div class="blank5"></div>
     <div id="ECS_COMMENT"> <div class="box">
      <div class="box_1">
@@ -573,22 +502,6 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
 </div>
 <div class="blank"></div>
 
-<link href="style/qq.css" rel="stylesheet" type="text/css">
-<div class="QQbox" id="divQQbox" style="width: 170px; top: 124.5px;">
-<div class="Qlist" id="divOnline" onmouseout="hideMsgBox(event);" style="display: none; " onmouseover="OnlineOver();">
-    <div class="t"></div>
-    <div class="infobox">我们营业的时间<br>9:00-18:00</div>
-    <div class="con">
-        <ul>
-                <li><a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=851818184&amp;Site=%E9%BC%8E%E6%96%B0%E6%96%87%E5%8C%96QQ851818184&amp;Menu=yes" target="_blank"><img src="/shop/Public/images/pa.gif" alt="QQ" border="0" height="16"> 851818184</a> </li>
-                <li><img src="/shop/Public/images/msn.gif" alt="MSN" border="0" height="17" width="18"> <a href="msnim:chat?contact=ecmoban@msn.com">ecmoban@msn.com</a></li>
-	              <li> 服务热线: 123456</li>
-         </ul>
-    </div>
-    <div class="b"></div>
-</div>
-<div id="divMenu" onmouseover="OnlineOver();" style="display: block; "><img src="/shop/Public/images/qq_1.gif" class="press" alt="在线咨询"></div>
-</div>
 
 
 <img src="/shop/Public/images/controlbar.htm" style="position: absolute; top: -999px;"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928911455.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928911455.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928892532.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928892532.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928911596.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928911596.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928959652.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928959652.jpg"><img src="/shop/Public/images/controlbar.htm" style="position: absolute; top: -999px;"><div class="MagicThumb-container" style="position: absolute; display: none; visibility: hidden;"><div style="font-size: 0px; height: 0px; outline: medium none; border: medium none; line-height: 0px; width: 710px; padding-left: 1px; padding-right: 1px;"></div><div style="display: inline; overflow: hidden; visibility: visible; color: rgb(255, 0, 0); font-size: 12px; font-weight: bold; font-family: Tahoma; position: absolute; width: 90%; text-align: right; right: 15px; top: 702px; z-index: 10;"></div><div class="MagicThumb-controlbar" style="position: absolute; top: -9999px; visibility: hidden; z-index: 11;"><a style="float: left; position: relative;" rel="close" href="#" title="Close"><span style="left: -36px; cursor: pointer;"></span></a></div></div><img class="MagicThumb-image" style="position: absolute; top: -9999px; display: none;" src="./images/140_P_1413928911455.jpg"><img src="/shop/Public/images/controlbar.htm" style="position: absolute; top: -999px;"></body></html>

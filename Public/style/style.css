@@ -274,7 +274,6 @@ ul.shoppingMes li.welcomeVjia .loginvjia{color:#dc0050;}
 	float: left
 }
 .ser_n {
-	border: 2px solid #f69;
 	display: inline;
 	background: #fff;
 	float: left;
@@ -851,7 +850,7 @@ border: solid 1px #e4e4e4;
      购物流程
 ==================== */
     .flowBox{ padding-bottom:5px;}
-	 .flowBox h6{ background:#ececec; color:#666666; font-weight:bold}
+	 .flowBox h6{ background:#ececec; color:#666666; font-weight:bold;}
     .flowBox table{ margin:5px auto;}
 		/*2.62在购物车里面显示相关配件*/
 		.flowGoodsFittings{padding:10px;}
@@ -906,7 +905,7 @@ border: solid 1px #e4e4e4;
 .footer .f_list {
 	float: left;
 	line-height: 26px;
-	padding: 10px 21px 20px 30px
+	padding: 10px 21px 20px 70px
 }
 .footer .f_list h4 {
 	font-size: 16px;

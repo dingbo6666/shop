@@ -28,7 +28,7 @@
             <div class="navbar-header pull-left">
                 <a href="#" class="navbar-brand">
                     <small>
-                            <img src="http://127.0.0.1/shop/Application/Admin/Public/images/logo.png" alt="">
+                            <img src="http://127.0.0.1/shop/Application/Admin/Public/images/logo.jpg" alt="">
                         </small>
                 </a>
             </div>
@@ -45,12 +45,12 @@
                         <li>
                             <a class="login-area dropdown-toggle" data-toggle="dropdown">
                                 <div class="avatar" title="View your public profile">
-                                    <img src="http://127.0.0.1/shop/Application/Admin/Public/images/adam-jansen.jpg">
+                                    <img src="http://127.0.0.1/shop/Application/Admin/Public/images/adam-jansen.png">
                                 </div>
                                 <section>
                                     <h2><span class="profile">
                                       <span>
-                                        <?php echo (session('username')); ?>
+                                        <?php echo (session('uname')); ?>
                                       </span>
                                     </span>
                                   </h2>
@@ -72,14 +72,9 @@
                             </ul>
                             <!--/Login Area Dropdown-->
                         </li>
-                        <!-- /Account Area -->
-                        <!--Note: notice that setting div must start right after account area list.
-                            no space must be between these elements-->
-                        <!-- Settings -->
                     </ul>
                 </div>
             </div>
-            <!-- /Account Area and Settings -->
         </div>
     </div>
 </div>
@@ -91,13 +86,7 @@
 		<div class="page-container">
 			      <!-- Page Sidebar -->
             <div class="page-sidebar" id="sidebar">
-    <!-- Page Sidebar Header-->
-    <div class="sidebar-header-wrapper">
-        <input class="searchinput" type="text">
-        <i class="searchicon fa fa-search"></i>
-        <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
-    </div>
-    <!-- /Page Sidebar Header -->
+
     <!-- Sidebar Menu -->
     <ul class="nav sidebar-menu">
         <!--Dashboard-->
@@ -214,14 +203,23 @@
             </a>
               <ul class="submenu">
                   <li>
-                    <a href="/admin/user/index.html">
-                      <span class="menu-text">会员管理</span>
+                    <a href="/shop/index.php/Admin/MemberLevel/lst">
+                      <span class="menu-text">会员等级</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>
+            </ul>
+      </li>
+      <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gear"></i>
+                <span class="menu-text">推荐位管理</span>
+                <i class="menu-expand"></i>
+            </a>
+              <ul class="submenu">
                   <li>
-                    <a href="/shop/index.php/Admin/MemberLevel/lst">
-                      <span class="menu-text">会员等级</span>
+                    <a href="/shop/index.php/Admin/Recpos/lst">
+                      <span class="menu-text">推荐位列表</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>
@@ -235,8 +233,14 @@
             </a>
               <ul class="submenu">
                   <li>
-                    <a href="/admin/user/index.html">
+                    <a href="/shop/index.php/Admin/Order/lst">
                       <span class="menu-text">订单列表</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Ordergoods/lst">
+                      <span class="menu-text">订单详情</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>
@@ -250,8 +254,14 @@
             </a>
               <ul class="submenu">
                   <li>
-                    <a href="/admin/user/index.html">
+                    <a href="/shop/index.php/Admin/Config/config">
                       <span class="menu-text">站点配置</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Config/lst">
+                      <span class="menu-text">配置列表</span>
                       <i class="menu-expand"></i>
                     </a>
                   </li>

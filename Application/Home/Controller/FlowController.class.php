@@ -17,7 +17,6 @@ class FlowController extends CommonController {
         $car=D('Car');
         $goodsInfo=$car->getGoodsInfo();
         $this->assign('goodsInfo',$goodsInfo);
-        dump($goodsInfo);
         $this->display();
     }
 
@@ -30,9 +29,11 @@ class FlowController extends CommonController {
         $goodsInfo=$car->getGoodsInfo();
         $mid=session('id');
         $shrInfos=D('shrinfo')->where(array('mid'=>$mid))->find();
+        $memres=D('member')->where(array('id'=>$mid))->find();
         $this->assign(array(
             'goodsInfo'=>$goodsInfo,
             'shrInfos'=>$shrInfos,
+            'memres'=>$memres
             ));
         $this->display();
     }

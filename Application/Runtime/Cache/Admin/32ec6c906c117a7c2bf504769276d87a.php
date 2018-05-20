@@ -1,7 +1,9 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><!--Head--><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--Head-->
+    <head>
     <meta charset="utf-8">
-    <title>登录界面</title>
+    <title>平台管理登录界面</title>
     <meta name="description" content="login page">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +15,9 @@
     <link id="beyond-link" href="http://127.0.0.1/shop/Application/Admin/Public/style/beyond.css" rel="stylesheet">
     <link href="http://127.0.0.1/shop/Application/Admin/Public/style/demo.css" rel="stylesheet">
     <link href="http://127.0.0.1/shop/Application/Admin/Public/style/animate.css" rel="stylesheet">
-</head>
+    </head>
 <!--Head Ends-->
 <!--Body-->
-
 <body>
     <div class="login-container animated fadeInDown">
         <form action="" method="post">
@@ -29,15 +30,15 @@
                     <input class="form-control" placeholder="password" name="password" type="password">
                 </div>
                 <div class="loginbox-textbox">
-                    <input class="form-control" style="width:120px;height:50px;float:left;" placeholder="验证码" name="verify" type="text">
-                    <img src="/shop/index.php/Admin/Login/verify" style="cursor:pointer;" onclick="this.src='/shop/index.php/Admin/Login/verify/'+Math.random();" height="50" width="100" border="0">
+                    <input class="form-control" style="width:120px;height:45px;float:left;" placeholder="验证码" name="verify" type="text">
+                    <img src="/shop/index.php/Admin/Login/verify" style="cursor:pointer;" onclick="this.src='/shop/index.php/Admin/Login/verify/'+Math.random();" height="45" width="100" border="0">
                 </div>
                 <div class="loginbox-submit">
                     <input class="btn btn-primary btn-block" value="Login" type="submit">
                 </div>
             </div>
                 <div class="logobox">
-                    <p class="text-center">登录享受精彩</p>
+                    <p class="text-center">谢谢您的使用</p>
                 </div>
         </form>
     </div>
@@ -47,8 +48,4 @@
     <script src="http://127.0.0.1/shop/Application/Admin/Public/style/jquery_002.js"></script>
     <!--Beyond Scripts-->
     <script src="http://127.0.0.1/shop/Application/Admin/Public/style/beyond.js"></script>
-
-
-
-
 </body><!--Body Ends--></html>
