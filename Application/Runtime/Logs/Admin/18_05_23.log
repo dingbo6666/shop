@@ -1,0 +1,90 @@
+[ 2018-05-23T15:23:43+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/ajaxgetattr/typeid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000939s ]
+SQL: SHOW COLUMNS FROM `sp_attr` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `sp_attr` WHERE `type_id` = 1  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000800s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000834s ]
+
+[ 2018-05-23T15:23:45+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/ajaxgetattr/typeid/%E9%80%89%E6%8B%A9%E5%95%86%E5%93%81%E7%B1%BB%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `sp_attr` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `sp_attr` WHERE `type_id` = 0  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000473s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000501s ]
+
+[ 2018-05-23T15:30:18+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/ajaxgetattr/typeid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+SQL: SHOW COLUMNS FROM `sp_attr` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sp_attr` WHERE `type_id` = 1  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000656s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+
+[ 2018-05-23T15:44:27+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/ajaxgetattr/typeid/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001125s ]
+SQL: SHOW COLUMNS FROM `sp_attr` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `sp_attr` WHERE `type_id` = 2  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000742s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000778s ]
+
+[ 2018-05-23T22:21:34+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/ajaxgetattr/typeid/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001981s ]
+SQL: SHOW COLUMNS FROM `sp_attr` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `sp_attr` WHERE `type_id` = 2  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000805s ]
+
+[ 2018-05-23T23:05:13+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/ajaxgetattr/typeid/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001070s ]
+SQL: SHOW COLUMNS FROM `sp_attr` [ RunTime:0.0152s ]
+SQL: SELECT * FROM `sp_attr` WHERE `type_id` = 2  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001807s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001918s ]
+
+[ 2018-05-23T23:10:16+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/ajaxgetattr/typeid/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000910s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001279s ]
+SQL: SHOW COLUMNS FROM `sp_attr` [ RunTime:0.0148s ]
+SQL: SELECT * FROM `sp_attr` WHERE `type_id` = 2  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003483s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003597s ]
+
+[ 2018-05-23T23:18:25+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/ajaxgetattr/typeid/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001146s ]
+SQL: SHOW COLUMNS FROM `sp_attr` [ RunTime:0.0162s ]
+SQL: SELECT * FROM `sp_attr` WHERE `type_id` = 2  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002842s ]
+
+[ 2018-05-23T23:26:17+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/ajaxgetattr/typeid/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001277s ]
+SQL: SHOW COLUMNS FROM `sp_attr` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sp_attr` WHERE `type_id` = 2  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002260s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002312s ]
+

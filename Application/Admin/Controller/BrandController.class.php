@@ -5,7 +5,7 @@ class BrandController extends CommonController {
     public function lst(){
       $brand=D('brand');
       $count= $brand->count();// 查询满足要求的总记录数
-      $Page = new \Think\Page($count,2);
+      $Page = new \Think\Page($count,8);
       $show = $Page->show();// 分页显示输出
       $list = $brand->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
       $this->assign('list',$list);// 赋值数据集

@@ -104,15 +104,15 @@ catch (e) {
             <li>联系我们:QQ1051078011</li>
         </ul>
         <div class="header_r">
-        <script type="text/javascript" src="/shop/Public/style/transport.js"></script>
-        <script type="text/javascript" src="/shop/Public/style/utils.js"></script>
         <font id="login_check"></font>
         </div>
     </div>
 </div>
 <div class=" block header_bg" style="margin-bottom: 0px;">
   <div class="clear_f"></div>
-  <div class="header_top logo_wrap"> <a class="logo_new" href="mbmeilishuo/index.php"><img src="/shop/Public/images/logo.gif"></a>
+  <div> <a href="http://127.0.0.1/shop/index.php/home/index/index">
+    <img src="/shop/Public/images/logo.jpg" style="width:212px;height:72px">
+  </a>
     <div class="ser_n">
       <div class="clear_f"></div>
       <ul class="searchType none_f">
@@ -125,7 +125,7 @@ catch (e) {
       <?php endforeach;?> -->
       </div>
     </div>
-    <ul class="cart_info">
+    <ul class="cart_info" style="padding-top:20px">
       <li id="ECS_CARTINFO"><em class="i_cart">&nbsp;</em><a href="http://127.0.0.1/shop/index.php/Home/Flow/flow1.html">查看购物车</a></li>
     </ul>
   </div>
@@ -161,11 +161,11 @@ catch (e) {
 
 
 		<span class="f_l"><img src="/shop/Public/images/btn_fold.gif" style="padding-top:10px;padding-right:6px;cursor:pointer;"></span>
-		<a href="/mbmeilishuo/category.php?id=22" class="  f_l"><?php echo $v['catename'];?></a>
+		<a href="/shop/index.php/Home/category/index/id/<?php echo $v['id'];?>" class="  f_l"><?php echo $v['catename'];?></a>
 		</h1>
 		<ul style="display:none">
 		<?php foreach ($v['children'] as $k1 => $v1):?>
-				 <a class="over_2" href="/mbmeilishuo/category.php?id=23"><?php echo $v1['catename'];?></a>
+				 <a class="over_2" href="/shop/index.php/Home/category/index/id/<?php echo $v1['id'];?>"><?php echo $v1['catename'];?></a>
 
 <div class="clearfix">
 </div>
@@ -427,81 +427,60 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
     </script>
 
     <div class="blank5"></div>
-    <div id="ECS_COMMENT"> <div class="box">
-     <div class="box_1">
-      <h3><span class="text">用户评论</span>(共<font class="f1">0</font>条评论)</h3>
-      <div class="boxCenterList clearfix" style="height:1%;">
-       <ul class="comments">
-               <li>暂时还没有任何用户评论</li>
-               </ul>
-
-       <div id="pagebar" class="f_r">
-        <form name="selectPageForm" action="/mbmeilishuo/goods.php" method="get">
-                <div id="pager">
-          总计 0 个记录，共 1 页。 <span> <a href="javascript:gotoPage(1,140,0)">第一页</a> <a href="javascript:;">上一页</a> <a href="javascript:;">下一页</a> <a href="javascript:;">最末页</a> </span>
-                    </div>
-                </form>
-      </div>
-
-      <div class="blank5"></div>
-
-      <div class="commentsList">
-      <form action="javascript:;" onsubmit="submitComment(this)" method="post" name="commentForm" id="commentForm">
-       <table border="0" cellpadding="0" cellspacing="5" width="710">
-        <tbody><tr>
-          <td align="right" width="64">用户名：</td>
-          <td width="631">匿名用户</td>
-        </tr>
-        <tr>
-          <td align="right">E-mail：</td>
-          <td>
-          <input name="email" id="email" maxlength="100" class="inputBorder" type="text">
-          </td>
-        </tr>
-        <tr>
-          <td align="right">评价等级：</td>
-          <td>
-          <input name="comment_rank" value="1" id="comment_rank1" type="radio"> <img src="/shop/Public/images/stars1.gif">
-          <input name="comment_rank" value="2" id="comment_rank2" type="radio"> <img src="/shop/Public/images/stars2.gif">
-          <input name="comment_rank" value="3" id="comment_rank3" type="radio"> <img src="/shop/Public/images/stars3.gif">
-          <input name="comment_rank" value="4" id="comment_rank4" type="radio"> <img src="/shop/Public/images/stars4.gif">
-          <input name="comment_rank" value="5" checked="checked" id="comment_rank5" type="radio"> <img src="/shop/Public/images/stars5.gif">
-          </td>
-        </tr>
-        <tr>
-          <td align="right" valign="top">评论内容：</td>
-          <td>
-          <textarea name="content" class="inputBorder" style="height:50px; width:620px;"></textarea>
-          <input name="cmt_type" value="0" type="hidden">
-          <input name="id" value="140" type="hidden">
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-                    <div style="padding-left:15px; text-align:left; float:left;">
-          验证码：<input name="captcha" class="inputBorder" style="width:50px; margin-left:5px;" type="text">
-          <img src="/shop/Public/images/captcha.png" alt="captcha" onclick="this.src='captcha.php?'+Math.random()" class="captcha">
-          </div>
-                         <input name="" value="评论咨询" class="f_r bnt_blue_1" style=" margin-right:8px;" type="submit">
-          </td>
-        </tr>
-      </tbody></table>
-      </form>
-      </div>
-
-      </div>
-     </div>
-    </div>
-    <div class="blank5"></div>
-
-</div>
   </div>
 
 </div>
-<include file="Common/footer">
-</div>
-<div class="blank"></div>
 
+</div>
+<div class="footer">
+  <div class="foot_con">
+    <div class="f_list service_info">
+      <div class="kefu"> <span class="tel_ico"></span>
+        <p class="f20_f">18525703670</p>
+        <p class="f14_f mt4_f">联系我们</p>
+      </div>
+      <ol class="business">
+        <li>周一至周五：09:00-17:00</li>
+      </ol>
+    </div>
+    <?php if(is_array($hcres)): $i = 0; $__LIST__ = $hcres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="f_list">
+        <h4><?php echo ($vo["catename"]); ?></h4>
+        <ul>
+          <?php if(is_array($vo['article'])): $i = 0; $__LIST__ = $vo['article'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($i % 2 );++$i;?><li><a target="_blank" href="#" title="售后流程"><?php echo ($vo2["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+        </ul>
+      </div><?php endforeach; endif; else: echo "" ;endif; ?>
+
+      <div class="f_list">
+      <h4>关注我们</h4>
+      <ul>
+        <li> <a href="https://weibo.com/" target="_blank"><span class="i_sina">&nbsp;</span>新浪微博</a></li>
+        <li><a href="https://qzone.qq.com/" target="_blank"><span class="i_qzone">&nbsp;</span>QQ空间</a></li>
+        <li><a href="http://t.qq.com/" target="_blank"><span class="i_tx">&nbsp;</span>腾讯微博</a></li>
+      </ul>
+    </div>
+    <div class="blank"></div>
+      <div class="blank"></div>
+    <div id="bottomNav" class="rolling">
+    <h4 class="f_links">底部导航：</h4>
+      <ul id="link_slide">
+       <li>
+        <?php if(is_array($bottomnav)): $i = 0; $__LIST__ = $bottomnav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><a href="<?php echo ($nav["nav_url"]); ?>" <?php if($nav['nav_blank'] == 1): ?>target="_blank"<?php endif; ?>><?php echo ($nav["nav_name"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+       </li>
+      </ul>
+    </div>
+    <div class="record" style="height:50px">
+      <div style="width:500px;margin: 0 auto;">
+       © 2018 Ding  &nbsp; <a href="#" target="_blank">暂无内容</a>&nbsp; <a href="#" target="_blank">企业法人营业执照</a>&nbsp; 京ICP备11111111号&nbsp; 京公网安备11111111&nbsp;<br>
+      客服邮箱：暂无&nbsp;&nbsp;客服电话：18525703670&nbsp; 文明办网文明上网举报电话：010-0000000 &nbsp; <a href="#" target="_blank">违法不良信息举报中心</a>
+    </div>
+    </div>
+  </div>
+  <div class="blank10"></div>
+</div>
+<script src="/shop/Public/style/jquery.min.js"></script>
+<script type="text/javascript" src="/shop/Public/style/login.js"></script>
+
+<div class="blank"></div>
 
 
 <img src="/shop/Public/images/controlbar.htm" style="position: absolute; top: -999px;"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928911455.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928911455.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928892532.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928892532.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928911596.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928911596.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928959652.jpg"><img style="position: absolute; left: -10000px; top: -10000px;" src="./images/140_P_1413928959652.jpg"><img src="/shop/Public/images/controlbar.htm" style="position: absolute; top: -999px;"><div class="MagicThumb-container" style="position: absolute; display: none; visibility: hidden;"><div style="font-size: 0px; height: 0px; outline: medium none; border: medium none; line-height: 0px; width: 710px; padding-left: 1px; padding-right: 1px;"></div><div style="display: inline; overflow: hidden; visibility: visible; color: rgb(255, 0, 0); font-size: 12px; font-weight: bold; font-family: Tahoma; position: absolute; width: 90%; text-align: right; right: 15px; top: 702px; z-index: 10;"></div><div class="MagicThumb-controlbar" style="position: absolute; top: -9999px; visibility: hidden; z-index: 11;"><a style="float: left; position: relative;" rel="close" href="#" title="Close"><span style="left: -36px; cursor: pointer;"></span></a></div></div><img class="MagicThumb-image" style="position: absolute; top: -9999px; display: none;" src="./images/140_P_1413928911455.jpg"><img src="/shop/Public/images/controlbar.htm" style="position: absolute; top: -999px;"></body></html>

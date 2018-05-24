@@ -64,9 +64,9 @@
 																<th class="text-center">电话号码</th>
 																<th class="text-center">配送方式</th>
 																<th class="text-center">总价</th>
-																<th class="text-center">订单状态</th>
+																<!-- <th class="text-center">订单状态</th> -->
 																<th class="text-center">支付状态</th>
-																<th class="text-center">是否发货</th>
+																<!-- <th class="text-center">是否发货</th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -81,7 +81,7 @@
 																<td align="center">{$vo.phone}</a></td>
 																<td align="center">{$vo.peisong}</a></td>
 																<td align="center">{$vo.tprice}</a></td>
-																<td align="center">
+																<!-- <td align="center">
 																	<if condition="$vo['order_status'] eq 0">
 																	未确认
 																	<elseif condition="$vo['order_status'] eq 1"/>
@@ -91,7 +91,7 @@
 																	<else />
 																	已退货
 																	</if>
-																</td>
+																</td> -->
 																<td align="center">
 																	<if condition="$vo['pay_status'] eq 0">
 																	未支付
@@ -99,13 +99,13 @@
 																	已支付
 																	</if>
 																</td>
-																<td align="center">
+																<!-- <td align="center">
 																	<if condition="$vo['fh_status'] eq 0">
 																	未发货
 																	<else />
 																	已发货
 																	</if>
-																</td>
+																</td> -->
                             </tr>
 													</volist>
                         </tbody>

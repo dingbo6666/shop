@@ -238,6 +238,12 @@
                       <i class="menu-expand"></i>
                     </a>
                   </li>
+                  <li>
+                    <a href="/shop/index.php/Admin/Ordergoods/lst">
+                      <span class="menu-text">订单详情</span>
+                      <i class="menu-expand"></i>
+                    </a>
+                  </li>
             </ul>
       </li>
       <li>

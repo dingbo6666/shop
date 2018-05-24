@@ -1,0 +1,898 @@
+[ 2018-05-24T07:12:09+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001024s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0037s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_member` [ RunTime:0.0221s ]
+SQL: SELECT * FROM `sp_member` WHERE `username` = 'dingbo' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sp_member_level` [ RunTime:0.0290s ]
+SQL: SELECT * FROM `sp_member_level` WHERE ( 0 BETWEEN points_min AND points_max ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000773s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000810s ]
+
+[ 2018-05-24T07:12:17+08:00 ] 127.0.0.1 /shop/index.php/home/category/index/id/list_files/global.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T07:12:18+08:00 ] 127.0.0.1 /shop/index.php/home/category/index/id/list_files/common.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T07:12:19+08:00 ] 127.0.0.1 /shop/index.php/home/category/index/id/list_files/compare.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T07:12:20+08:00 ] 127.0.0.1 /shop/index.php/home/category/index/id/list_files/global.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T07:12:21+08:00 ] 127.0.0.1 /shop/index.php/home/category/index/id/list_files/compare.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T07:12:22+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0033s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000519s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000549s ]
+
+[ 2018-05-24T07:12:39+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/global.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:12:40+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/common.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:12:42+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:12:43+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/global.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:12:44+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:12:45+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0038s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000792s ]
+
+[ 2018-05-24T07:12:48+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/global.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:12:49+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:12:50+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/common.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:12:52+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/global.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:12:53+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:12:54+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0038s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000885s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000921s ]
+
+[ 2018-05-24T07:13:06+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/common.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:13:07+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:13:08+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/global.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:13:10+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:17:11+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/common.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:17:12+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:17:13+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/global.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:17:14+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:17:15+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001110s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0036s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000671s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000701s ]
+
+[ 2018-05-24T07:17:29+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/global.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:17:31+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/common.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:17:32+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:17:33+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/global.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:17:34+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:17:35+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0038s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000665s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000701s ]
+
+[ 2018-05-24T07:18:15+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/common.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:18:16+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:18:17+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/global.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:18:19+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:18:20+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0039s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000897s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000934s ]
+
+[ 2018-05-24T07:18:36+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:18:37+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/common.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:18:38+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/global.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:18:39+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/9/ob/addtime/ow/list_files/compare.js
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list_files LIMIT 0,4' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_goods` WHERE `cate_id` IN ('9') ORDER BY addtime list_files LIMIT 0,4  
+
+[ 2018-05-24T07:18:41+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0037s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000733s ]
+
+[ 2018-05-24T08:33:24+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0096s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_member` [ RunTime:0.0242s ]
+SQL: SELECT * FROM `sp_member` WHERE `username` = 'dingbo' LIMIT 1   [ RunTime:0.0153s ]
+SQL: SHOW COLUMNS FROM `sp_member_level` [ RunTime:0.0408s ]
+SQL: SELECT * FROM `sp_member_level` WHERE ( 0 BETWEEN points_min AND points_max ) LIMIT 1   [ RunTime:0.0107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002164s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002305s ]
+
+[ 2018-05-24T08:34:31+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0133s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0100s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001480s ]
+
+[ 2018-05-24T08:38:01+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/5/gaid/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000883s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0133s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0114s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0123s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0514s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 5 AND `goods_attr` = '9' LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001690s ]
+
+[ 2018-05-24T08:38:02+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009244s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0142s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0108s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001638s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001743s ]
+
+[ 2018-05-24T08:38:26+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/5/gaid/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0139s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0100s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0104s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0096s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 5 AND `goods_attr` = '9' LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001527s ]
+
+[ 2018-05-24T08:38:27+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0138s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0111s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002534s ]
+
+[ 2018-05-24T08:38:34+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/5/gaid/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0151s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0107s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0082s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 5 AND `goods_attr` = '9' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001386s ]
+
+[ 2018-05-24T08:38:35+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000952s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0142s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0114s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001846s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001952s ]
+
+[ 2018-05-24T08:38:36+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/5/gaid/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000856s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0141s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0097s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0048s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 5 AND `goods_attr` = '9' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000929s ]
+
+[ 2018-05-24T08:38:37+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0147s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0113s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001272s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001349s ]
+
+[ 2018-05-24T08:38:40+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/5/gaid/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000876s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0047s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0052s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 5 AND `goods_attr` = '9' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000775s ]
+
+[ 2018-05-24T08:38:41+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001550s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0097s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001977s ]
+
+[ 2018-05-24T08:41:35+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/5/gaid/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0142s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0094s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0053s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 5 AND `goods_attr` = '9' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001084s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001126s ]
+
+[ 2018-05-24T08:41:37+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001171s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0081s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001167s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001243s ]
+
+[ 2018-05-24T08:41:38+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN () ) 
+
+[ 2018-05-24T08:41:41+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/5/gaid/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0146s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0108s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0071s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 5 AND `goods_attr` = '9' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000892s ]
+
+[ 2018-05-24T08:41:42+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0136s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0101s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002100s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002195s ]
+
+[ 2018-05-24T08:43:09+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/5/gaid/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007457s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0067s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0063s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 5 AND `goods_attr` = '9' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000910s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000973s ]
+
+[ 2018-05-24T08:43:11+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001464s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0153s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0073s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001701s ]
+
+[ 2018-05-24T08:45:02+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/5/gaid/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001929s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0100s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0035s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 5 AND `goods_attr` = '9' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001055s ]
+
+[ 2018-05-24T08:45:03+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003253s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0143s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0109s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002804s ]
+
+[ 2018-05-24T08:45:05+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/list_files/common.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T08:45:06+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/list_files/global.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T08:45:07+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/list_files/compare.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T08:45:09+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003166s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0111s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006639s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006745s ]
+
+[ 2018-05-24T08:45:13+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001218s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0135s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0108s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002909s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003024s ]
+
+[ 2018-05-24T08:45:14+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/5/gaid/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002565s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0139s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0108s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0123s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0107s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 5 AND `goods_attr` = '9' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004770s ]
+
+[ 2018-05-24T08:45:16+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/list_files/global.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T08:45:18+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/list_files/compare.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T08:45:19+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/list_files/common.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T08:45:20+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/list_files/global.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T08:45:21+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/list_files/compare.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T08:45:22+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003168s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0135s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0057s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002537s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002599s ]
+
+[ 2018-05-24T08:45:23+08:00 ] 127.0.0.1 /shop/index.php/Home/Goods/getgoodsnum/gid/5/gaid/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001821s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0036s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `sp_product` [ RunTime:0.0036s ]
+SQL: SELECT `goods_number` FROM `sp_product` WHERE `goods_id` = 5 AND `goods_attr` = '9' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000912s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000941s ]
+
+[ 2018-05-24T08:45:25+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001596s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0109s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002843s ]
+
+[ 2018-05-24T08:45:27+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/list_files/common.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T08:45:28+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/list_files/global.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T08:45:29+08:00 ] 127.0.0.1 /shop/index.php/Home/category/index/id/list_files/compare.js
+ERR: 1054:Unknown column 'list_files' in 'where clause'
+ [ SQL语句 ] : SELECT DISTINCT(b.id),b.brand_name FROM sp_goods a INNER JOIN sp_brand b ON a.brand_id = b.id  WHERE ( cate_id IN (list_files) ) 
+
+[ 2018-05-24T08:45:30+08:00 ] 127.0.0.1 /shop/index.php/home/user/checklogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002643s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0142s ]
+SQL: SELECT * FROM `sp_category` WHERE `type` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sp_article` [ RunTime:0.0145s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 3  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 4  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `sp_article` WHERE `cateid` = 5  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `sp_nav`  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `sp_config` [ RunTime:0.0119s ]
+SQL: SELECT `enname`,`value` FROM `sp_config`  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005126s ]
+

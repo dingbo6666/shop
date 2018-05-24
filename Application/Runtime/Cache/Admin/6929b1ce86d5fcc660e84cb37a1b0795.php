@@ -307,9 +307,9 @@
 																<th class="text-center">电话号码</th>
 																<th class="text-center">配送方式</th>
 																<th class="text-center">总价</th>
-																<th class="text-center">订单状态</th>
+																<!-- <th class="text-center">订单状态</th> -->
 																<th class="text-center">支付状态</th>
-																<th class="text-center">是否发货</th>
+																<!-- <th class="text-center">是否发货</th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -323,7 +323,7 @@
 																<td align="center"><?php echo ($vo["phone"]); ?></a></td>
 																<td align="center"><?php echo ($vo["peisong"]); ?></a></td>
 																<td align="center"><?php echo ($vo["tprice"]); ?></a></td>
-																<td align="center">
+																<!-- <td align="center">
 																	<?php if($vo['order_status'] == 0): ?>未确认
 																	<?php elseif($vo['order_status'] == 1): ?>
 																	已确认
@@ -331,17 +331,17 @@
 																	退货
 																	<?php else: ?>
 																	已退货<?php endif; ?>
-																</td>
+																</td> -->
 																<td align="center">
 																	<?php if($vo['pay_status'] == 0): ?>未支付
 																	<?php else: ?>
 																	已支付<?php endif; ?>
 																</td>
-																<td align="center">
+																<!-- <td align="center">
 																	<?php if($vo['fh_status'] == 0): ?>未发货
 																	<?php else: ?>
 																	已发货<?php endif; ?>
-																</td>
+																</td> -->
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                         </tbody>
                     </table>

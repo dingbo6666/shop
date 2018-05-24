@@ -42,7 +42,9 @@
 </div>
 <div class=" block header_bg" style="margin-bottom: 0px;">
   <div class="clear_f"></div>
-  <div class="header_top logo_wrap"> <a class="logo_new" href="mbmeilishuo/index.php"><img src="/shop/Public/images/logo.gif"></a>
+  <div> <a href="http://127.0.0.1/shop/index.php/home/index/index">
+    <img src="/shop/Public/images/logo.jpg" style="width:212px;height:72px">
+  </a>
     <div class="ser_n">
       <div class="clear_f"></div>
       <ul class="searchType none_f">
@@ -55,7 +57,7 @@
       <?php endforeach;?> -->
       </div>
     </div>
-    <ul class="cart_info">
+    <ul class="cart_info" style="padding-top:20px">
       <li id="ECS_CARTINFO"><em class="i_cart">&nbsp;</em><a href="http://127.0.0.1/shop/index.php/Home/Flow/flow1.html">查看购物车</a></li>
     </ul>
   </div>
@@ -268,7 +270,7 @@
   <div class="foot_con">
     <div class="f_list service_info">
       <div class="kefu"> <span class="tel_ico"></span>
-        <p class="f20_f">18456875874</p>
+        <p class="f20_f">18525703670</p>
         <p class="f14_f mt4_f">联系我们</p>
       </div>
       <ol class="business">
@@ -278,7 +280,7 @@
     <?php if(is_array($hcres)): $i = 0; $__LIST__ = $hcres;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="f_list">
         <h4><?php echo ($vo["catename"]); ?></h4>
         <ul>
-          <?php if(is_array($vo['article'])): $i = 0; $__LIST__ = $vo['article'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($i % 2 );++$i;?><li><a target="_blank" href="/mbmeilishuo/article.php?id=9" title="售后流程"><?php echo ($vo2["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+          <?php if(is_array($vo['article'])): $i = 0; $__LIST__ = $vo['article'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($i % 2 );++$i;?><li><a target="_blank" href="#" title="售后流程"><?php echo ($vo2["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
       </div><?php endforeach; endif; else: echo "" ;endif; ?>
 
@@ -306,8 +308,12 @@
       <img src="/shop/Public/images/msn.gif" alt="MSN" border="0" height="17" width="18"> <a href="msnim:chat?contact=ecmoban@msn.com">ecmoban@msn.com</a>
       <br>
     </div>
-    <div class="record"> © 2018 Ding  &nbsp; <a href="#" target="_blank">暂无内容</a>&nbsp; <a href="#" target="_blank">企业法人营业执照</a>&nbsp; 京ICP备11111111号&nbsp; 京公网安备11111111&nbsp;<br>
-      客服邮箱：暂无&nbsp;&nbsp;客服电话：18525703670&nbsp; 文明办网文明上网举报电话：010-0000000 &nbsp; <a href="#" target="_blank">违法不良信息举报中心</a> </div>
+    <div class="record" style="height:50px">
+      <div style="width:500px;margin: 0 auto;">
+       © 2018 Ding  &nbsp; <a href="#" target="_blank">暂无内容</a>&nbsp; <a href="#" target="_blank">企业法人营业执照</a>&nbsp; 京ICP备11111111号&nbsp; 京公网安备11111111&nbsp;<br>
+      客服邮箱：暂无&nbsp;&nbsp;客服电话：18525703670&nbsp; 文明办网文明上网举报电话：010-0000000 &nbsp; <a href="#" target="_blank">违法不良信息举报中心</a>
+    </div>
+    </div>
   </div>
   <div class="blank10"></div>
 </div>

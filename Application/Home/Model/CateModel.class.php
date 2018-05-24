@@ -23,7 +23,7 @@ class CateModel extends Model{
     				if(count($reccatesres[$k]['recgoods'])>=$limit){
     					break;
     				}
-    				$reccatesres[$k]['recgoods'][]=$goods->field('id,mid_thumb,market_price,shop_price')->find($v1['id']);
+    				$reccatesres[$k]['recgoods'][]=$goods->field('id,mid_thumb,goods_name,market_price,shop_price')->find($v1['id']);
     			}
     		}
     	}
