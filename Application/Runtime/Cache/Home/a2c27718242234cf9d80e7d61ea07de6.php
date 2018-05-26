@@ -200,7 +200,7 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
   <div class="AreaR">
 
 	  	  <div class="box">
-          <div class="box_1">
+          <!-- <div class="box_1">
      			<h3><span>商品筛选</span></h3>
      						<div class="screeBox">
      			      <strong>品牌：</strong>
@@ -226,7 +226,7 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
                                    <?php endforeach;?>
        									</div>
                        <?php endforeach;?>
-           		 </div>
+           		 </div> -->
 		<div class="blank"></div>
 
 
@@ -235,10 +235,10 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
   <h3>
   <span>商品列表</span>
   <form method="GET" class="sort" name="listform">
-  显示方式：
+  <!-- 显示方式：
   <a href="javascript:;" onclick="javascript:display_mode('list')"><img src="/shop/Public/images/display_mode_list.gif" alt=""></a>
   <a href="javascript:;" onclick="javascript:display_mode('grid')"><img src="/shop/Public/images/display_mode_grid_act.gif" alt=""></a>
-  <a href="javascript:;" onclick="javascript:display_mode('text')"><img src="/shop/Public/images/display_mode_text.gif" alt=""></a>&nbsp;&nbsp;
+  <a href="javascript:;" onclick="javascript:display_mode('text')"><img src="/shop/Public/images/display_mode_text.gif" alt=""></a>&nbsp;&nbsp; -->
   <?php if($ob=='addtime'&& $ow=='asc'):?>
   <a href="/shop/index.php/Home/category/index/id/<?php echo ($cateid); ?>/ob/addtime/ow/desc"><img src="/shop/Public/images/goods_id_ASC.gif" alt="按上架时间排序"></a>
   <?php elseif($ob=='addtime'&& $ow=='desc'):?>

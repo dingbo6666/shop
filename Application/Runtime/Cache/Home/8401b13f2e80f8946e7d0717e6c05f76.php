@@ -287,9 +287,9 @@
       <div class="f_list">
       <h4>关注我们</h4>
       <ul>
-        <li> <a href="#" target="_blank"><span class="i_sina">&nbsp;</span>新浪微博</a></li>
-        <li><a href="#" target="_blank"><span class="i_qzone">&nbsp;</span>QQ空间</a></li>
-        <li><a href="#" target="_blank"><span class="i_tx">&nbsp;</span>腾讯微博</a></li>
+        <li> <a href="https://weibo.com/" target="_blank"><span class="i_sina">&nbsp;</span>新浪微博</a></li>
+        <li><a href="https://qzone.qq.com/" target="_blank"><span class="i_qzone">&nbsp;</span>QQ空间</a></li>
+        <li><a href="http://t.qq.com/" target="_blank"><span class="i_tx">&nbsp;</span>腾讯微博</a></li>
       </ul>
     </div>
     <div class="blank"></div>
@@ -301,12 +301,6 @@
         <?php if(is_array($bottomnav)): $i = 0; $__LIST__ = $bottomnav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><a href="<?php echo ($nav["nav_url"]); ?>" <?php if($nav['nav_blank'] == 1): ?>target="_blank"<?php endif; ?>><?php echo ($nav["nav_name"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
        </li>
       </ul>
-    </div>
-    <div class="text" style="height:1px ; width:1px; overflow:hidden;">
-      Tel: 123456
-      <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=851818184&amp;Site=%E9%BC%8E%E6%96%B0%E6%96%87%E5%8C%96QQ851818184&amp;Menu=yes" target="_blank"><img src="/shop/Public/images/pa.gif" alt="QQ" border="0" height="16"> 851818184</a>
-      <img src="/shop/Public/images/msn.gif" alt="MSN" border="0" height="17" width="18"> <a href="msnim:chat?contact=ecmoban@msn.com">ecmoban@msn.com</a>
-      <br>
     </div>
     <div class="record" style="height:50px">
       <div style="width:500px;margin: 0 auto;">

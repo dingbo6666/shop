@@ -279,7 +279,7 @@
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
                                         <li>
-                        <a href="#">商品管理</a>
+                        <a href="/shop/index.php/Admin/Goods/lst">商品管理</a>
                     </li>
                                         <li class="active">商品库存</li>
                                         </ul>

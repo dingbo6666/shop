@@ -9,7 +9,7 @@ class IndexController extends CommonController {
         $newgoods=$goods->getrecgoods(1,5); //最新推荐商品
         $cheapgoods=$goods->getrecgoods(4,4); //特价推荐商品
         $cate=D('cate');
-        $reccatesres=$cate->getreccates(5,6,3);
+        $reccatesres=$cate->getreccates(5,6,5);
         $navres=$cate->getnav();
         $this->assign(array(
       		'bestgoods'=>$bestgoods,
